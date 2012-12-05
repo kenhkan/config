@@ -1,8 +1,8 @@
-# Default Editor
+# Editor's stuff
 
 EDITOR=vim
 export EDITOR
-
+set tw=79
 
 # Colors and display
 
@@ -13,11 +13,6 @@ alias ls='ls -G'
 alias ll='ls -hl'
 export PS1='\n\[\e[1;37m\]#\!\[\e[m\] \[\033[01;32m\]\u@\h\[\033[00m\]  \[\033[01;36m\]\w\[\033[00m\]\n\$ '
 
-
-# Editor's stuff
-set tw=79
-
-
 # Paths
 
 PATH=/usr/local/bin:/usr/local/sbin:~/lib:/opt/local/bin:/opt/local/sbin:$PATH:/usr/local/heroku/bin:/Applications/Postgres.app/Contents/MacOS/bin
@@ -26,12 +21,17 @@ export PATH
 CLASSPATH=/Users/kenhkan/.classpath:/Users/kenhkan/.classpath/js.jar:$CLASSPATH
 export CLASSPATH
 
+# Shortcuts
+
+q=~/Downloads
+export q
+w=~/Desktop
+export w
 
 
 ##### Tools #####
 
 alias json="underscore print --color --data"
-
 
 
 ##### Programming Environments #####
