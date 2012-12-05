@@ -1,0 +1,65 @@
+color solarized
+set guioptions=aAce
+
+set cindent
+set smartindent
+set autoindent
+set cinkeys=0{,0},:,0#,^F
+
+set wrap linebreak textwidth=0 
+set nolist
+
+set guifont=Consolas:h14
+set antialias
+
+" Close NERDTree on file opened
+:let NERDTreeQuitOnOpen = 1
+
+" Use ; instead of : to save the shift keystroke
+noremap ; :
+
+" Reselect visual block after indent/outdent
+vnoremap < <gv
+vnoremap > >gv
+
+" Normally Y copies the whole row - not from cursor to EOL like other capitals. Make Y behave like other capitals
+map Y y$
+
+"show indent guides
+set lcs=tab:\⁞\
+set list
+
+" Clean trailing space
+nnoremap <leader>c :%s/<Space>\+$//<CR>
+
+" Use sane regexes
+noremap / /\v
+
+" List buffers and switch to a buffer quickly
+nnoremap K :ls<CR>:buffer<Space>
+
+" Command-T
+nnoremap = :CommandT<CR>
+
+" Split screen
+nmap * <C-w>v
+nmap # <C-w>s
+
+" NERDTree
+nnoremap , :NERDTreeToggle<ENTER>
+
+" Arrow keys move among splits in normal mode
+nmap <Left> <C-W>h
+nmap <Right> <C-W>l
+nmap <Up> <C-W>k
+nmap <Up> <C-W>k
+nmap <Down> <C-W>j
+
+" Arrow keys for indentation in visual mode
+vmap <Left> <gv
+vmap <Right> >gv
+vmap <Up> [egv
+vmap <Down> ]egv
+
+" Commenting
+map : <leader>c<Space>
