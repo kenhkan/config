@@ -6,14 +6,13 @@ set smartindent
 set autoindent
 set cinkeys=0{,0},:,0#,^F
 
-set wrap linebreak textwidth=0 
-set nolist
+set wrap linebreak textwidth=79
 
 set guifont=Consolas:h14
 set antialias
 
 " Close NERDTree on file opened
-:let NERDTreeQuitOnOpen = 1
+let NERDTreeQuitOnOpen = 1
 
 " Use ; instead of : to save the shift keystroke
 noremap ; :
