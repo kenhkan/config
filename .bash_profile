@@ -21,13 +21,6 @@ export PATH
 CLASSPATH=/Users/kenhkan/.classpath:/Users/kenhkan/.classpath/js.jar:$CLASSPATH
 export CLASSPATH
 
-# Shortcuts
-
-q=~/Downloads
-export q
-w=~/Desktop
-export w
-
 
 ##### Tools #####
 
