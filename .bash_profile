@@ -39,6 +39,10 @@ export RUBYLIB
 
 alias js="/usr/bin/java org.mozilla.javascript.tools.shell.Main"
 
+# Node.js
+NODE_PATH=/usr/local/lib/node_modules
+export NODE_PATH
+
 # Android
 
 ANDROID_SDK="/usr/local/Cellar/android-sdk/r21"
