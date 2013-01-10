@@ -29,7 +29,7 @@ set lcs=tab:\⁞\
 set list
 
 " Clean trailing space
-nnoremap <leader>c :%s/<Space>\+$//<CR>
+nnoremap <Leader>c :%s/<Space>\+$//<CR>
 
 " Use sane regexes
 noremap / /\v
@@ -61,4 +61,4 @@ vmap <Up> [egv
 vmap <Down> ]egv
 
 " Commenting
-map : <leader>c<Space>
+map : <Leader>c<Space>
