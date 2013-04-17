@@ -62,3 +62,6 @@ vmap <Down> ]egv
 
 " Commenting
 map : <Leader>c<Space>
+
+" Pathogen
+call pathogen#infect()
