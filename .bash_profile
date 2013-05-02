@@ -15,7 +15,7 @@ export PS1='\n\[\e[1;37m\]#\!\[\e[m\] \[\033[01;32m\]\u@\h\[\033[00m\]  \[\033[0
 
 # Paths
 
-PATH=/usr/local/heroku/bin:/Applications/Postgres.app/Contents/MacOS/bin:/usr/local/share/npm/bin:/usr/local/bin:/usr/local/sbin:~/lib:/opt/local/bin:/opt/local/sbin:$PATH
+PATH=/usr/local/bin:/usr/local/sbin:~/lib:/opt/local/bin:/opt/local/sbin:$PATH:/usr/local/heroku/bin:/Applications/Postgres.app/Contents/MacOS/bin:/usr/local/share/npm/bin
 export PATH
 
 CLASSPATH=/Users/kenhkan/.classpath:/Users/kenhkan/.classpath/js.jar:$CLASSPATH
