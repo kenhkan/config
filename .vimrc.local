@@ -66,10 +66,6 @@ map : <Leader>c<Space>
 " Pathogen
 call pathogen#infect()
 
-" Natural split opening
-set splitbelow
-set splitright
-
 "Max out the height of the current split
 nmap <Leader>h <C-W>_
 "Max out the width of the current split
