@@ -22,11 +22,6 @@ CLASSPATH=/Users/kenhkan/.classpath:/Users/kenhkan/.classpath/js.jar:$CLASSPATH
 export CLASSPATH
 
 
-##### Tools #####
-
-alias json="underscore print --color --data"
-
-
 ##### Programming Environments #####
 
 # Ruby
@@ -49,3 +44,12 @@ ANDROID_SDK="/usr/local/Cellar/android-sdk/r21"
 ANDROID_NDK="/usr/local/Cellar/android-ndk/r8c"
 export ANDROID_SDK
 export ANDROID_NDK
+
+
+##### Programming Environments #####
+
+# querious.me
+QUERIOUSAPP_DEVELOPER="Kenneth Kan"
+QUERIOUSAPP_PPUUID="CD8E08D2-DB9A-43D0-8610-6201FB7B1DCA"
+export QUERIOUSAPP_DEVELOPER
+export QUERIOUSAPP_PPUUID
