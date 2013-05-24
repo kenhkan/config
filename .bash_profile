@@ -37,19 +37,3 @@ alias js="/usr/bin/java org.mozilla.javascript.tools.shell.Main"
 # Node.js
 NODE_PATH=/usr/local/lib/node_modules
 export NODE_PATH
-
-# Android
-
-ANDROID_SDK="/usr/local/Cellar/android-sdk/r21"
-ANDROID_NDK="/usr/local/Cellar/android-ndk/r8c"
-export ANDROID_SDK
-export ANDROID_NDK
-
-
-##### Programming Environments #####
-
-# querious.me
-QUERIOUSAPP_DEVELOPER="Kenneth Kan"
-QUERIOUSAPP_PPUUID="CD8E08D2-DB9A-43D0-8610-6201FB7B1DCA"
-export QUERIOUSAPP_DEVELOPER
-export QUERIOUSAPP_PPUUID
