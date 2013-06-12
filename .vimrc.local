@@ -66,11 +66,16 @@ map : <Leader>c<Space>
 " Pathogen
 call pathogen#infect()
 
-"Max out the height of the current split
+" Max out the height of the current split
 nmap <Leader>h <C-W>_
-"Max out the width of the current split
+" Max out the width of the current split
 nmap <Leader>g <C-W>\|
-"Normalize all split sizes, which is very handy when resizing terminal
+" Normalize all split sizes, which is very handy when resizing terminal
 nmap <Leader>n <C-W>=
-"Swap top/bottom or left/right split
+" Swap top/bottom or left/right split
 nmap <Leader>s <C-W>R
+
+" Shortcuts for scrolling
+nnoremap U H
+nmap H <C-u>
+nmap J <C-d>
