@@ -42,6 +42,8 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git)
 
+setopt APPEND_HISTORY
+
 source $ZSH/oh-my-zsh.sh
 
 export PATH=$PATH:/usr/local/bin:/usr/local/sbin:/Users/kenhkan/lib:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/heroku/bin:/Applications/Postgres.app/Contents/MacOS/bin:/usr/local/share/npm/bin:/Users/kenhkan/.rvm/bin
