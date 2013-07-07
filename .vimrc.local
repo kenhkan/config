@@ -79,3 +79,6 @@ nmap <Leader>s <C-W>R
 nnoremap U H
 nmap H <C-u>
 nmap J <C-d>
+
+" Use relative line numbering
+set relativenumber
