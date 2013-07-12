@@ -81,4 +81,6 @@ nmap H <C-u>
 nmap J <C-d>
 
 " Use relative line numbering
+set nonumber
 set relativenumber
+set rnu
