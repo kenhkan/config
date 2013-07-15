@@ -6,7 +6,7 @@ set smartindent
 set autoindent
 set cinkeys=0{,0},:,0#,^F
 
-set wrap linebreak
+set wrap
 
 set guifont=Consolas:h14
 set antialias
