@@ -8,6 +8,8 @@ set cinkeys=0{,0},:,0#,^F
 
 set wrap
 set tw=0
+set fo=cq
+set wm=0
 
 set guifont=Consolas:h14
 set antialias
