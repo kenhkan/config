@@ -11,7 +11,7 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-" Bundles
+" NeoBundles
 NeoBundle 'Shougo/vimproc'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'Lokaltog/vim-easymotion'
@@ -19,31 +19,31 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'scrooloose/nerdcommenter'
 
+" Required for NeoBundle
 filetype plugin indent on
-"
-" Brief help
-" :NeoBundleList          - list configured bundles
-" :NeoBundleInstall(!)    - install(update) bundles
-" :NeoBundleClean(!)      - confirm(or auto-approve) removal of unused bundles
 
-" Installation check.
+" NeoBundle installation check.
 NeoBundleCheck
 
 " Highlighting
 syntax enable
 
-" Indentationi
-set cindent
+" Indentation
 set smartindent
 set autoindent
-set cinkeys=0{,0},:,0#,^F
 
 " No hard wrap
 set wrap
 set tw=0
 set fo=cq
 set wm=0
+
+" Use spaces, not tabs
+set tabstop=2
+set shiftwidth=2
+set expandtab
 
 " Font & Style
 set guifont=Consolas:h14
@@ -62,14 +62,14 @@ vnoremap > >gv
 " Normally Y copies the whole row - not from cursor to EOL like other capitals. Make Y behave like other capitals
 map Y y$
 
-"show indent guides
+" Show tab guides
 set lcs=tab:\⁞\
 set list
 
 " Clean trailing space
 nnoremap <Leader>c :%s/<Space>\+$//<CR>
 
-" Use sane regexes
+" Use sane (i.e. normal) regexes
 noremap / /\v
 
 " List buffers and switch to a buffer quickly
@@ -86,14 +86,11 @@ nnoremap , :NERDTreeToggle<ENTER>
 nmap <Left> <C-W>h
 nmap <Right> <C-W>l
 nmap <Up> <C-W>k
-nmap <Up> <C-W>k
 nmap <Down> <C-W>j
 
 " Arrow keys for indentation in visual mode
 vmap <Left> <gv
 vmap <Right> >gv
-vmap <Up> [egv
-vmap <Down> ]egv
 
 " Commenting
 map : <Leader>c<Space>
@@ -108,7 +105,6 @@ nmap <Leader>n <C-W>=
 nmap <Leader>s <C-W>R
 
 " Shortcuts for scrolling
-nnoremap U H
 nmap H <C-u>
 nmap J <C-d>
 
