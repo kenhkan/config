@@ -1,8 +1,0 @@
-" Disable Cmd+Q by making it save the file instead
-if has("gui_macvim")
-  menu File.Close\ Instance :w<CR>
-  inoremenu File.Close\ Instance :w<CR>
-endif
-
-" Visible line numbers
-highlight LineNr guifg=yellow
