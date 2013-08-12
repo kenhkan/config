@@ -27,6 +27,13 @@ NeoBundleCheck
 
 " Highlighting
 syntax enable
+set number
+set ruler
+
+" Use relative line numbering
+set nonumber
+set relativenumber
+set rnu
 
 " Indentation
 set smartindent
@@ -100,10 +107,9 @@ nmap <Leader>s <C-W>R
 nmap H <C-u>
 nmap J <C-d>
 
-" Use relative line numbering
-set nonumber
-set relativenumber
-set rnu
+" Copy to clipboard
+vnoremap c "+y
+nnoremap C "+p
 
 " Search by file/buffer name
 nnoremap < :Unite<Space>file_rec/async<Space>buffer<CR>
