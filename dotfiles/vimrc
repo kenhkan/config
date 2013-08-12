@@ -112,3 +112,6 @@ nmap J <C-d>
 set nonumber
 set relativenumber
 set rnu
+
+" Unite
+nnoremap . :Unite<Space>file_rec<Space>buffer<CR>
