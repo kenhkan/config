@@ -1,7 +1,11 @@
-" For NeoBundle
+" Compatibility hacks
 set shell=/bin/bash
 set nocompatible
 
+" Default color scheme
+let &background="light"
+
+" NeoBunlde stuff
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
@@ -40,7 +44,7 @@ set smartindent
 set autoindent
 
 " No hard wrap
-set wrap
+set nowrap
 set tw=0
 set fo=cq
 set wm=0
@@ -49,10 +53,24 @@ set wm=0
 set tabstop=2
 set shiftwidth=2
 set expandtab
+set softtabstop=2
 
 " Font & Style
 set guifont=Consolas:h14
 set antialias
+
+" Searching
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+" Tab completion
+set wildmode=list:longest,list:full
+set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
+
+" Status bar
+set laststatus=2
 
 " Use ; instead of : to save the shift keystroke
 noremap ; :
@@ -66,16 +84,13 @@ map Y y$
 
 " Show tab guides
 set lcs=tab:\⁞\
-set list
+set list listchars=tab:\ \ ,trail:·
 
 " Clean trailing space
 nnoremap <Leader>c :%s/<Space>\+$//<CR>
 
 " Use sane (i.e. normal) regexes
 noremap / /\v
-
-" List buffers and switch to a buffer quickly
-nnoremap K :ls<CR>:buffer<Space>
 
 " Split screen
 nmap * <C-w>v

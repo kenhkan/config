@@ -1,8 +1,8 @@
 # Editor's stuff
 
-EDITOR=vim
-export EDITOR
-set tw=79
+export EDITOR=vim
+export TERM=xterm-256color
+set tw=80
 
 # Colors and display
 
