@@ -110,7 +110,8 @@ vmap <Left> <gv
 vmap <Right> >gv
 
 " Commenting
-map : <Leader>c<Space>
+vmap ] <Leader>clgv
+vmap [ <Leader>cugv
 
 " Max out the height of the current split
 nmap <Leader>h <C-W>_
