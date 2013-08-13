@@ -133,9 +133,9 @@ nnoremap c "+p
 nnoremap C "+P
 
 " Search by file/buffer name
-nnoremap < :Unite<Space>file_rec/async<Space>buffer<CR>
+nnoremap ' :Unite<Space>file_rec/async<Space>buffer<CR>
 " Search directory content
-nnoremap ' :Unite<Space>grep:.<CR>
+nnoremap : :Unite<Space>grep:.<CR>
 " Select buffer
 nnoremap . :Unite<Space>-quick-match<Space>buffer<CR>
 " Enable yank history
