@@ -44,7 +44,7 @@ set smartindent
 set autoindent
 
 " No hard wrap
-set nowrap
+set wrap
 set tw=0
 set fo=cq
 set wm=0
