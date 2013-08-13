@@ -122,12 +122,14 @@ nmap <Leader>n <C-W>=
 nmap <Leader>s <C-W>R
 
 " Shortcuts for scrolling
-nmap H <C-u>
+nmap K <C-u>
 nmap J <C-d>
 
-" Copy to clipboard
+" Cut/Copy to clipboard
 vnoremap c "+y
-nnoremap C "+p
+vnoremap C "+d
+nnoremap c "+p
+nnoremap C "+P
 
 " Search by file/buffer name
 nnoremap < :Unite<Space>file_rec/async<Space>buffer<CR>
