@@ -78,6 +78,9 @@ set laststatus=2
 " Use ; instead of : to save the shift keystroke
 noremap ; :
 
+" Use ? to repeat last command
+noremap ? .
+
 " Reselect visual block after indent/outdent
 vnoremap < <gv
 vnoremap > >gv
