@@ -23,6 +23,8 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'digitaltoad/vim-jade'
+NeoBundle 'ninegrid/vim-fbp'
+NeoBundle 'plasticboy/vim-markdown'
 
 " Required for NeoBundle
 filetype plugin indent on
@@ -76,8 +78,8 @@ set backspace=indent,eol,start
 " Status bar
 set laststatus=2
 
-" Use ; instead of : to save the shift keystroke
-noremap ; :
+" The best keymap ever
+map <Space> :
 
 " Use ? to repeat last command
 noremap ? .
@@ -95,9 +97,6 @@ set list listchars=tab:\ \ ,trail:·
 
 " Clean trailing space
 nnoremap <Leader>c :%s/<Space>\+$//<CR>
-
-" Use sane (i.e. normal) regexes
-noremap / /\v
 
 " Split screen
 nmap * <C-w>v
@@ -137,9 +136,9 @@ nnoremap c "+p
 nnoremap C "+P
 
 " Search by file/buffer name
-nnoremap ' :Unite<Space>file_rec/async<Space>buffer<CR>
+nnoremap ' :Unite<Space>file_rec/async<CR>
 " Search directory content
-nnoremap : :Unite<Space>grep:.<CR>
+nnoremap ; :Unite<Space>grep:.<CR>
 " Select buffer
 nnoremap . :Unite<Space>-quick-match<Space>buffer<CR>
 " Enable yank history
@@ -149,3 +148,15 @@ let g:unite_source_history_yank_enable = 1
 nnoremap , :NERDTreeToggle<ENTER>
 " Close NERDTree on file opened
 let NERDTreeQuitOnOpen = 1
+
+" Disable folding in Markdown
+let g:vim_markdown_folding_disabled=1
+
+" Redo
+map r <C-r>
+
+" Use sane (i.e. normal) regexes for [s]earches
+noremap s /\v
+
+" Search and replace
+map / <Space>%s;
