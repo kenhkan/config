@@ -155,8 +155,5 @@ let g:vim_markdown_folding_disabled=1
 " Redo
 map r <C-r>
 
-" Use sane (i.e. normal) regexes for [s]earches
+" Use sane (i.e. normal) regexes
 noremap s /\v
-
-" Search and replace
-map / <Space>%s;
