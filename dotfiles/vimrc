@@ -25,6 +25,7 @@ NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'ninegrid/vim-fbp'
 NeoBundle 'plasticboy/vim-markdown'
+NeoBundle 'wavded/vim-stylus'
 
 " Required for NeoBundle
 filetype plugin indent on
@@ -156,4 +157,4 @@ let g:vim_markdown_folding_disabled=1
 map r <C-r>
 
 " Use sane (i.e. normal) regexes
-noremap s /\v
+noremap / /\v
