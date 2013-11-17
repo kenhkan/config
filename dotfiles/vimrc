@@ -26,6 +26,7 @@ NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'ninegrid/vim-fbp'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'wavded/vim-stylus'
+NeoBundle 'mintplant/vim-literate-coffeescript'
 
 " Required for NeoBundle
 filetype plugin indent on
@@ -58,10 +59,6 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set softtabstop=2
-
-" Font & Style
-set guifont=Consolas:h14
-set antialias
 
 " Searching
 set hlsearch
@@ -158,3 +155,6 @@ map r <C-r>
 
 " Use sane (i.e. normal) regexes
 noremap / /\v
+
+" Clean VIM artifacts
+au BufWritePost * :silent! :syntax sync fromstart<cr>:redraw!<cr>
