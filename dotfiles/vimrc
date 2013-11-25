@@ -27,6 +27,7 @@ NeoBundle 'ninegrid/vim-fbp'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'wavded/vim-stylus'
 NeoBundle 'mintplant/vim-literate-coffeescript'
+NeoBundle 'tpope/vim-fugitive'
 
 " Required for NeoBundle
 filetype plugin indent on
