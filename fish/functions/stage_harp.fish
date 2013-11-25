@@ -1,5 +1,7 @@
 function stage_harp
+  set DEST ~/Documents/Dropbox/harp.io/apps
   set name $argv[1]
-  echo rm -rf "~/s/harp/"$name".harpapp.io"
-  echo cp public "~/s/harp/"$name".harpapp.io"
+  rm -rf $DEST"/"$name".harpapp.io"
+  cp -r public $DEST
+  mv $DEST"/public" $DEST"/"$name".harpapp.io"
 end
