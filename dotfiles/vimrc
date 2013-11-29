@@ -2,10 +2,7 @@
 set shell=/bin/bash
 set nocompatible
 
-" Default color scheme
-let &background="light"
-
-" NeoBunlde stuff
+" NeoBunlde
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
@@ -15,7 +12,7 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-" NeoBundles
+" NeoBundle stuff
 NeoBundle 'Shougo/vimproc'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'scrooloose/nerdtree'
@@ -28,6 +25,7 @@ NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'wavded/vim-stylus'
 NeoBundle 'mintplant/vim-literate-coffeescript'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'christoomey/vim-tmux-navigator'
 
 " Required for NeoBundle
 filetype plugin indent on
@@ -128,12 +126,6 @@ nmap <Leader>s <C-W>R
 nmap K <C-u>
 nmap J <C-d>
 
-" Cut/Copy to clipboard
-vnoremap c "+y
-vnoremap C "+d
-nnoremap c "+p
-nnoremap C "+P
-
 " Search by file/buffer name
 nnoremap ' :Unite<Space>file_rec/async<CR>
 " Search directory content
@@ -159,3 +151,9 @@ noremap / /\v
 
 " Clean VIM artifacts
 au BufWritePost * :silent! :syntax sync fromstart<cr>:redraw!<cr>
+
+" Reload source
+nmap R :so ~/.vimrc
+
+" Yank to clipboard
+set clipboard=unnamed

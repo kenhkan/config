@@ -1,3 +1,9 @@
 *~
 .DS_Store
 *.swp
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
