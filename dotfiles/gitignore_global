@@ -1,9 +1,16 @@
-*~
 .DS_Store
-*.swp
 .AppleDouble
 .LSOverride
+
+# Icon must ends with two \r.
 Icon
+
+# Thumbnails
 ._*
+
+# Files that might appear on external disk
 .Spotlight-V100
 .Trashes
+
+# Swap files
+*.swp

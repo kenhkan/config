@@ -1,3 +1,3 @@
 function cpwd
-  pwd | pbcopy
+  pwd | reattach-to-user-namespace pbcopy
 end
