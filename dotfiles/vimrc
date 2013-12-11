@@ -26,6 +26,8 @@ NeoBundle 'wavded/vim-stylus'
 NeoBundle 'mintplant/vim-literate-coffeescript'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'christoomey/vim-tmux-navigator'
+NeoBundle 'jistr/vim-nerdtree-tabs'
+NeoBundle 'gcmt/taboo.vim'
 
 " Required for NeoBundle
 filetype plugin indent on
@@ -136,7 +138,7 @@ nnoremap . :Unite<Space>-quick-match<Space>buffer<CR>
 let g:unite_source_history_yank_enable = 1
 
 " NERDTree
-nnoremap , :NERDTreeToggle<ENTER>
+nnoremap , :NERDTreeTabsToggle<CR>
 " Close NERDTree on file opened
 let NERDTreeQuitOnOpen = 1
 
@@ -157,3 +159,10 @@ nmap R :so ~/.vimrc
 
 " Yank to clipboard
 set clipboard=unnamed
+
+" Always show tab bar
+set showtabline=2
+
+" Taboo
+let g:taboo_tab_format='  %N  '
+let g:taboo_renamed_tab_format='  %N %f  '
