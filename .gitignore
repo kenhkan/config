@@ -1,3 +1,5 @@
+*.sw*
 browserify
+configstore
 fish/*
 !fish/functions
