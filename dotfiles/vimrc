@@ -131,6 +131,8 @@ nmap <Leader>w :w<CR>
 nmap <Leader>q :q<CR>
 " Remove buffer
 nmap <Leader>x :bd<CR>
+" Remove ALL buffers
+nmap <Leader>X :bd *<C-A><CR>
 
 " Reload current file
 nmap <Leader>e :e<CR>
