@@ -128,7 +128,7 @@ noremap Y y$
 " Save
 nmap <Leader>w :w<CR>
 " Save and quit
-nmap <Leader>q :wq<CR>
+nmap <Leader>q :q<CR>
 " Remove buffer
 nmap <Leader>x :bd<CR>
 
@@ -155,17 +155,17 @@ nmap <Leader>j <C-W>j
 nmap <Leader>n <C-W>w
 nmap <Leader>m <C-W>W
 
-" Arrow keys for indentation in visual mode
-vmap <Leader>h <gv
-vmap <Leader>l >gv
+" Indentation in visual mode
+vnoremap <Leader>h <gv
+vnoremap <Leader>l >gv
 
 " Shortcuts for scrolling
 nmap K <C-u>
 nmap J <C-d>
 
 " Commenting
-vmap j <Leader>clgv
-vmap k <Leader>cugv
+vnoremap <Leader>k <Leader>clgv
+vnoremap <Leader>j <Leader>cugv
 
 " Max out the height of the current split
 nmap <Leader>t <C-W>_
@@ -200,3 +200,9 @@ noremap <Leader>f /\v
 
 " Search previous
 nmap m N
+
+" git with fugitive
+nmap <Leader>' :Gstatus<CR>
+nmap <Leader>; :Gcommit<CR>
+nmap <Leader>/ :Gcommit --amend<CR>
+nmap <Leader>` :Gdiff<CR>
