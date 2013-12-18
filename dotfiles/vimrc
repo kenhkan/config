@@ -77,70 +77,117 @@ set backspace=indent,eol,start
 " Status bar
 set laststatus=2
 
-" The best keymap ever
-map <Space> :
+" Yank to clipboard
+set clipboard=unnamed
 
-" Use ? to repeat last command
-noremap ? .
+" Always show tab bar
+set showtabline=2
 
-" Reselect visual block after indent/outdent
-vnoremap < <gv
-vnoremap > >gv
+" Leader
+let mapleader=" "
 
-" Normally Y copies the whole row - not from cursor to EOL like other capitals. Make Y behave like other capitals
-map Y y$
+" Taboo tabs
+let g:taboo_tab_format='  %N  '
+let g:taboo_renamed_tab_format='  %N %f  '
 
 " Show tab guides
 set lcs=tab:\⁞\
 set list listchars=tab:\ \ ,trail:·
 
+" Clean VIM artifacts on write
+au BufWritePost * :silent! :syntax sync fromstart<cr>:redraw!<cr>
+
+
+"----------"
+" MAPPINGS "
+"----------"
+
+" Reload source
+nmap <Leader>z :so ~/.vimrc<CR>
+
+" No highlight
+nmap <Leader>p :noh<CR>
+
+" Switch case
+nnoremap ` ~
+
+" Command
+nnoremap ' :
+
+" Repeat last command
+nnoremap <Leader>r .
+
+" Reselect visual block after indent/outdent
+vnoremap < <gv
+vnoremap > >gv
+
+" Normally Y copies the whole row - not from cursor to EOL like other
+" capitals. Make Y behave like other capitals
+noremap Y y$
+
+" Save
+nmap <Leader>w :w<CR>
+" Save and quit
+nmap <Leader>q :wq<CR>
+" Remove buffer
+nmap <Leader>x :bd<CR>
+
+" Reload current file
+nmap <Leader>e :e<CR>
+" New file
+nmap <Leader>v :vert new<CR>
+nmap <Leader>b :new<CR>
+
 " Clean trailing space
 nnoremap <Leader>c :%s/<Space>\+$//<CR>
 
-" Split screen
-nmap * <C-w>v
-nmap # <C-w>s
+" Split screen, horizontall and vertically
+nmap <Leader>i <C-w>v
+nmap <Leader>o <C-w>s
 
-" Arrow keys move among splits in normal mode
-nmap <Left> <C-W>h
-nmap <Right> <C-W>l
-nmap <Up> <C-W>k
-nmap <Down> <C-W>j
+" Move among splits in normal mode
+nmap <Leader>h <C-W>h
+nmap <Leader>l <C-W>l
+nmap <Leader>k <C-W>k
+nmap <Leader>j <C-W>j
+
+" Move to next split
+nmap <Leader>n <C-W>w
+nmap <Leader>m <C-W>W
 
 " Arrow keys for indentation in visual mode
-vmap <Left> <gv
-vmap <Right> >gv
-
-" Commenting
-vmap ] <Leader>clgv
-vmap [ <Leader>cugv
-
-" Max out the height of the current split
-nmap <Leader>h <C-W>_
-" Max out the width of the current split
-nmap <Leader>g <C-W>\|
-" Normalize all split sizes, which is very handy when resizing terminal
-nmap <Leader>n <C-W>=
-" Swap top/bottom or left/right split
-nmap <Leader>s <C-W>R
+vmap <Leader>h <gv
+vmap <Leader>l >gv
 
 " Shortcuts for scrolling
 nmap K <C-u>
 nmap J <C-d>
 
-" Search by file/buffer name
-nnoremap ' :Unite<Space>file_rec/async<CR>
-" Search directory content
-nnoremap ; :Unite<Space>grep:.<CR>
-" Select buffer
-nnoremap . :Unite<Space>-quick-match<Space>buffer<CR>
-" Enable yank history
-let g:unite_source_history_yank_enable = 1
+" Commenting
+vmap j <Leader>clgv
+vmap k <Leader>cugv
+
+" Max out the height of the current split
+nmap <Leader>t <C-W>_
+" Max out the width of the current split
+nmap <Leader>y <C-W>\|
+" Normalize all split sizes, which is very handy when resizing terminal
+nmap <Leader>u <C-W>=
 
 " NERDTree
-nnoremap , :NERDTreeTabsToggle<CR>
+nmap <Leader>g :NERDTreeTabsToggle<CR>
 " Close NERDTree on file opened
 let NERDTreeQuitOnOpen = 1
+
+" Search by file/buffer name
+nnoremap <Leader>d :Unite<Space>file_rec/async<CR>
+" Search directory content
+nnoremap <Leader>s :Unite<Space>grep:.<CR>
+" Select buffer
+nnoremap <Leader>a :Unite<Space>-quick-match<Space>buffer<CR>
+
+" Enable yank history
+let g:unite_source_history_yank_enable = 1
 
 " Disable folding in Markdown
 let g:vim_markdown_folding_disabled=1
@@ -149,20 +196,7 @@ let g:vim_markdown_folding_disabled=1
 map r <C-r>
 
 " Use sane (i.e. normal) regexes
-noremap / /\v
+noremap <Leader>f /\v
 
-" Clean VIM artifacts
-au BufWritePost * :silent! :syntax sync fromstart<cr>:redraw!<cr>
-
-" Reload source
-nmap R :so ~/.vimrc
-
-" Yank to clipboard
-set clipboard=unnamed
-
-" Always show tab bar
-set showtabline=2
-
-" Taboo
-let g:taboo_tab_format='  %N  '
-let g:taboo_renamed_tab_format='  %N %f  '
+" Search previous
+nmap m N
