@@ -112,7 +112,7 @@ nmap <Leader>p :noh<CR>
 nnoremap ` ~
 
 " Command
-nnoremap ' :
+map ' :
 
 " Repeat last command
 nnoremap <Leader>r .
@@ -206,3 +206,18 @@ nmap <Leader>' :Gstatus<CR>
 nmap <Leader>; :Gcommit<CR>
 nmap <Leader>/ :Gcommit --amend<CR>
 nmap <Leader>` :Gdiff<CR>
+
+" Tabs
+nmap <Leader><Space> :tabnew<CR>
+nmap <Leader>[ :tabp<CR>
+nmap <Leader>] :tabn<CR>
+nmap <Leader>1 1gt
+nmap <Leader>2 2gt
+nmap <Leader>3 3gt
+nmap <Leader>4 4gt
+nmap <Leader>5 5gt
+nmap <Leader>6 6gt
+nmap <Leader>7 7gt
+nmap <Leader>8 8gt
+nmap <Leader>9 9gt
+nmap <Leader>0 0gt
