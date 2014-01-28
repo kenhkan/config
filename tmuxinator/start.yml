@@ -1,7 +1,7 @@
-# ~/.tmuxinator/pixbi.yml
+# ~/.tmuxinator/start.yml
 
-name: pixbi
-root: ~/s/pixbi/
+name: start
+root: ~/s/w/
 
 # Optional tmux socket
 # socket_name: foo
@@ -19,75 +19,57 @@ root: ~/s/pixbi/
 # tmux_command: byobu
 
 windows:
-  - alpha:
+  - empty:
       layout: e7d5,238x59,0,0[238x42,0,0,0,238x16,0,43{118x16,0,43,2,119x16,119,43,3}]
       panes:
         - cd ~/s/w
         - cd ~/s/w
         - cd ~/s/w
-  - beta:
+  - empty:
       layout: e7d5,238x59,0,0[238x42,0,0,0,238x16,0,43{118x16,0,43,2,119x16,119,43,3}]
       panes:
         - cd ~/s/w
         - cd ~/s/w
         - cd ~/s/w
-  - gamma:
+  - empty:
       layout: e7d5,238x59,0,0[238x42,0,0,0,238x16,0,43{118x16,0,43,2,119x16,119,43,3}]
       panes:
         - cd ~/s/w
         - cd ~/s/w
         - cd ~/s/w
-  - common:
+  - empty:
       layout: e7d5,238x59,0,0[238x42,0,0,0,238x16,0,43{118x16,0,43,2,119x16,119,43,3}]
       panes:
-        - cd pixbi-common; vim
-        - cd pixbi-common
-        - cd pixbi-common
-  - loader:
+        - cd ~/s/w
+        - cd ~/s/w
+        - cd ~/s/w
+  - empty:
       layout: e7d5,238x59,0,0[238x42,0,0,0,238x16,0,43{118x16,0,43,2,119x16,119,43,3}]
       panes:
-        - cd pixbi-loader; vim
-        - cd pixbi-loader
-        - cd pixbi-loader
-  - embeddable:
+        - cd ~/s/w
+        - cd ~/s/w
+        - cd ~/s/w
+  - empty:
       layout: e7d5,238x59,0,0[238x42,0,0,0,238x16,0,43{118x16,0,43,2,119x16,119,43,3}]
       panes:
-        - cd pixbi-embeddable; vim
-        - cd pixbi-embeddable
-        - cd pixbi-embeddable
-  - business-dashboard:
+        - cd ~/s/w
+        - cd ~/s/w
+        - cd ~/s/w
+  - empty:
       layout: e7d5,238x59,0,0[238x42,0,0,0,238x16,0,43{118x16,0,43,2,119x16,119,43,3}]
       panes:
-        - cd pixbi-business-dashboard; vim
-        - cd pixbi-business-dashboard
-        - cd pixbi-business-dashboard
-  - user-dashboard:
+        - cd ~/s/w
+        - cd ~/s/w
+        - cd ~/s/w
+  - empty:
       layout: e7d5,238x59,0,0[238x42,0,0,0,238x16,0,43{118x16,0,43,2,119x16,119,43,3}]
       panes:
-        - cd pixbi-consumer-dashboard; vim
-        - cd pixbi-consumer-dashboard
-        - cd pixbi-consumer-dashboard
-  - kinvey:
+        - cd ~/s/w
+        - cd ~/s/w
+        - cd ~/s/w
+  - empty:
       layout: e7d5,238x59,0,0[238x42,0,0,0,238x16,0,43{118x16,0,43,2,119x16,119,43,3}]
       panes:
-        - cd pixbi-kinvey; vim
-        - cd pixbi-kinvey
-        - cd pixbi-kinvey
-  - card:
-      layout: e7d5,238x59,0,0[238x42,0,0,0,238x16,0,43{118x16,0,43,2,119x16,119,43,3}]
-      panes:
-        - cd pixbi-api-card; vim
-        - cd pixbi-api-card
-        - cd pixbi-api-card
-  - checkout:
-      layout: e7d5,238x59,0,0[238x42,0,0,0,238x16,0,43{118x16,0,43,2,119x16,119,43,3}]
-      panes:
-        - cd pixbi-api-checkout; vim
-        - cd pixbi-api-checkout
-        - cd pixbi-api-checkout
-  - putty:
-      layout: e7d5,238x59,0,0[238x42,0,0,0,238x16,0,43{118x16,0,43,2,119x16,119,43,3}]
-      panes:
-        - cd pixbi-api-putty; vim
-        - cd pixbi-api-putty
-        - cd pixbi-api-putty
+        - cd ~/s/w
+        - cd ~/s/w
+        - cd ~/s/w

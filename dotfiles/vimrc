@@ -28,6 +28,13 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'christoomey/vim-tmux-navigator'
 NeoBundle 'jistr/vim-nerdtree-tabs'
 NeoBundle 'gcmt/taboo.vim'
+NeoBundle 'elzr/vim-json'
+NeoBundle 'michalliu/jsoncodecs.vim'
+NeoBundle 'michalliu/jsruntime.vim'
+NeoBundle 'michalliu/sourcebeautify.vim'
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
 
 " Required for NeoBundle
 filetype plugin indent on
@@ -46,7 +53,7 @@ set relativenumber
 set rnu
 
 " Indentation
-set smartindent
+set nosmartindent
 set autoindent
 
 " No hard wrap
@@ -125,17 +132,18 @@ vmap > >gv
 " capitals. Make Y behave like other capitals
 map Y y$
 
+""" Shortcuts with commands
 " Save
-nmap <Leader>w :w<CR>
+nmap <Leader>w :w
 " Save and quit
-nmap <Leader>q :q<CR>
+nmap <Leader>q :q
 " Remove buffer
-nmap <Leader>x :bd<CR>
+nmap <Leader>x :bd
 " Remove ALL buffers
-nmap <Leader>X :bd *<C-A><CR>
-
+nmap <Leader>X :bd *<C-A>
 " Reload current file
-nmap <Leader>e :e<CR>
+nmap <Leader>e :e
+
 " New file
 nmap <Leader>v :vert new<CR>
 nmap <Leader>b :new<CR>
@@ -210,7 +218,7 @@ nmap <Leader>/ :Gcommit --amend<CR>
 nmap <Leader>` :Gdiff<CR>
 
 " Tabs
-nmap <Leader><Space> :tabnew<CR>
+nmap <Leader>= :tabnew<CR>
 nmap <Leader>[ :tabp<CR>
 nmap <Leader>] :tabn<CR>
 nmap <Leader>1 1gt
@@ -223,3 +231,23 @@ nmap <Leader>7 7gt
 nmap <Leader>8 8gt
 nmap <Leader>9 9gt
 nmap <Leader>0 0gt
+
+" Snippets
+
+" Plugin key-mappings.
+"imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+"smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+"xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+" SuperTab like snippets behavior.
+imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: "\<TAB>"
+
+" For snippet_complete marker.
+"if has('conceal')
+"  set conceallevel=2 concealcursor=i
+"endif

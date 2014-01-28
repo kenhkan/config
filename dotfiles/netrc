@@ -1,0 +1,12 @@
+machine bitbucket.org
+  login kenhkan
+  password aX4H4JhFVmyNa4qY
+machine pixbipackages.com
+  login kenhkan
+  password aX4H4JhFVmyNa4qY
+machine api.heroku.com
+  login ken@pixbi.com
+  password 09fc4ae2-9636-4070-ab80-69c812e1b9b1
+machine code.heroku.com
+  login ken@pixbi.com
+  password 09fc4ae2-9636-4070-ab80-69c812e1b9b1
