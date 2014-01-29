@@ -104,13 +104,13 @@ set list listchars=tab:\ \ ,trail:·
 " Clean VIM artifacts on write
 au BufWritePost * :silent! :syntax sync fromstart<cr>:redraw!<cr>
 
+" Fold
+set foldmethod=syntax
+
 
 "----------"
 " MAPPINGS "
 "----------"
-
-" Reload source
-nmap <Leader>z :so ~/.vimrc<CR>
 
 " No highlight
 nmap <Leader>p :noh<CR>
@@ -231,6 +231,10 @@ nmap <Leader>7 7gt
 nmap <Leader>8 8gt
 nmap <Leader>9 9gt
 nmap <Leader>0 0gt
+
+" Folding
+nmap <Leader>z za
+nmap <Leader>Z zA
 
 " Snippets
 
