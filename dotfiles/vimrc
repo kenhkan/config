@@ -29,7 +29,6 @@ NeoBundle 'christoomey/vim-tmux-navigator'
 NeoBundle 'jistr/vim-nerdtree-tabs'
 NeoBundle 'gcmt/taboo.vim'
 NeoBundle 'elzr/vim-json'
-NeoBundle 'michalliu/jsoncodecs.vim'
 NeoBundle 'michalliu/jsruntime.vim'
 NeoBundle 'michalliu/sourcebeautify.vim'
 NeoBundle 'Shougo/neocomplcache'
@@ -230,7 +229,7 @@ nmap <Leader>6 6gt
 nmap <Leader>7 7gt
 nmap <Leader>8 8gt
 nmap <Leader>9 9gt
-nmap <Leader>0 0gt
+nmap <Leader>0 10gt
 
 " Folding
 nmap <Leader>z za
