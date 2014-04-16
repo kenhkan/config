@@ -4,6 +4,9 @@ machine api.heroku.com
 machine code.heroku.com
   login kenhkan@gmail.com
   password 3720f7ec72bf9da10a0c1ddfd1dc01a8bab957b3
+machine github.com
+  login kenhkan
+  password 46c86e99104a6d1196e16ca8d14a780a7466e6bc
 machine raw.github.com
   login kenhkan
   password 46c86e99104a6d1196e16ca8d14a780a7466e6bc

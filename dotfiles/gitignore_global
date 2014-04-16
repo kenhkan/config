@@ -13,4 +13,4 @@ Icon
 .Trashes
 
 # Swap files
-*.swp
+*.sw*
