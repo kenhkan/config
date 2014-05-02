@@ -10,3 +10,6 @@ machine github.com
 machine raw.github.com
   login kenhkan
   password 46c86e99104a6d1196e16ca8d14a780a7466e6bc
+machine raw.githubusercontent.com
+  login kenhkan
+  password 46c86e99104a6d1196e16ca8d14a780a7466e6bc
