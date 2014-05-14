@@ -235,8 +235,8 @@ nmap <Leader>9 9gt
 nmap <Leader>0 10gt
 
 " Folding
-nmap <Leader>z za
-nmap <Leader>Z zA
+nmap <Leader>Z za
+nmap <Leader>z zA
 
 " Format JSON
 command! JSON %!python -m json.tool

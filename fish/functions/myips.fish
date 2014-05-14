@@ -1,3 +1,3 @@
-function myip
+function myips
   ifconfig | grep inet
 end
