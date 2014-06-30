@@ -32,6 +32,8 @@ NeoBundle 'elzr/vim-json'
 NeoBundle 'Shougo/neocomplete'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundle 'maksimr/vim-jsbeautify'
+NeoBundle 'einars/js-beautify'
 
 " Required for NeoBundle
 filetype plugin indent on
@@ -238,9 +240,6 @@ nmap <Leader>0 10gt
 nmap <Leader>Z za
 nmap <Leader>z zA
 
-" Format JSON
-command! JSON %!python -m json.tool
-
 " Snippets
 
 " SuperTab like snippets behavior.
@@ -265,3 +264,13 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 "let g:neosnippet#enable_snipmate_compatibility = 1
 " Tell Neosnippet about the other snippets
 let g:neosnippet#snippets_directory='~/.vim/bundle/neosnippet-snippets/neosnippets'
+
+" Set path to js-beautify file
+let g:jsbeautify_file = fnameescape(fnamemodify(expand("<sfile>"), ":h")."/bundle/js-beautify/beautify.js")
+let g:jsbeautify_engine = "node"
+
+" Formatters
+command! JSON %!python -m json.tool
+command! HTML :call HtmlBeautify()
+command! JS :call JsBeautify()
+command! CSS :call CSSBeautify()
