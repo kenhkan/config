@@ -73,7 +73,7 @@ windows:
         - cd ~/s/w
         - cd ~/s/w
         - cd ~/s/w
-  - empty:
+  - scratch:
       layout: e7d5,238x59,0,0[238x42,0,0,0,238x16,0,43{118x16,0,43,2,119x16,119,43,3}]
       panes:
         - cd ~/s/w
