@@ -325,7 +325,7 @@ nmap <silent> --h "=HaskellModuleHeader()<CR>:0put =<CR>
 
 " Syntastic
 "map <silent> <Leader>e :Errors<CR>
-"map <Leader>s :SyntasticToggleMode<CR>
+map <Leader>_ :SyntasticToggleMode<CR>
 let g:syntastic_auto_loc_list=1
 
 " pointfree
