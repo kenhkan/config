@@ -1,4 +1,5 @@
 browserify
 configstore
 fish/*
+!fish/config.fish
 !fish/functions
