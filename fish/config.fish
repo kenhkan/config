@@ -1,4 +1,4 @@
-set PATH /usr/local/bin $PATH ~/.rvm/gems/ruby-2.0.0-p247/bin ~/.cabal/bin ~/.config/bin
+set PATH /Users/kenhkan/.cabal/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/bin /opt/X11/bin /Users/kenhkan/.config/bin /Users/kenhkan/.rvm/gems/ruby-2.0.0-p353/bin /usr/local/MacGPG2/bin /Users/kenhkan/.rvm/gems/ruby-2.0.0-p247/bin
 setenv EDITOR vim
 
 
