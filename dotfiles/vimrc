@@ -37,7 +37,6 @@ NeoBundle 'einars/js-beautify'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'eagletmt/ghcmod-vim'
-NeoBundle 'wting/lhaskell.vim'
 
 " Required for NeoBundle
 filetype plugin indent on
