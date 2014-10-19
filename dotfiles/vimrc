@@ -36,6 +36,7 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'eagletmt/ghcmod-vim'
 NeoBundle 'kenhkan/lhaskell.vim'
+NeoBundle 'dag/vim2hs'
 
 " Required for NeoBundle
 filetype plugin indent on
@@ -372,3 +373,6 @@ let g:tagbar_type_haskell = {
 " No LaTex for Literal Haskell
 let lhs_markup="none"
 let b:lhs_markup="none"
+
+" Literate Haskell
+autocmd FileType lhaskell setlocal formatoptions+=ro
