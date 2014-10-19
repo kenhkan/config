@@ -327,9 +327,6 @@ nmap <silent> --h "=HaskellModuleHeader()<CR>:0put =<CR>
 map <Leader>_ :SyntasticToggleMode<CR>
 let g:syntastic_auto_loc_list=1
 
-" pointfree
-autocmd BufEnter *.hs set formatprg=pointfree
-
 " ghc-mod
 map <silent> tu :call GHC_BrowseAll()<CR>
 map <silent> tw :call GHC_ShowType(1)<CR>
