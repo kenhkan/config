@@ -1,7 +1,3 @@
-" Compatibility hacks
-set shell=/bin/bash
-set nocompatible
-
 " NeoBunlde
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
@@ -43,6 +39,17 @@ filetype plugin indent on
 
 " NeoBundle installation check.
 NeoBundleCheck
+
+
+
+"----------"
+" SETTINGS "
+"----------"
+
+" Compatibility hacks
+set shell=/bin/bash
+set nocompatible
+
 
 " Highlighting
 syntax enable
@@ -110,6 +117,7 @@ au BufWritePost * :silent! :syntax sync fromstart<cr>:redraw!<cr>
 set foldmethod=syntax
 
 
+
 "----------"
 " MAPPINGS "
 "----------"
@@ -134,7 +142,6 @@ vmap > >gv
 " capitals. Make Y behave like other capitals
 map Y y$
 
-""" Shortcuts with commands
 " Save
 nmap <Leader>w :w
 " Save and quit
@@ -243,7 +250,9 @@ nmap <Leader>0 10gt
 nmap <Leader>Z za
 nmap <Leader>z zA
 
-""" Snippets
+" Tagbar
+nmap <leader>\ :TagbarToggle<CR>
+let g:tagbar_autofocus = 1
 
 " SuperTab like snippets behavior.
 imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
@@ -253,37 +262,23 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 \ "\<Plug>(neosnippet_expand_or_jump)"
 \: "\<TAB>"
 
-" Plugin key-mappings.
-"imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-"smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-"xmap <C-k>     <Plug>(neosnippet_expand_target)
 
-" For snippet_complete marker.
-"if has('conceal')
-"  set conceallevel=2 concealcursor=i
-"endif
 
-" Enable snipMate compatibility feature.
-"let g:neosnippet#enable_snipmate_compatibility = 1
-" Tell Neosnippet about the other snippets
-let g:neosnippet#snippets_directory='~/.vim/bundle/neosnippet-snippets/neosnippets'
+"------------"
+" FORMATTERS "
+"------------"
 
-" Set path to js-beautify file
-let g:jsbeautify_file = fnameescape(fnamemodify(expand("<sfile>"), ":h")."/bundle/js-beautify/beautify.js")
-let g:jsbeautify_engine = "node"
-
-" Formatters
 command! JSON %!python -m json.tool
 command! HTML :call HtmlBeautify()
 command! JS :call JsBeautify()
 command! CSS :call CSSBeautify()
 
-" Tagbar
-nmap <leader>\ :TagbarToggle<CR>
-let g:tagbar_autofocus = 1
 
 
-""" Haskell
+"---------"
+" HASKELL "
+"---------"
+
 " See http://www.stephendiehl.com/posts/vim_haskell.html
 
 " Module Sections
@@ -370,7 +365,7 @@ let g:tagbar_type_haskell = {
     \ }
 \ }
 
-" No LaTex for Literal Haskell
+" No LaTeX for Literal Haskell
 let lhs_markup="none"
 let b:lhs_markup="none"
 
