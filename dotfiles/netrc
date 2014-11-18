@@ -1,15 +1,6 @@
-machine github.com
-  login kenhkan
-  password 53d5e9a08a060eec6b4db6becde78afa259f913b
-machine raw.github.com
-  login kenhkan
-  password 53d5e9a08a060eec6b4db6becde78afa259f913b
 machine raw.githubusercontent.com
   login kenhkan
-  password 53d5e9a08a060eec6b4db6becde78afa259f913b
+  password a38c2d26e5a29fecfad59a38b617ea8f3a6e94ff
 machine api.heroku.com
-  login kenhkan@gmail.com
-  password 3720f7ec72bf9da10a0c1ddfd1dc01a8bab957b3
-machine code.heroku.com
   login kenhkan@gmail.com
   password 3720f7ec72bf9da10a0c1ddfd1dc01a8bab957b3
