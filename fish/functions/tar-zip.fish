@@ -1,3 +1,3 @@
-function tar_zip
+function tar-zip
   tar cvzf $argv
 end
