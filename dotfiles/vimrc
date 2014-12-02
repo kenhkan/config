@@ -263,6 +263,10 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 \ "\<Plug>(neosnippet_expand_or_jump)"
 \: "\<TAB>"
 
+" Sort
+vmap <Leader>s :sort<CR>
+vmap <Leader>su :sort u<CR>
+
 
 
 "------------"
@@ -375,5 +379,5 @@ autocmd FileType lhaskell setlocal formatoptions+=ro
 
 " Vertical alignment
 vmap <Leader>align :Align 
-vmap <Leader>ahscbl :Align , : ==
-vmap <Leader>ahsrec :Align , { } ::
+vmap <Leader>ahscbl :Align , : ==<CR>
+vmap <Leader>ahsrec :Align , { } ::<CR>
