@@ -33,6 +33,7 @@ NeoBundle 'majutsushi/tagbar'
 NeoBundle 'eagletmt/ghcmod-vim'
 NeoBundle 'kenhkan/lhaskell.vim'
 NeoBundle 'dag/vim2hs'
+NeoBundle 'vim-scripts/Align'
 
 " Required for NeoBundle
 filetype plugin indent on
@@ -371,3 +372,8 @@ let b:lhs_markup="none"
 
 " Literate Haskell
 autocmd FileType lhaskell setlocal formatoptions+=ro
+
+" Vertical alignment
+vmap <Leader>align :Align 
+vmap <Leader>ahscbl :Align , : ==
+vmap <Leader>ahsrec :Align , { } ::
