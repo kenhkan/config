@@ -381,3 +381,6 @@ autocmd FileType lhaskell setlocal formatoptions+=ro
 vmap <Leader>align :Align 
 vmap <Leader>ahscbl :Align , : ==<CR>
 vmap <Leader>ahsrec :Align , { } ::<CR>
+vmap <Leader>ahsdef :Align ::<CR>
+vmap <Leader>ahsmod :Align ( ) ,<CR>
+vmap <Leader>ahsvar :Align = {<CR>
