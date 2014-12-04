@@ -379,8 +379,15 @@ autocmd FileType lhaskell setlocal formatoptions+=ro
 
 " Vertical alignment
 vmap <Leader>align :Align 
+" Cabal dependencies
 vmap <Leader>ahscbl :Align , : ==<CR>
+" Records
 vmap <Leader>ahsrec :Align , { } ::<CR>
-vmap <Leader>ahsdef :Align ::<CR>
+" Type definitions
+vmap <Leader>ahstype :Align ::<CR>
+" Module declarations
 vmap <Leader>ahsmod :Align ( ) ,<CR>
-vmap <Leader>ahsvar :Align = {<CR>
+" Variable definitions
+vmap <Leader>ahsvar :Align = { } ::<CR>
+" do notation
+vmap <Leader>ahsdo :Align = <-<CR>
