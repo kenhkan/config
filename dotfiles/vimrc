@@ -385,8 +385,6 @@ vmap <Leader>acbl :Align , : ==<CR>
 vmap <Leader>arec :Align , { } :: (<CR>
 " Type definitions
 vmap <Leader>atype :Align ::<CR>
-" Module declarations
-vmap <Leader>amod :Align ( ) ,<CR>
 " Variable definitions
 vmap <Leader>avar :Align = { } :: \|<CR>
 " do notation
