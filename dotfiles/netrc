@@ -1,6 +1,6 @@
 machine raw.githubusercontent.com
   login kenhkan
-  password a38c2d26e5a29fecfad59a38b617ea8f3a6e94ff
+  password 911dc0101f96cf9f9e13ca6095a380d644aad821
 machine api.heroku.com
   login kenhkan@gmail.com
   password 3720f7ec72bf9da10a0c1ddfd1dc01a8bab957b3
