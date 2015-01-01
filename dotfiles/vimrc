@@ -382,7 +382,7 @@ vmap <Leader>align :Align
 " Cabal dependencies
 vmap <Leader>acbl :Align , : ==<CR>
 " Records
-vmap <Leader>arec :Align , { } :: (<CR>
+vmap <Leader>arec :Align , { } :: ( )<CR>
 " Type definitions
 vmap <Leader>atype :Align ::<CR>
 " Variable definitions
