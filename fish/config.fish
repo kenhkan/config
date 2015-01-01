@@ -1,4 +1,4 @@
-set PATH /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/bin /opt/X11/bin /Users/kenhkan/.config/bin
+set PATH /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/bin /opt/X11/bin /Users/kenhkan/.config/bin /Users/kenhkan/.cabal/bin/
 setenv EDITOR vim
 
 
