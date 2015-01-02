@@ -1,6 +1,6 @@
 --ignore-dir=node_modules
---type-set=coffeescript=.coffee
+--ignore-dir=dist
+--ignore-dir=build
 --type-set=stylus=.styl
 --type-set=jade=.jade
---type-set=fbp=.fbp
 --type-set=pgsql=.pgsql
