@@ -1,56 +1,74 @@
-" NeoBunlde
+" ----------
+" NeoBundles
+" ----------
+
+" NeoBundle loads first
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
-
 call neobundle#rc(expand('~/.vim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-" NeoBundle stuff
+
+" ----------
+" The bundles
+" ----------
+
+" OS process interaction
 NeoBundle 'Shougo/vimproc'
+" Moving even faster in vim
 NeoBundle 'Lokaltog/vim-easymotion'
+" Project file tree
 NeoBundle 'scrooloose/nerdtree'
+" A single nerdtree
+NeoBundle 'jistr/vim-nerdtree-tabs'
+" Essential utilities like search
 NeoBundle 'Shougo/unite.vim'
+" Deal with comments
 NeoBundle 'scrooloose/nerdcommenter'
+" Tab in vim
+NeoBundle 'gcmt/taboo.vim'
+" Tabular alignment
+NeoBundle "godlygeek/tabular"
+" The snippet engine
+NeoBundle "sirver/ultisnips"
+" The snippets themselves
+NeoBundle "honza/vim-snippets"
+" Git
+NeoBundle 'tpope/vim-fugitive'
+" Web tech beautification: HTML, CSS, and of course JS
+NeoBundle 'maksimr/vim-jsbeautify'
+" The most-in-one Haskell bundle
+NeoBundle 'dag/vim2hs'
+" GHC integration
+NeoBundle 'eagletmt/ghcmod-vim'
+" Other language support
 NeoBundle 'digitaltoad/vim-jade'
-NeoBundle 'ninegrid/vim-fbp'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'wavded/vim-stylus'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'christoomey/vim-tmux-navigator'
-NeoBundle 'jistr/vim-nerdtree-tabs'
-NeoBundle 'gcmt/taboo.vim'
 NeoBundle 'elzr/vim-json'
-NeoBundle 'Shougo/neocomplete'
-NeoBundle 'Shougo/neosnippet'
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'maksimr/vim-jsbeautify'
-NeoBundle 'einars/js-beautify'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'majutsushi/tagbar'
-NeoBundle 'eagletmt/ghcmod-vim'
-NeoBundle 'kenhkan/lhaskell.vim'
-NeoBundle 'dag/vim2hs'
-NeoBundle 'vim-scripts/Align'
+
+" TODO: restore
+"NeoBundle 'majutsushi/tagbar'
+"NeoBundle 'scrooloose/syntastic'
+"NeoBundle 'eagletmt/neco-ghc'
+
+
+" ----------
+" Basic setup
+" ----------
 
 " Required for NeoBundle
 filetype plugin indent on
 
-" NeoBundle installation check.
+" NeoBundle installation check
 NeoBundleCheck
-
-
-
-"----------"
-" SETTINGS "
-"----------"
 
 " Compatibility hacks
 set shell=/bin/bash
 set nocompatible
-
 
 " Highlighting
 syntax enable
@@ -103,25 +121,11 @@ set showtabline=2
 " Leader
 let mapleader=" "
 
-" Taboo tabs
-let g:taboo_tab_format='  %N  '
-let g:taboo_renamed_tab_format='  %N %f  '
-
-" Show tab guides
-set lcs=tab:\⁞\
-set list listchars=tab:\ \ ,trail:·
-
 " Clean VIM artifacts on write
 au BufWritePost * :silent! :syntax sync fromstart<cr>:redraw!<cr>
 
 " Fold
 set foldmethod=syntax
-
-
-
-"----------"
-" MAPPINGS "
-"----------"
 
 " No highlight
 nmap <Leader>p :noh<CR>
@@ -194,23 +198,6 @@ nmap <Leader>y <C-W>\|
 " Normalize all split sizes, which is very handy when resizing terminal
 nmap <Leader>u <C-W>=
 
-" NERDTree
-nmap <Leader>g :NERDTreeTabsToggle<CR>
-" Close NERDTree on file opened
-let NERDTreeQuitOnOpen = 1
-
-" Search by file/buffer name
-nmap <Leader>d :Unite<Space>file_rec/async<CR>
-" Search directory content
-nmap <Leader>s :Unite<Space>grep:.<CR>
-" Select buffer
-nmap <Leader>a :Unite<Space>-quick-match<Space>buffer<CR>
-
-" Ignore `.gitignore` files
-let g:unite_source_grep_command = 'ag'
-let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
-let g:unite_source_grep_recursive_opt = ''
-
 " Enable yank history
 let g:unite_source_history_yank_enable = 1
 
@@ -229,10 +216,68 @@ nmap m N
 " git with fugitive
 nmap <Leader>' :Gstatus<CR>
 nmap <Leader>; :Gcommit<CR>
-nmap <Leader>/ :Gcommit --amend<CR>
 nmap <Leader>` :Gdiff<CR>
 
+" Folding
+nmap <Leader>Z za
+nmap <Leader>z zA
+
+" Sort
+vmap <Leader>s :sort<CR>
+vmap <Leader>su :sort u<CR>
+
+
+" ----------
+" Manipulating files and the OS
+" ----------
+
+" Activation shortcut
+nmap <Leader>g :NERDTreeTabsToggle<CR>
+" Close NERDTree on file opened
+let NERDTreeQuitOnOpen = 1
+
+" Search by file/buffer name
+nmap <Leader>d :Unite<Space>file_rec/async<CR>
+" Search directory content
+nmap <Leader>s :Unite<Space>grep:.<CR>
+" Select buffer
+nmap <Leader>a :Unite<Space>-quick-match<Space>buffer<CR>
+
+" Ignore `.gitignore` files
+let g:unite_source_grep_command = 'ag'
+let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
+let g:unite_source_grep_recursive_opt = ''
+
+
+
+" ----------
+" Web tech
+" ----------
+
+command! JSON %!python -m json.tool
+
+nnoremap <Leader><Space>js :call JsBeautify()<cr>
+nnoremap <Leader><Space>html :call HtmlBeautify()<cr>
+nnoremap <Leader><Space>css :call CSSBeautify()<cr>
+
+vnoremap <Leader><Space>js :call RangeJsBeautify()<cr>
+vnoremap <Leader><Space>html :call RangeHtmlBeautify()<cr>
+vnoremap <Leader><Space>css :call RangeCSSBeautify()<cr>
+
+
+" ----------
 " Tabs
+" ----------
+
+" Taboo
+let g:taboo_tab_format='  %N  '
+let g:taboo_renamed_tab_format='  %N %f  '
+
+" Show tab guides
+set lcs=tab:\⁞\
+set list listchars=tab:\ \ ,trail:·
+
+" Shortcuts
 nmap <Leader>= :tabnew<CR>
 nmap <Leader>[ :tabp<CR>
 nmap <Leader>] :tabn<CR>
@@ -247,44 +292,28 @@ nmap <Leader>8 8gt
 nmap <Leader>9 9gt
 nmap <Leader>0 10gt
 
-" Folding
-nmap <Leader>Z za
-nmap <Leader>z zA
 
-" Tagbar
-nmap <leader>\ :TagbarToggle<CR>
-let g:tagbar_autofocus = 1
+" ----------
+" Alignments
+" ----------
 
-" SuperTab like snippets behavior.
-imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: pumvisible() ? "\<C-n>" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: "\<TAB>"
+nmap <Leader>/ :Tabularize /
+vmap <Leader>/ :Tabularize /
 
-" Sort
-vmap <Leader>s :sort<CR>
-vmap <Leader>su :sort u<CR>
+" Generic Haskell delimiters:
+"   <-  ->  (  )  {  }  =  ,
+nmap <Leader>/h :Tabularize /\(<-\\|->\\|)\\|{\\|}\\|=\\|,\)<CR>
+vmap <Leader>/h :Tabularize /\(<-\\|->\\|)\\|{\\|}\\|=\\|,\)<CR>
 
 
+" ----------
+" Haskell
+" ----------
 
-"------------"
-" FORMATTERS "
-"------------"
-
-command! JSON %!python -m json.tool
-command! HTML :call HtmlBeautify()
-command! JS :call JsBeautify()
-command! CSS :call CSSBeautify()
-
-
-
-"---------"
-" HASKELL "
-"---------"
-
-" See http://www.stephendiehl.com/posts/vim_haskell.html
+" Do not substitute characters, ever
+let g:haskell_conceal_wide = 0
+let g:haskell_conceal = 0
+let g:haskell_conceal_enumerations = 0
 
 " Module Sections
 let s:width = 80
@@ -302,7 +331,6 @@ nmap <silent> --s "=HaskellModuleSection()<CR>gp
 
 " Module Headers
 let s:width = 80
-
 
 function! HaskellModuleHeader(...)
     let name = 0 < a:0 ? a:1 : inputdialog("Module: ")
@@ -323,19 +351,23 @@ endfunction
 
 nmap <silent> --h "=HaskellModuleHeader()<CR>:0put =<CR>
 
-" Syntastic
+"" [syntastic]
 "map <silent> <Leader>e :Errors<CR>
-map <Leader>_ :SyntasticToggleMode<CR>
-let g:syntastic_auto_loc_list=1
+"map <Leader>_ :SyntasticToggleMode<CR>
+"" It's important to turn this off as ghc-mod annoyingly complains about
+"" missing ghc-prim.
+"let g:syntastic_auto_loc_list=0
 
-" ghc-mod
-map <silent> tu :call GHC_BrowseAll()<CR>
-map <silent> tw :call GHC_ShowType(1)<CR>
+"" [ghc-mod]
+"map <silent> tu :call GHC_BrowseAll()<CR>
+"map <silent> tw :call GHC_ShowType(1)<CR>
 
-" hdevtools
-au FileType haskell nnoremap <buffer> <F1> :HdevtoolsType<CR>
-au FileType haskell nnoremap <buffer> <silent> <F2> :HdevtoolsClear<CR>
-au FileType haskell nnoremap <buffer> <silent> <F3> :HdevtoolsInfo<CR>
+" [ghcmod-vim] Always lint on save
+autocmd BufWritePost *.hs :GhcModLint
+
+" Haddock documentation setup
+let g:haddock_browser = "open"
+let g:haddock_browser_callformat = "%s %s"
 
 " tagbar
 let g:tagbar_type_haskell = {
@@ -370,24 +402,10 @@ let g:tagbar_type_haskell = {
     \ }
 \ }
 
-" No LaTeX for Literal Haskell
-let lhs_markup="none"
-let b:lhs_markup="none"
+" Tagbar
+nmap <leader>\ :TagbarToggle<CR>
+let g:tagbar_autofocus = 1
 
-" Literate Haskell
-autocmd FileType lhaskell setlocal formatoptions+=ro
-
-" Vertical alignment
-vmap <Leader>align :Align 
-" Cabal dependencies
-vmap <Leader>acbl :Align , : ==<CR>
-" Records
-vmap <Leader>arec :Align , { } :: ( )<CR>
-" Type definitions
-vmap <Leader>atype :Align ::<CR>
-" Variable definitions
-vmap <Leader>avar :Align = { } :: \|<CR>
-" do notation
-vmap <Leader>ado :Align = <-<CR>
-" case notation
-vmap <Leader>acase :Align -><CR>
+" Snippets
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
