@@ -36,14 +36,18 @@ NeoBundle "godlygeek/tabular"
 NeoBundle "sirver/ultisnips"
 " The snippets themselves
 NeoBundle "honza/vim-snippets"
-" Git
+" Git support
 NeoBundle 'tpope/vim-fugitive'
-" Web tech beautification: HTML, CSS, and of course JS
-NeoBundle 'maksimr/vim-jsbeautify'
+" Completion engine
+NeoBundle 'Shougo/neocomplcache.vim'
 " The most-in-one Haskell bundle
 NeoBundle 'dag/vim2hs'
 " GHC integration
 NeoBundle 'eagletmt/ghcmod-vim'
+" Haskell code completion
+NeoBundle 'eagletmt/neco-ghc'
+" Web tech beautification: HTML, CSS, and of course JS
+NeoBundle 'maksimr/vim-jsbeautify'
 " Other language support
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'plasticboy/vim-markdown'
@@ -53,7 +57,6 @@ NeoBundle 'elzr/vim-json'
 " TODO: restore
 "NeoBundle 'majutsushi/tagbar'
 "NeoBundle 'scrooloose/syntastic'
-"NeoBundle 'eagletmt/neco-ghc'
 
 
 " ----------
@@ -226,6 +229,9 @@ nmap <Leader>z zA
 vmap <Leader>s :sort<CR>
 vmap <Leader>su :sort u<CR>
 
+" Start code ompletion engine
+let g:neocomplcache_enable_at_startup = 1
+
 
 " ----------
 " Manipulating files and the OS
@@ -305,69 +311,12 @@ vmap <Leader>/ :Tabularize /
 nmap <Leader>/h :Tabularize /\(<-\\|->\\|)\\|{\\|}\\|=\\|,\)<CR>
 vmap <Leader>/h :Tabularize /\(<-\\|->\\|)\\|{\\|}\\|=\\|,\)<CR>
 
-
-" ----------
-" Haskell
-" ----------
-
-" Do not substitute characters, ever
-let g:haskell_conceal_wide = 0
-let g:haskell_conceal = 0
-let g:haskell_conceal_enumerations = 0
-
-" Module Sections
-let s:width = 80
-
-function! HaskellModuleSection(...)
-    let name = 0 < a:0 ? a:1 : inputdialog("Section name: ")
-
-    return  repeat('-', s:width) . "\n"
-    \       . "--  " . name . "\n"
-    \       . "\n"
-
-endfunction
-
-nmap <silent> --s "=HaskellModuleSection()<CR>gp
-
-" Module Headers
-let s:width = 80
-
-function! HaskellModuleHeader(...)
-    let name = 0 < a:0 ? a:1 : inputdialog("Module: ")
-    let note = 1 < a:0 ? a:2 : inputdialog("Note: ")
-    let description = 2 < a:0 ? a:3 : inputdialog("Describe this module: ")
-
-    return  repeat('-', s:width) . "\n" 
-    \       . "-- | \n" 
-    \       . "-- Module      : " . name . "\n"
-    \       . "-- Note        : " . note . "\n"
-    \       . "-- \n"
-    \       . "-- " . description . "\n"
-    \       . "-- \n"
-    \       . repeat('-', s:width) . "\n"
-    \       . "\n"
-
-endfunction
-
-nmap <silent> --h "=HaskellModuleHeader()<CR>:0put =<CR>
-
 "" [syntastic]
 "map <silent> <Leader>e :Errors<CR>
 "map <Leader>_ :SyntasticToggleMode<CR>
 "" It's important to turn this off as ghc-mod annoyingly complains about
 "" missing ghc-prim.
 "let g:syntastic_auto_loc_list=0
-
-"" [ghc-mod]
-"map <silent> tu :call GHC_BrowseAll()<CR>
-"map <silent> tw :call GHC_ShowType(1)<CR>
-
-" [ghcmod-vim] Always lint on save
-autocmd BufWritePost *.hs :GhcModLint
-
-" Haddock documentation setup
-let g:haddock_browser = "open"
-let g:haddock_browser_callformat = "%s %s"
 
 " tagbar
 let g:tagbar_type_haskell = {
@@ -409,3 +358,26 @@ let g:tagbar_autofocus = 1
 " Snippets
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
+
+
+" ----------
+" Haskell
+" ----------
+
+" Do not substitute characters, ever
+let g:haskell_conceal_wide = 0
+let g:haskell_conceal = 0
+let g:haskell_conceal_enumerations = 0
+
+" Haddock documentation setup
+let g:haddock_browser = "open"
+let g:haddock_browser_callformat = "%s %s"
+
+" Prefer point-free style
+autocmd BufEnter *.hs set formatprg=pointfree
+
+" Always lint on save
+autocmd BufWritePost *.hs :GhcModLint
+
+" Setup neco-ghc for completion
+setlocal omnifunc=necoghc#omnifunc
