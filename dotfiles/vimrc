@@ -319,6 +319,11 @@ vmap <Leader>/ :Tabularize /
 nmap <Leader>/h :Tabularize /\(<-\\|->\\|)\\|{\\|}\\|=\\|,\)<CR>
 vmap <Leader>/h :Tabularize /\(<-\\|->\\|)\\|{\\|}\\|=\\|,\)<CR>
 
+" Generic JavaScript delimiters:
+"   :  =  ,
+nmap <Leader>/j :Tabularize /\(:\\|=\\|,\)<CR>
+vmap <Leader>/j :Tabularize /\(:\\|=\\|,\)<CR>
+
 
 " ----------
 " Ctags
