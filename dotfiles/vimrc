@@ -363,3 +363,10 @@ autocmd BufWritePost *.hs :GhcModLint
 
 " Setup neco-ghc for completion
 setlocal omnifunc=necoghc#omnifunc
+
+
+" ----------
+" Base-64
+" ----------
+
+:vnoremap <leader><space>64 c<c-r>=system('base64 --decode', @")<cr><esc>
