@@ -275,13 +275,13 @@ let g:unite_source_grep_recursive_opt = ''
 
 command! JSON %!python -m json.tool
 
-nnoremap <Leader><Space>js :call JsBeautify()<cr>
-nnoremap <Leader><Space>html :call HtmlBeautify()<cr>
-nnoremap <Leader><Space>css :call CSSBeautify()<cr>
+nnoremap <Leader><Space>js :call JsBeautify()<CR>
+nnoremap <Leader><Space>html :call HtmlBeautify()<CR>
+nnoremap <Leader><Space>css :call CSSBeautify()<CR>
 
-vnoremap <Leader><Space>js :call RangeJsBeautify()<cr>
-vnoremap <Leader><Space>html :call RangeHtmlBeautify()<cr>
-vnoremap <Leader><Space>css :call RangeCSSBeautify()<cr>
+vnoremap <Leader><Space>js :call RangeJsBeautify()<CR>
+vnoremap <Leader><Space>html :call RangeHtmlBeautify()<CR>
+vnoremap <Leader><Space>css :call RangeCSSBeautify()<CR>
 
 
 " ----------
@@ -369,4 +369,4 @@ setlocal omnifunc=necoghc#omnifunc
 " Base-64
 " ----------
 
-:vnoremap <leader><space>64 c<c-r>=system('base64 --decode', @")<cr><esc>
+:vnoremap <Leader><Space>64 c<C-R>=system('base64 --decode', @")<CR><Esc>
