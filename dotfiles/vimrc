@@ -321,8 +321,8 @@ vmap <Leader>/h :Tabularize /\(<-\\|->\\|)\\|{\\|}\\|=\\|,\)<CR>
 
 " Cabal delimiters:
 "   :  ,  ==   =>
-nmap <Leader>/c :Tabularize /\(:\\|,\\|==\\|=>\)<CR>
-vmap <Leader>/c :Tabularize /\(:\\|,\\|==\\|=>\)<CR>
+nmap <Leader>/c :Tabularize /\(==\\|=>\\|:\\|,\)<CR>
+vmap <Leader>/c :Tabularize /\(==\\|=>\\|:\\|,\)<CR>
 
 " Generic JavaScript delimiters:
 "   :  =  ,
@@ -385,11 +385,11 @@ vnoremap <Leader><Space>64 c<C-R>=system('base64 --decode', @")<CR><Esc>
 let g:EasyMotion_smartcase = 1
 
 " Replace search
-nmap / <Plug>(easymotion-s)
+nmap f <Plug>(easymotion-s)
 
 " Use EasyMotion for search
-nmap f <Plug>(easymotion-sn)
-"omap f <Plug>(easymotion-tn)
+nmap <Leader>f <Plug>(easymotion-sn)
+omap <Leader>f <Plug>(easymotion-tn)
 
 " Previous and next
 map n <Plug>(easymotion-next)
