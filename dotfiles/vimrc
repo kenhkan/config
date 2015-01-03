@@ -319,6 +319,11 @@ vmap <Leader>/ :Tabularize /
 nmap <Leader>/h :Tabularize /\(<-\\|->\\|)\\|{\\|}\\|=\\|,\)<CR>
 vmap <Leader>/h :Tabularize /\(<-\\|->\\|)\\|{\\|}\\|=\\|,\)<CR>
 
+" Cabal delimiters:
+"   :  ,  ==   =>
+nmap <Leader>/c :Tabularize /\(:\\|,\\|==\\|=>\)<CR>
+vmap <Leader>/c :Tabularize /\(:\\|,\\|==\\|=>\)<CR>
+
 " Generic JavaScript delimiters:
 "   :  =  ,
 nmap <Leader>/j :Tabularize /\(:\\|=\\|,\)<CR>
