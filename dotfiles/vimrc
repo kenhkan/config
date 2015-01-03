@@ -223,9 +223,6 @@ let g:vim_markdown_folding_disabled=1
 " Redo
 map r <C-r>
 
-" Use sane (i.e. normal) regexes
-map <Leader>f /\v
-
 " Search previous
 nmap m N
 
@@ -273,15 +270,13 @@ let g:unite_source_grep_recursive_opt = ''
 " Web tech
 " ----------
 
-command! JSON %!python -m json.tool
+nnoremap <Leader><Space>JS :call JsBeautify()<CR>
+nnoremap <Leader><Space>HTML :call HtmlBeautify()<CR>
+nnoremap <Leader><Space>CSS :call CSSBeautify()<CR>
 
-nnoremap <Leader><Space>js :call JsBeautify()<CR>
-nnoremap <Leader><Space>html :call HtmlBeautify()<CR>
-nnoremap <Leader><Space>css :call CSSBeautify()<CR>
-
-vnoremap <Leader><Space>js :call RangeJsBeautify()<CR>
-vnoremap <Leader><Space>html :call RangeHtmlBeautify()<CR>
-vnoremap <Leader><Space>css :call RangeCSSBeautify()<CR>
+vnoremap <Leader><Space>JS :call RangeJsBeautify()<CR>
+vnoremap <Leader><Space>HTML :call RangeHtmlBeautify()<CR>
+vnoremap <Leader><Space>CSS :call RangeCSSBeautify()<CR>
 
 
 " ----------
@@ -369,4 +364,31 @@ setlocal omnifunc=necoghc#omnifunc
 " Base-64
 " ----------
 
-:vnoremap <Leader><Space>64 c<C-R>=system('base64 --decode', @")<CR><Esc>
+vnoremap <Leader><Space>64 c<C-R>=system('base64 --decode', @")<CR><Esc>
+
+
+" ----------
+" EasyMotion
+" ----------
+
+" Case-sensitive
+let g:EasyMotion_smartcase = 1
+
+" Replace search
+nmap / <Plug>(easymotion-s)
+
+" Use EasyMotion for search
+map f <Plug>(easymotion-sn)
+omap f <Plug>(easymotion-tn)
+
+" Previous and next
+map n <Plug>(easymotion-next)
+map N <Plug>(easymotion-prev)
+
+" hjkl-specific motions
+map <Leader><Space>l <Plug>(easymotion-lineforward)
+map <Leader><Space>j <Plug>(easymotion-j)
+map <Leader><Space>k <Plug>(easymotion-k)
+map <Leader><Space>h <Plug>(easymotion-linebackward)
+" keep cursor colum when JK motion
+let g:EasyMotion_startofline = 0
