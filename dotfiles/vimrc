@@ -383,8 +383,8 @@ let g:EasyMotion_smartcase = 1
 nmap / <Plug>(easymotion-s)
 
 " Use EasyMotion for search
-map f <Plug>(easymotion-sn)
-omap f <Plug>(easymotion-tn)
+nmap f <Plug>(easymotion-sn)
+"omap f <Plug>(easymotion-tn)
 
 " Previous and next
 map n <Plug>(easymotion-next)
