@@ -315,9 +315,9 @@ nmap <Leader>/ :Tabularize /
 vmap <Leader>/ :Tabularize /
 
 " Generic Haskell delimiters:
-"   <-  ->  (  )  {  }  =  ,
-nmap <Leader>/h :Tabularize /\(<-\\|->\\|)\\|{\\|}\\|=\\|,\)<CR>
-vmap <Leader>/h :Tabularize /\(<-\\|->\\|)\\|{\\|}\\|=\\|,\)<CR>
+"   <-  ->  (  )  {  }  =  ,  ::
+nmap <Leader>/h :Tabularize /\(<-\\|->\\|(\\|)\\|{\\|}\\|=\\|,\\|::\)<CR>
+vmap <Leader>/h :Tabularize /\(<-\\|->\\|(\\|)\\|{\\|}\\|=\\|,\\|::\)<CR>
 
 " Cabal delimiters:
 "   :  ,  ==   =>
