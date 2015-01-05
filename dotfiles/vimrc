@@ -308,29 +308,6 @@ nmap <Leader>0 10gt
 
 
 " ----------
-" Alignments
-" ----------
-
-nmap <Leader>/ :Tabularize /
-vmap <Leader>/ :Tabularize /
-
-" Generic Haskell delimiters:
-"   <-  ->  (  )  {  }  =  ,  ::
-nmap <Leader>/h :Tabularize /\(<-\\|->\\|(\\|)\\|{\\|}\\|=\\|,\\|::\)<CR>
-vmap <Leader>/h :Tabularize /\(<-\\|->\\|(\\|)\\|{\\|}\\|=\\|,\\|::\)<CR>
-
-" Cabal delimiters:
-"   :  ,  ==   =>
-nmap <Leader>/c :Tabularize /\(==\\|>=\\|:\\|,\)<CR>
-vmap <Leader>/c :Tabularize /\(==\\|>=\\|:\\|,\)<CR>
-
-" Generic JavaScript delimiters:
-"   :  =  ,
-nmap <Leader>/j :Tabularize /\(:\\|=\\|,\)<CR>
-vmap <Leader>/j :Tabularize /\(:\\|=\\|,\)<CR>
-
-
-" ----------
 " Ctags
 " ----------
 
@@ -399,3 +376,31 @@ map <Leader><Leader>k <Plug>(easymotion-k)
 map <Leader><Leader>h <Plug>(easymotion-linebackward)
 " keep cursor colum when JK motion
 let g:EasyMotion_startofline = 0
+
+
+" ----------
+" Alignments
+" ----------
+
+nmap <Leader>/ :Tabularize /
+vmap <Leader>/ :Tabularize /
+
+" Generic Haskell delimiters:
+"   <-  ->  (  )  {  }  =  ,  ::
+nmap <Leader>/h :Tabularize /\(<-\\|->\\|(\\|)\\|{\\|}\\|=\\|,\\|::\)<CR>
+vmap <Leader>/h :Tabularize /\(<-\\|->\\|(\\|)\\|{\\|}\\|=\\|,\\|::\)<CR>
+
+" Haskell records delimiters:
+"   {  }  ,  ::  =
+nmap <Leader>/r :Tabularize /\({\\|}\\|,\\|::\\|=\)<CR>
+vmap <Leader>/r :Tabularize /\({\\|}\\|,\\|::\\|=\)<CR>
+
+" Cabal delimiters:
+"   :  ,  ==   =>
+nmap <Leader>/c :Tabularize /\(==\\|>=\\|:\\|,\)<CR>
+vmap <Leader>/c :Tabularize /\(==\\|>=\\|:\\|,\)<CR>
+
+" Generic JavaScript delimiters:
+"   :  =  ,
+nmap <Leader>/j :Tabularize /\(:\\|=\\|,\)<CR>
+vmap <Leader>/j :Tabularize /\(:\\|=\\|,\)<CR>
