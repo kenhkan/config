@@ -1,3 +1,3 @@
 function cinst
-  cabal install --only-dependencies -j8 --reinstall --force-reinstall
+  cabal install --only-dependencies --enable-library-profiling --jobs
 end
