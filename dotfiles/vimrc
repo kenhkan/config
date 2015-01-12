@@ -50,8 +50,6 @@ NeoBundle 'tpope/vim-fugitive'
 
 " Completion engine
 NeoBundle 'Shougo/neocomplcache.vim'
-" Haskell code completion
-NeoBundle 'eagletmt/neco-ghc'
 
 " The most-in-one Haskell bundle
 NeoBundle 'dag/vim2hs'
@@ -337,20 +335,12 @@ let g:haskell_conceal_enumerations = 0
 let g:haddock_browser = "open"
 let g:haddock_browser_callformat = "%s %s"
 
-" Prefer point-free style
-autocmd BufEnter *.hs set formatprg=pointfree
-
-" Always lint on save
-autocmd BufWritePost *.hs :GhcModLint
-
-" Setup neco-ghc for completion
-setlocal omnifunc=necoghc#omnifunc
-
 
 " ----------
 " Base-64
 " ----------
 
+nnoremap <Leader><Leader>64 c<C-R>=system('base64 --decode', @")<CR><Esc>
 vnoremap <Leader><Leader>64 c<C-R>=system('base64 --decode', @")<CR><Esc>
 
 
