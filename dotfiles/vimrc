@@ -387,13 +387,18 @@ vmap <Leader>/ :Tabularize /
 
 " Generic Haskell delimiters:
 "   <-  ->  (  )  {  }  =  ,  ::
-nmap <Leader>/h :Tabularize /\(<-\\|->\\|(\\|)\\|{\\|}\\|=\\|,\\|::\)<CR>
-vmap <Leader>/h :Tabularize /\(<-\\|->\\|(\\|)\\|{\\|}\\|=\\|,\\|::\)<CR>
+nmap <Leader>/hg :Tabularize /\(<-\\|->\\|(\\|)\\|{\\|}\\|=\\|,\\|::\)<CR>
+vmap <Leader>/hg :Tabularize /\(<-\\|->\\|(\\|)\\|{\\|}\\|=\\|,\\|::\)<CR>
 
 " Haskell records delimiters:
 "   {  }  ,  ::  =
-nmap <Leader>/r :Tabularize /\({\\|}\\|,\\|::\\|=\)<CR>
-vmap <Leader>/r :Tabularize /\({\\|}\\|,\\|::\\|=\)<CR>
+nmap <Leader>/hr :Tabularize /\({\\|}\\|,\\|::\\|=\)<CR>
+vmap <Leader>/hr :Tabularize /\({\\|}\\|,\\|::\\|=\)<CR>
+
+" Haskell alignments delimiters:
+"   =
+nmap <Leader>/ha :Tabularize /\(=\)<CR>
+vmap <Leader>/ha :Tabularize /\(=\)<CR>
 
 " Cabal delimiters:
 "   :  ,  ==   =>
