@@ -386,9 +386,9 @@ nmap <Leader>/hr :Tabularize /\({\\|}\\|,\\|::\\|=\)<CR>
 vmap <Leader>/hr :Tabularize /\({\\|}\\|,\\|::\\|=\)<CR>
 
 " Haskell alignments delimiters:
-"   =
-nmap <Leader>/ha :Tabularize /\(=\)<CR>
-vmap <Leader>/ha :Tabularize /\(=\)<CR>
+"   <-  ->  =
+nmap <Leader>/ha :Tabularize /\(<-\\|->\\|=\)<CR>
+vmap <Leader>/ha :Tabularize /\(<-\\|->\\|=\)<CR>
 
 " Cabal delimiters:
 "   :  ,  ==   =>
