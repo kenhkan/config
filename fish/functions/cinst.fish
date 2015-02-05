@@ -1,3 +1,4 @@
 function cinst
-  cabal install --only-dependencies --enable-library-profiling --jobs
+  cabal install --only-dependencies --enable-tests --enable-benchmarks --enable-library-profiling --jobs
+  cabal configure --enable-profiling --enable-tests --enable-benchmarks
 end
