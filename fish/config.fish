@@ -1,30 +1,30 @@
-set PATH /Users/kenhkan/.config/bin /Users/kenhkan/.cabal/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/bin /opt/X11/bin
+set PATH /Users/kenhkan/.config/bin /Users/kenhkan/.cabal/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/bin /opt/X11/bin /usr/local/Cellar/llvm34/3.4.2/bin
 setenv EDITOR vim
 
 
-# nix
-if test -n "$HOME"
-    set NIX_LINK "$HOME/.nix-profile"
+## nix
+#if test -n "$HOME"
+#    set NIX_LINK "$HOME/.nix-profile"
 
-    # Set the default profile.
-    if not [ -L "$NIX_LINK" ]
-        echo "creating $NIX_LINK" >&2
-        set _NIX_DEF_LINK /nix/var/nix/profiles/default
-        /nix/store/4lrli8ng5i54k14id152svvp1kvqsn92-coreutils-8.21/bin/ln -s "$_NIX_DEF_LINK" "$NIX_LINK"
-    end
+#    # Set the default profile.
+#    if not [ -L "$NIX_LINK" ]
+#        echo "creating $NIX_LINK" >&2
+#        set _NIX_DEF_LINK /nix/var/nix/profiles/default
+#        /nix/store/4lrli8ng5i54k14id152svvp1kvqsn92-coreutils-8.21/bin/ln -s "$_NIX_DEF_LINK" "$NIX_LINK"
+#    end
 
-    set PATH $NIX_LINK/bin $NIX_LINK/sbin $PATH
+#    set PATH $NIX_LINK/bin $NIX_LINK/sbin $PATH
 
-    # Subscribe the root user to the Nixpkgs channel by default.
-    if [ ! -e $HOME/.nix-channels ]
-        echo "http://nixos.org/channels/nixpkgs-unstable nixpkgs" > $HOME/.nix-channels
-    end
+#    # Subscribe the root user to the Nixpkgs channel by default.
+#    if [ ! -e $HOME/.nix-channels ]
+#        echo "http://nixos.org/channels/nixpkgs-unstable nixpkgs" > $HOME/.nix-channels
+#    end
 
-    # Append ~/.nix-defexpr/channels/nixpkgs to $NIX_PATH so that
-    # <nixpkgs> paths work when the user has fetched the Nixpkgs
-    # channel.
-    set NIX_PATH nixpkgs=$HOME/.nix-defexpr/channels/nixpkgs
-end
+#    # Append ~/.nix-defexpr/channels/nixpkgs to $NIX_PATH so that
+#    # <nixpkgs> paths work when the user has fetched the Nixpkgs
+#    # channel.
+#    set NIX_PATH nixpkgs=$HOME/.nix-defexpr/channels/nixpkgs
+#end
 
 
 # http://ethanschoonover.com/solarized#the-values
