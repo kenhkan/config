@@ -69,6 +69,11 @@ NeoBundle 'elzr/vim-json'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'bitc/lushtags'
 
+" PureScript
+NeoBundle "raichoo/purescript-vim"
+" Idris
+NeoBundle "idris-hackers/idris-vim"
+
 
 " ----------
 " Basic setup
