@@ -73,6 +73,8 @@ NeoBundle 'bitc/lushtags'
 NeoBundle "raichoo/purescript-vim"
 " Idris
 NeoBundle "idris-hackers/idris-vim"
+" Elm
+NeoBundle "lambdatoast/elm.vim"
 
 
 " ----------
