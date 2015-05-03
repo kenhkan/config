@@ -64,17 +64,11 @@ NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'wavded/vim-stylus'
 NeoBundle 'elzr/vim-json'
+NeoBundle "lambdatoast/elm.vim"
 
 " Ctags
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'bitc/lushtags'
-
-" PureScript
-NeoBundle "raichoo/purescript-vim"
-" Idris
-NeoBundle "idris-hackers/idris-vim"
-" Elm
-NeoBundle "lambdatoast/elm.vim"
 
 
 " ----------
