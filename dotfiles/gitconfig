@@ -1,0 +1,6 @@
+[user]
+	name = Kenneth Kan
+	email = kenhkan@gmail.com
+[core]
+	editor = vim
+	excludesfile = /Users/kenhkan/.gitignore
