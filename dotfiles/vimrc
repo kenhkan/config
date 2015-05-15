@@ -241,6 +241,9 @@ vmap <Leader>su :sort u<CR>
 " Start code ompletion engine
 let g:neocomplcache_enable_at_startup = 1
 
+" Solarized
+hi Visual cterm=NONE ctermbg=0 ctermfg=NONE guibg=Grey40
+
 
 " ----------
 " Manipulating files and the OS
