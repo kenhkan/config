@@ -1,4 +1,4 @@
-set PATH /Users/kenhkan/.config/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/bin /opt/X11/bin
+set PATH /Users/kenhkan/.config/bin /Users/kenhkan/Library/Haskell/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/bin /opt/X11/bin
 setenv EDITOR vim
 
 # http://ethanschoonover.com/solarized#the-values
