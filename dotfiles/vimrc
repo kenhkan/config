@@ -38,12 +38,12 @@ NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'gcmt/taboo.vim'
 
 " Tabular alignment
-NeoBundle "godlygeek/tabular"
+NeoBundle 'godlygeek/tabular'
 
 " The snippet engine
-NeoBundle "sirver/ultisnips"
+NeoBundle 'sirver/ultisnips'
 " The snippets themselves
-NeoBundle "honza/vim-snippets"
+NeoBundle 'honza/vim-snippets'
 
 " Git support
 NeoBundle 'tpope/vim-fugitive'
@@ -64,11 +64,14 @@ NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'wavded/vim-stylus'
 NeoBundle 'elzr/vim-json'
-NeoBundle "lambdatoast/elm.vim"
+NeoBundle 'lambdatoast/elm.vim'
 
 " Ctags
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'bitc/lushtags'
+
+" EditorConfig
+NeoBundle 'editorconfig/editorconfig-vim'
 
 
 " ----------
@@ -134,7 +137,7 @@ set clipboard=unnamed
 set showtabline=2
 
 " Leader
-let mapleader=" "
+let mapleader=' '
 
 " Clean VIM artifacts on write
 au BufWritePost * :silent! :syntax sync fromstart<cr>:redraw!<cr>
@@ -322,8 +325,8 @@ let g:tagbar_autofocus = 1
 " Snippets
 " ----------
 
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsExpandTrigger='<tab>'
+let g:UltiSnipsJumpForwardTrigger='<tab>'
 
 
 " ----------
@@ -336,8 +339,8 @@ let g:haskell_conceal = 0
 let g:haskell_conceal_enumerations = 0
 
 " Haddock documentation setup
-let g:haddock_browser = "open"
-let g:haddock_browser_callformat = "%s %s"
+let g:haddock_browser = 'open'
+let g:haddock_browser_callformat = '%s %s'
 
 
 " ----------
