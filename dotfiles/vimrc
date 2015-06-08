@@ -4,9 +4,13 @@
 
 " NeoBundle loads first
 if has('vim_starting')
+  if &compatible
+    set nocompatible
+  endif
+
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle'))
 
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
@@ -406,3 +410,5 @@ vmap <Leader>/c :Tabularize /\(:\zs\\|,\)<CR>
 "   :  =  ,
 nmap <Leader>/j :Tabularize /\(:\\|=\\|,\)<CR>
 vmap <Leader>/j :Tabularize /\(:\\|=\\|,\)<CR>
+
+call neobundle#end()
