@@ -4,4 +4,3 @@ fish/*
 !fish/config.fish
 !fish/functions
 gtk-2.0/
-bin/duplo
