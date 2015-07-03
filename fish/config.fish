@@ -1,4 +1,4 @@
-set PATH /Users/kenhkan/.cabal/bin /Users/kenhkan/.config/bin /Users/kenhkan/Library/Haskell/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/bin /opt/X11/bin
+set PATH /Users/kenhkan/.cabal/bin /Users/kenhkan/.config/bin /Users/kenhkan/Library/Haskell/bin /usr/local/opt/go/libexec/bin /Users/kenhkan/go/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/bin /opt/X11/bin
 setenv EDITOR nvim
 
 # http://ethanschoonover.com/solarized#the-values
