@@ -106,11 +106,11 @@ set rnu
 set nosmartindent
 set autoindent
 
-" No hard wrap
+" Wrapping
 set wrap
-set tw=0
-set fo=cq
-set wm=0
+set textwidth=80
+set formatoptions=cqt
+set wrapmargin=5
 
 " Use spaces, not tabs
 set tabstop=2
@@ -260,6 +260,8 @@ hi Visual cterm=NONE ctermbg=0 ctermfg=NONE guibg=Grey40
 nmap <Leader>g :NERDTreeTabsToggle<CR>
 " Close NERDTree on file opened
 let NERDTreeQuitOnOpen = 1
+" No fancy arrows
+let g:NERDTreeDirArrows=0
 
 " Search by file/buffer name
 nmap <Leader>d :Unite<Space>file_rec/async<CR>
@@ -295,10 +297,6 @@ vnoremap <Leader><Leader>CSS :call RangeCSSBeautify()<CR>
 " Taboo
 let g:taboo_tab_format='  %N  '
 let g:taboo_renamed_tab_format='  %N %f  '
-
-" Show tab guides
-set lcs=tab:\⁞\
-set list listchars=tab:\ \ ,trail:·
 
 " Shortcuts
 nmap <Leader>= :tabnew<CR>
