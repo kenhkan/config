@@ -110,7 +110,7 @@ set autoindent
 set wrap
 set formatoptions=tcq
 " Wrapping needs to be enforced on every buffer.
-autocmd BufRead * :set textwidth=80
+autocmd BufRead * :set textwidth=79
 
 " Use spaces, not tabs
 set tabstop=2
