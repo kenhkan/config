@@ -158,6 +158,10 @@ nmap ` ~
 " Command
 map ' :
 
+" Marks
+noremap M m
+noremap m `
+
 " Repeat last command
 nmap <Leader>r .
 
@@ -228,9 +232,6 @@ let g:vim_markdown_folding_disabled=1
 
 " Redo
 map r <C-r>
-
-" Search previous
-nmap m N
 
 " git with fugitive
 nmap <Leader>' :Gstatus<CR>
