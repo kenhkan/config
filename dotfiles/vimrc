@@ -249,6 +249,9 @@ nmap <Leader>' :Gstatus<CR>
 nmap <Leader>; :Gcommit<CR>
 nmap <Leader>` :Gdiff<CR>
 
+" Vertical diffing!
+set diffopt+=vertical
+
 " Folding
 nmap <Leader>Z za
 nmap <Leader>z zA
