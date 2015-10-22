@@ -1,0 +1,66 @@
+- hosts: localhost
+  vars:
+    home: /Users/kenhkan
+    applications:
+      - 0xed
+      - google-chrome
+      - iterm2
+      - keka
+      - skitch
+      - spectacle
+      - torbrowser
+      - unrarx
+      - virtualbox
+      - backblaze
+      - firefox
+      - java
+      - textmate
+      - tuxera-ntfs
+      - vagrant
+      - vlc
+
+  tasks:
+    - name: Install programs with homebrew
+      homebrew: name={{ item }} state=present
+      with_items:
+        - haskell-stack
+        - antlr
+        - fish
+        - heroku-toolbelt
+        - parallel
+        - rust
+        - brew-cask
+        - ghc
+        - neovim
+        - node
+
+    - name: Create code directory
+      file: path={{ home }}/Desktop/code state=directory
+
+    - name: Clone configurations
+      git: repo=git@github.com:kenhkan/{{ item }}.git dest={{ home }}/Desktop/code/{{ item }} force=no update=no
+      with_items:
+        - config
+
+    - name: Symlink dotfiles
+      file: path={{ home }}/.{{ item }} src={{ home }}/Desktop/code/config/{{ item }} state=link
+
+      with_items:
+        - .ackrc
+        - .editorconfig
+        - .gitconfig
+        - .gitignore
+        - .netrc
+        - .nvimrc
+        - .vimrc
+
+    - name: Check for installed apps
+      shell: brew cask list | grep {{ item }}
+      register: installed_applications
+      with_items: applications
+      ignore_errors: true
+
+    - name: Install apps with brew-cask
+      shell: brew cask install {{ item }}
+      with_items: applications
+      when: item not in installed_applications.results | map(attribute='stdout')

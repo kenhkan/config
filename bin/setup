@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+ROOT="$( cd "$DIR/../ansible/" && pwd )"
+
+# Get Homebrew
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# Get Ansible
+brew install ansible
+
+# Play setup playbook
+ansible-playbook $ROOT/setup.yml -i $ROOT/hosts
