@@ -21,11 +21,6 @@
       - vlc
 
   tasks:
-    - name: Tap homebrew repositories
-      homebrew_tap: tap={{ item }} state=present
-      with_items:
-        - neovim/neovim
-
     - name: Install programs with homebrew
       homebrew: name={{ item }} state=present update_homebrew=yes
       with_items:
@@ -38,12 +33,6 @@
         - caskroom/cask/brew-cask
         - ghc
         - node
-        - python3
-
-    - name: Install head-only programs with homebrew
-      homebrew: name={{ item }} state=head
-      with_items:
-        - neovim
 
     - name: Create code directory
       file: path={{ home }}/Desktop/code state=directory

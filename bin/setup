@@ -37,6 +37,15 @@ sudo chsh -s /usr/local/bin/fish
 # Keep-alive: update existing `sudo` time stamp until finish
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+# Get Python package manager
+sudo easy_install pip
+
+# Install NeoVim
+sudo pip install neovim
+# Use NeoVim, always.
+sudo rm /usr/bin/vim
+sudo ln -s /usr/local/bin/nvim /usr/bin/vim
+
 # Configure
 osx/app
 osx/dock
@@ -52,7 +61,3 @@ osx/spotlight
 osx/ssd
 osx/terminal
 osx/webkit
-
-# Use NeoVim, always.
-sudo rm /usr/bin/vim
-sudo ln -s /usr/local/bin/nvim /usr/bin/vim
