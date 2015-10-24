@@ -6,6 +6,6 @@
 
 mkdir ~/s
 cd ~/s
-ln -s d /Users/kenhkan/Desktop
-ln -s v /Volumes
-ln -s w /Users/kenhkan/Downloads/
+ln -s /Users/kenhkan/Desktop d 
+ln -s /Volumes v 
+ln -s /Users/kenhkan/Downloads w
