@@ -3,8 +3,8 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Replace iTunes
-mv /Applications/iTunes.app /Applications/iTunes.backup.app
-cp -rf $DIR/../etc/DoNothing.app /Applications/iTunes.app
+sudo mv /Applications/iTunes.app /Applications/iTunes.backup.app
+sudo cp $DIR/../etc/DoNothing.app /Applications/iTunes.app
 
 # Create empty group.
 sudo dscl . -create /groups/nobody
