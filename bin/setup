@@ -51,3 +51,7 @@ osx/spotlight
 osx/ssd
 osx/terminal
 osx/webkit
+
+# Use NeoVim, always.
+rm /usr/bin/vim
+ln -s /usr/local/bin/vim /usr/bin/vim
