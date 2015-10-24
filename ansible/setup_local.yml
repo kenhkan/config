@@ -2,8 +2,9 @@
   vars:
     home: /Users/kenhkan
     applications:
-      - 0xed
+      - "0xed"
       - google-chrome
+      - fish
       - iterm2
       - keka
       - skitch
@@ -20,39 +21,46 @@
       - vlc
 
   tasks:
-    - name: Install programs with homebrew
-      homebrew: name={{ item }} state=present
+    - name: Tap homebrew repositories
+      homebrew_tap: tap={{ item }} state=present
       with_items:
+        - neovim/neovim
+
+    - name: Install programs with homebrew
+      homebrew: name={{ item }} state=present update_homebrew=yes
+      with_items:
+        - git
         - haskell-stack
         - antlr
-        - fish
         - heroku-toolbelt
         - parallel
         - rust
-        - brew-cask
+        - caskroom/cask/brew-cask
         - ghc
-        - neovim
         - node
+
+    - name: Install head-only programs with homebrew
+      homebrew: name={{ item }} state=head
+      with_items:
+        - neovim
 
     - name: Create code directory
       file: path={{ home }}/Desktop/code state=directory
 
     - name: Clone configurations
-      git: repo=git@github.com:kenhkan/{{ item }}.git dest={{ home }}/Desktop/code/{{ item }} force=no update=no
-      with_items:
-        - config
+      git: repo=https://github.com/kenhkan/config.git dest={{ home }}/Desktop/code/config update=no accept_hostkey=yes
 
     - name: Symlink dotfiles
-      file: path={{ home }}/.{{ item }} src={{ home }}/Desktop/code/config/{{ item }} state=link
-
+      file: path={{ home }}/.{{ item }} src={{ home }}/Desktop/code/config/dotfiles/{{ item }} state=link
       with_items:
-        - .ackrc
-        - .editorconfig
-        - .gitconfig
-        - .gitignore
-        - .netrc
-        - .nvimrc
-        - .vimrc
+        - ackrc
+        - editorconfig
+        - gitconfig
+        - gitignore
+        - vimrc
+
+    - name: Symlink neovim config
+      file: path={{ home }}/.nvimrc src={{ home }}/.vimrc state=link
 
     - name: Check for installed apps
       shell: brew cask list | grep {{ item }}

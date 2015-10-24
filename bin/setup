@@ -1,7 +1,19 @@
 #!/usr/bin/env bash
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-ROOT="$( cd "$DIR/../ansible/" && pwd )"
+ANSIBLE_PATH="$( cd "$DIR/../ansible/" && pwd )"
+
+
+### Setup ###
+
+# Ask for the administrator password upfront
+sudo -v
+
+# Install Xcode
+xcode-select --install
+
+echo "Press ENTER when Xcode has finished installing."
+read XCODE_INSTALLED
 
 # Get Homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -9,5 +21,32 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 # Get Ansible
 brew install ansible
 
+
+### Install ###
+
 # Play setup playbook
-ansible-playbook $ROOT/setup.yml -i $ROOT/hosts
+ansible-playbook $ANSIBLE_PATH/setup_local.yml -i $ANSIBLE_PATH/hosts
+
+
+### Set preferences ###
+# Adapted from https://github.com/mathiasbynens/dotfiles/blob/master/.osx
+
+# Use fish as the default shell
+chsh -s /usr/local/bin/fish
+
+# Keep-alive: update existing `sudo` time stamp until finish
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+# Configure
+bash preferences/app
+bash preferences/dock
+bash preferences/finder
+bash preferences/general
+bash preferences/input
+bash preferences/mac
+bash preferences/no_itunes
+bash preferences/screen
+bash preferences/spotlight
+bash preferences/ssd
+bash preferences/terminal
+bash preferences/webkit
