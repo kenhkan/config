@@ -53,5 +53,5 @@ osx/terminal
 osx/webkit
 
 # Use NeoVim, always.
-rm /usr/bin/vim
-ln -s /usr/local/bin/vim /usr/bin/vim
+sudo rm /usr/bin/vim
+sudo ln -s /usr/local/bin/vim /usr/bin/vim
