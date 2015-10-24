@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+# Replace iTunes
+mv /Applications/iTunes.app /Applications/iTunes.backup.app
+cp -rf $DIR/../etc/DoNothing.app /Applications/iTunes.app
+
+# Create empty group.
+sudo dscl . -create /groups/nobody
+sudo dscl . -append /groups/nobody gid 4200
+sudo dscl . -append /groups/nobody passwd "*"
+
+# Change ownership of empty iTunes
+chown root /Applications/iTunes.app/
+sudo chmod 0700 /Applications/iTunes.app/
+sudo chgrp nobody /Applications/iTunes.app/
