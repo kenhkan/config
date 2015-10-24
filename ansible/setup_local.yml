@@ -38,6 +38,7 @@
         - caskroom/cask/brew-cask
         - ghc
         - node
+        - python3
 
     - name: Install head-only programs with homebrew
       homebrew: name={{ item }} state=head
