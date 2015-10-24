@@ -3,5 +3,6 @@
 ## Setup
 
 ```sh
-source <(curl -fsSL https://raw.githubusercontent.com/kenhkan/config/master/etc/setup)
+curl https://raw.githubusercontent.com/kenhkan/config/master/etc/setup > /tmp/setup
+bash /tmp/setup
 ```
