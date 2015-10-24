@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+cd ~/Desktop
+git clone https://github.com/kenhkan/config.git
+cd config
+bin/setup
+rm -rf ~/Desktop/config
