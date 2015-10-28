@@ -1,6 +1,16 @@
 - hosts: localhost
   vars:
     home: /Users/kenhkan
+    program:
+      - git
+      - haskell-stack
+      - antlr
+      - heroku-toolbelt
+      - parallel
+      - rust
+      - caskroom/cask/brew-cask
+      - ghc
+      - node
     applications:
       - "0xed"
       - google-chrome
@@ -23,16 +33,7 @@
   tasks:
     - name: Install programs with homebrew
       homebrew: name={{ item }} state=present update_homebrew=yes
-      with_items:
-        - git
-        - haskell-stack
-        - antlr
-        - heroku-toolbelt
-        - parallel
-        - rust
-        - caskroom/cask/brew-cask
-        - ghc
-        - node
+      with_items: programs
 
     - name: Create code directory
       file: path={{ home }}/Desktop/code state=directory
