@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
-###############################################################################
-# Replace iTunes with an empty app
-###############################################################################
+# Replace iTunes with an empty app to avoid being automatically opened.
+
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 ROOT="$( cd "$DIR/.." && pwd )"

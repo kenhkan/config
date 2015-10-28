@@ -29,7 +29,6 @@ ansible-playbook $ANSIBLE_PATH/setup_local.yml -i $ANSIBLE_PATH/hosts
 
 
 ### Setup OS X ###
-# Adapted from https://github.com/mathiasbynens/dotfiles/blob/master/.osx
 
 # Use fish as the default shell
 chsh -s /usr/local/bin/fish
@@ -37,17 +36,17 @@ chsh -s /usr/local/bin/fish
 # Keep-alive: update existing `sudo` time stamp until finish
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# Configure
+# Configure OS X. Most scripts addapted from
+# https://github.com/mathiasbynens/dotfiles/blob/master/.osx
 osx/app
 osx/dock
 osx/finder
 osx/general
 osx/input
 osx/mac
-osx/no_itunes
 osx/neobundle
+osx/no_itunes
 osx/screen
-osx/shortcuts
 osx/spotlight
 osx/ssd
 osx/ssh
@@ -55,6 +54,5 @@ osx/terminal
 osx/webkit
 
 
-### Notice ###
-
+echo "***** CAVEATS *****"
 echo "Install OSXFuse (with MacFuse support) and VeraCrypt in the etc directory"
