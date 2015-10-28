@@ -53,3 +53,8 @@ osx/ssd
 osx/ssh
 osx/terminal
 osx/webkit
+
+
+### Notice ###
+
+echo "Install OSXFuse (with MacFuse support) and VeraCrypt in the etc directory"
