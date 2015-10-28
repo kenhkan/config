@@ -2,6 +2,7 @@
   vars:
     home: /Users/kenhkan
     program:
+      - vim
       - git
       - haskell-stack
       - antlr
@@ -49,9 +50,6 @@
         - gitconfig
         - gitignore
         - vimrc
-
-    - name: Symlink neovim config
-      file: path={{ home }}/.nvimrc src={{ home }}/.vimrc state=link
 
     - name: Check for installed apps
       shell: brew cask list | grep {{ item }}
