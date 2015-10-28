@@ -5,17 +5,23 @@
 ###############################################################################
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+ROOT="$( cd "$DIR/.." && pwd )"
 
-# Replace iTunes
-sudo mv /Applications/iTunes.app /Applications/iTunes.backup.app
-sudo cp $DIR/../etc/DoNothing.app /Applications/iTunes.app
+# If only this has already been done
+if [ ! -d /Applications/iTunes.backup.app ]; then
 
-# Create empty group.
-sudo dscl . -create /groups/nobody
-sudo dscl . -append /groups/nobody gid 4200
-sudo dscl . -append /groups/nobody passwd "*"
+  # Replace iTunes
+  sudo mv /Applications/iTunes.app /Applications/iTunes.backup.app
+  sudo cp -r $ROOT/etc/DoNothing.app /Applications/iTunes.app
 
-# Change ownership of empty iTunes
-chown root /Applications/iTunes.app/
-sudo chmod 0700 /Applications/iTunes.app/
-sudo chgrp nobody /Applications/iTunes.app/
+  # Create empty group.
+  sudo dscl . -create /groups/nobody
+  sudo dscl . -append /groups/nobody gid 4200
+  sudo dscl . -append /groups/nobody passwd "*"
+
+  # Change ownership of empty iTunes
+  chown root /Applications/iTunes.app/
+  sudo chmod 0755 /Applications/iTunes.app/
+  sudo chgrp nobody /Applications/iTunes.app/
+
+fi
