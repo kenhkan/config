@@ -4,7 +4,7 @@
 # Set up shortcuts
 ###############################################################################
 
-mkdir $HOME/s
+mkdir -P $HOME/s
 cd $HOME/s
 
 ln -sfhF $HOME/Desktop $HOME/s/d
