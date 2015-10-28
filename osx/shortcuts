@@ -4,8 +4,9 @@
 # Set up shortcuts
 ###############################################################################
 
-mkdir ~/s
-cd ~/s
-ln -s /Users/kenhkan/Desktop d 
-ln -s /Volumes v 
-ln -s /Users/kenhkan/Downloads w
+mkdir $HOME/s
+cd $HOME/s
+
+ln -sfhF $HOME/Desktop $HOME/s/d
+ln -sfhF /Volumes $HOME/s/v
+ln -sfhF $HOME/Downloads $HOME/s/w
