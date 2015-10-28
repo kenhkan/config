@@ -39,25 +39,26 @@
     - name: Create code directory
       file: path={{ home }}/Desktop/code state=directory
 
-    - name: Clone configurations
+    - name: Clone config
       git: repo=https://github.com/kenhkan/config.git dest={{ home }}/Desktop/code/config update=no accept_hostkey=yes
 
-    - name: Symlink dotfiles
-      file: path={{ home }}/.{{ item }} src={{ home }}/Desktop/code/config/dotfiles/{{ item }} state=link
+    - name: Symlink into config
+      file: path={{ home }}/.{{ item }} src={{ home }}/Desktop/code/config/{{ item }} state=link
       with_items:
-        - ackrc
-        - editorconfig
-        - gitconfig
-        - gitignore
-        - vimrc
+        - .
+        - dotfiles/ackrc
+        - dotfiles/editorconfig
+        - dotfiles/gitconfig
+        - dotfiles/gitignore
+        - dotfiles/vimrc
 
-    - name: Check for installed apps
+    - name: Check for installed applications
       shell: brew cask list | grep {{ item }}
       register: installed_applications
       with_items: applications
       ignore_errors: true
 
-    - name: Install apps with brew-cask
+    - name: Install applications with brew cask
       shell: brew cask install {{ item }}
       with_items: applications
       when: item not in installed_applications.results | map(attribute='stdout')
