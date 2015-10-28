@@ -6,8 +6,8 @@
 
 # Set computer name (as done via System Preferences → Sharing)
 sudo scutil --set ComputerName "KeniBook"
-sudo scutil --set HostName "kenihost"
-sudo scutil --set LocalHostName "kenihost"
+sudo scutil --set HostName "KeniBook"
+sudo scutil --set LocalHostName "KeniBook"
 #sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "0x6D746873"
 
 # Set standby delay to 24 hours (default is 1 hour)
