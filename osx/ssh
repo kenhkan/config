@@ -1,9 +1,13 @@
 #!/usr/bin/env bash
 
-# See https://help.github.com/articles/generating-ssh-keys/
-ssh-keygen -t rsa -b 4096 -C "kenhkan@gmail.com"
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_rsa
+if [ ! -d $HOME/.ssh ]; then
 
-echo "Run the following to register the SSH key with GitHub"
-echo "$ pbcopy < ~/.ssh/id_rsa.pub"
+  # See https://help.github.com/articles/generating-ssh-keys/
+  ssh-keygen -t rsa -b 4096 -C "kenhkan@gmail.com"
+  eval "$(ssh-agent -s)"
+  ssh-add ~/.ssh/id_rsa
+
+  echo "Run the following to register the SSH key with GitHub"
+  echo "$ pbcopy < ~/.ssh/id_rsa.pub"
+
+fi
