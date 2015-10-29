@@ -54,6 +54,7 @@ osx/terminal
 osx/webkit
 
 
-echo "***** CAVEATS *****"
+echo ""
+echo "***** MANUAL STEPS *****"
 echo "- Install Backblaze by opening the Backblaze installer"
 echo "- Install OSXFuse (with MacFuse support) and VeraCrypt in the etc directory"
