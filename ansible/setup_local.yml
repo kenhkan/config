@@ -3,8 +3,12 @@
     home: /Users/kenhkan
 
     shortcuts:
+      c:
+        from: "{{ home }}/Desktop/code"
       d:
         from: "{{ home }}/Desktop"
+      h:
+        from: "{{ home }}/Desktop/hack"
       v:
         from: "/Volumes"
       w:
@@ -47,8 +51,11 @@
       homebrew: name={{ item }} state=present update_homebrew=yes
       with_items: programs
 
-    - name: Create code directory
-      file: path={{ home }}/Desktop/code state=directory
+    - name: Create top-level directories
+      file: path={{ home }}/Desktop/{{ item }} state=directory
+      with_items:
+        - code
+        - hack
 
     - name: Clone config
       git: repo=https://github.com/kenhkan/config.git dest={{ home }}/Desktop/code/config update=no accept_hostkey=yes
