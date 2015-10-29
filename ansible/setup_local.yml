@@ -98,3 +98,6 @@
       with_items:
         - Spectacle
         - "Google Chrome"
+
+    - name: Customize dock
+      copy: dest={{ home }}/Library/Preferences/ src=../plists/com.apple.dock.plist
