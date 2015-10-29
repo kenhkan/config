@@ -89,3 +89,6 @@
       shell: brew cask install {{ item }}
       with_items: applications
       when: item not in installed_applications.results | map(attribute='stdout')
+
+    - name: Copy fonts
+      copy: dest={{ home }}/Library/Fonts/ src=../fonts/Input
