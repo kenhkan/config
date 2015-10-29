@@ -92,3 +92,9 @@
 
     - name: Copy fonts
       copy: dest={{ home }}/Library/Fonts/ src=../fonts/Input
+
+    - name: Set startup items
+      shell: osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Users/kenhkan/Applications/{{ item }}.app", hidden:false}'
+      with_items:
+        - Spectacle
+        - "Google Chrome"
