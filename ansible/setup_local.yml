@@ -3,16 +3,11 @@
     home: /Users/kenhkan
 
     shortcuts:
-      c:
-        from: "{{ home }}/Desktop/code"
-      d:
-        from: "{{ home }}/Desktop"
-      h:
-        from: "{{ home }}/Desktop/hack"
-      v:
-        from: "/Volumes"
-      w:
-        from: "{{ home }}/Downloads"
+      - { from: "c", to: "{{ home }}/Desktop/code" }
+      - { from: "d", to: "{{ home }}/Desktop" }
+      - { from: "h", to: "{{ home }}/Desktop/hack" }
+      - { from: "v", to: "/Volumes" }
+      - { from: "w", to: "{{ home }}/Downloads" }
 
     programs:
       - ag
@@ -76,8 +71,8 @@
       file: path={{ home }}/s state=directory
 
     - name: Setup shortcuts
-      file: path={{ home }}/s/{{ item.key }} src={{ item.value.from }}
-      with_dict: "{{ shortcuts }}"
+      file: path={{ home }}/s/{{ item.from }} src={{ item.to }} state=link
+      with_items: shortcuts
 
     - name: Check for installed applications
       shell: brew cask list | grep {{ item }}
