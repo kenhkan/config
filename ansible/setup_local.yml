@@ -3,10 +3,10 @@
     home: /Users/kenhkan
 
     shortcuts:
-      - { from: "c", to: "{{ home }}/Desktop/code" }
-      - { from: "d", to: "{{ home }}/Desktop" }
-      - { from: "h", to: "{{ home }}/Desktop/hack" }
       - { from: "v", to: "/Volumes" }
+      - { from: "d", to: "{{ home }}/Desktop" }
+      - { from: "c", to: "{{ home }}/Desktop/code" }
+      - { from: "h", to: "{{ home }}/Desktop/code/hack" }
       - { from: "w", to: "{{ home }}/Downloads" }
 
     programs:
@@ -50,7 +50,6 @@
       file: path={{ home }}/Desktop/{{ item }} state=directory
       with_items:
         - code
-        - hack
 
     - name: Clone config
       git: repo=https://github.com/kenhkan/config.git dest={{ home }}/Desktop/code/config update=no accept_hostkey=yes
