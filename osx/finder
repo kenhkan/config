@@ -113,6 +113,3 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 	General -bool true \
 	OpenWith -bool true \
 	Privileges -bool true
-
-# Hide Sidebar
-defaults write com.apple.finder ShowSidebar -bool false
