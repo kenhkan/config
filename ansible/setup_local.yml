@@ -50,6 +50,10 @@
       file: path={{ home }}/Desktop/{{ item }} state=directory
       with_items:
         - code
+        - code/hack
+
+    - name: Create shortcut directory
+      file: path={{ home }}/s state=directory
 
     - name: Clone config
       git: repo=https://github.com/kenhkan/config.git dest={{ home }}/Desktop/code/config update=no accept_hostkey=yes
@@ -65,9 +69,6 @@
         - gitconfig
         - gitignore
         - vimrc
-
-    - name: Create shortcut directory
-      file: path={{ home }}/s state=directory
 
     - name: Setup shortcuts
       file: path={{ home }}/s/{{ item.from }} src={{ item.to }} state=link
