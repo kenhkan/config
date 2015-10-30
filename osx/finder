@@ -28,7 +28,7 @@ defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
 # Finder: show status bar
-defaults write com.apple.finder ShowStatusBar -bool true
+defaults write com.apple.finder ShowStatusBar -bool false
 
 # Finder: show path bar
 defaults write com.apple.finder ShowPathbar -bool true
@@ -85,7 +85,7 @@ defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
 /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:iconSize 80" ~/Library/Preferences/com.apple.finder.plist
 
 # Set view mode in all Finder windows by default
-# Four-letter codes for view modes: `Nlsv`, `icnv`, `clmv`, `Flwv`
+# See http://www.defaults-write.com/change-default-view-style-in-os-x-finder/
 defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 
 # Disable the warning before emptying the Trash
@@ -113,3 +113,6 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 	General -bool true \
 	OpenWith -bool true \
 	Privileges -bool true
+
+# Hide Sidebar
+defaults write com.apple.finder ShowSidebar -bool false

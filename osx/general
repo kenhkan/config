@@ -121,3 +121,6 @@ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 rm -rf ~/Library/Application Support/Dock/desktoppicture.db
 sudo rm -rf /System/Library/CoreServices/DefaultDesktop.jpg
 sudo ln -s "/Library/Desktop Pictures/Solid Colors/Solid White.png" /System/Library/CoreServices/DefaultDesktop.jpg
+
+# No App Nap
+defaults write NSGlobalDomain NSAppSleepDisabled -bool YES
