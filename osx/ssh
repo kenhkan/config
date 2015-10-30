@@ -7,7 +7,4 @@ if [ ! -d $HOME/.ssh ]; then
   eval "$(ssh-agent -s)"
   ssh-add ~/.ssh/id_rsa
 
-  echo "Run the following to register the SSH key with GitHub"
-  echo "$ pbcopy < ~/.ssh/id_rsa.pub"
-
 fi

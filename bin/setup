@@ -49,12 +49,18 @@ osx/no_itunes
 osx/screen
 osx/spotlight
 osx/ssd
-osx/ssh
 osx/terminal
 osx/webkit
+osx/ssh
 
 
 echo ""
 echo "***** MANUAL STEPS *****"
+echo "- Run this to register the SSH key with GitHub: `pbcopy < ~/.ssh/id_rsa.pub`"
 echo "- Install Backblaze by opening the Backblaze installer"
 echo "- Install OSXFuse (with MacFuse support) and VeraCrypt in the etc directory"
+echo "- Configure input sources"
+echo "- Turn on firewall"
+echo "- Turn on FileVault"
+echo "- Setup iCloud and internet accounts"
+echo "- Restart and enjoy!"
