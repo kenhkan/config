@@ -100,3 +100,4 @@
         - com.apple.finder.plist
         - com.apple.dock.plist
         - com.apple.symbolichotkeys.plist
+        - com.googlecode.iterm2.plist
