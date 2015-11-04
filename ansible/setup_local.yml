@@ -40,6 +40,7 @@
       - tuxera-ntfs
       - vagrant
       - vlc
+      - vmware-fusion7
 
   tasks:
     - name: Install programs with homebrew
@@ -73,6 +74,9 @@
     - name: Setup shortcuts
       file: path={{ home }}/s/{{ item.from }} src={{ item.to }} state=link
       with_items: shortcuts
+
+    - name: Include old versions of casks
+      shell: brew tap caskroom/versions
 
     - name: Check for installed applications
       shell: brew cask list | grep {{ item }}
