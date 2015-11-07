@@ -21,6 +21,7 @@
       - caskroom/cask/brew-cask
       - ghc
       - node
+      - git-lfs
 
     applications:
       - "0xed"
