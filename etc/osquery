@@ -1,0 +1,11 @@
+select name,program,path FROM launchd;
+select name,program,path FROM launchd where username = 'root';
+select name,linked_against,path from kernel_extensions;
+select name,path,type,source from from startup_items;
+select * from preferences where domain = 'loginwindow';
+select * from preferences where domain = 'loginitems';
+select * from crontab;
+select * from shell_history where command = "launchctl";
+select * from shell_history where command = "/bin/launchctl";
+select identifier,path from safari_extensions;
+select identifier,path from chrome_extensions;

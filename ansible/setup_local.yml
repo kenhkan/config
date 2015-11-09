@@ -22,6 +22,7 @@
       - ghc
       - node
       - git-lfs
+      - osquery
 
     applications:
       - "0xed"
@@ -43,6 +44,8 @@
       - vlc
       - vmware-fusion7
       - diffmerge
+      - knockknock
+      - blockblock
 
   tasks:
     - name: Install programs with homebrew
