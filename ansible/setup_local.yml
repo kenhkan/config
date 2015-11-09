@@ -42,6 +42,7 @@
       - vagrant
       - vlc
       - vmware-fusion7
+      - diffmerge
 
   tasks:
     - name: Install programs with homebrew
