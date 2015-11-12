@@ -266,6 +266,19 @@ let g:neocomplcache_enable_at_startup = 1
 " Solarized
 hi Visual cterm=NONE ctermbg=0 ctermfg=NONE guibg=Grey40
 
+" Count characters and lines
+function! VisualCount() range
+    let n = @n
+    silent! normal gv"ny
+    echo "" . system("echo '" . @n . "' | wc")
+    let @n = n
+    " bonus: restores the visual selection
+    normal! gv
+endfunction
+nnoremap <Leader>c :w<Space>!wc<CR>
+vnoremap <Leader>c :call<Space>VisualCount()<CR>
+
+
 
 " ----------
 " Manipulating files and the OS
@@ -290,7 +303,7 @@ let g:ag_working_path_mode='r'
 
 
 " ----------
-" Web tech
+" Web stack
 " ----------
 
 nnoremap <Leader><Leader>JS :call JsBeautify()<CR>
