@@ -4,6 +4,7 @@
 [core]
 	editor = vim
 	excludesfile = /Users/kenhkan/.gitignore
+	pager = less
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean %f
