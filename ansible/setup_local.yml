@@ -29,11 +29,9 @@
       - google-chrome
       - fish
       - iterm2
-      - keka
       - skitch
       - spectacle
       - torbrowser
-      - unrarx
       - virtualbox
       - backblaze
       - firefox
@@ -42,10 +40,10 @@
       - tuxera-ntfs
       - vagrant
       - vlc
-      - vmware-fusion7
       - diffmerge
       - knockknock
       - blockblock
+      - archiver
 
   tasks:
     - name: Install programs with homebrew
