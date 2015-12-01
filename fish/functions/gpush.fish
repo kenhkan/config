@@ -1,3 +1,3 @@
 function gpush
-  git push --set-upstream $argv
+  git push $argv
 end
