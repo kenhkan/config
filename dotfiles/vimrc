@@ -88,6 +88,9 @@ NeoBundle 'editorconfig/editorconfig-vim'
 " Search with ag
 NeoBundle 'rking/ag.vim'
 
+" Extradite for git log
+NeoBundle 'int3/vim-extradite'
+
 
 " ----------
 " Basic setup
@@ -102,6 +105,7 @@ NeoBundleCheck
 " Compatibility hacks
 set shell=/bin/bash
 set nocompatible
+set shellslash
 
 " Highlighting
 syntax enable
@@ -248,6 +252,9 @@ map r <C-r>
 nmap <Leader>' :Gstatus<CR>
 nmap <Leader>; :Gcommit<CR>
 nmap <Leader>` :Gdiff<CR>
+
+" git log with extradite
+nmap <Leader>! :Extradite<CR>
 
 " Vertical diffing!
 set diffopt+=vertical
