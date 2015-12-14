@@ -23,6 +23,7 @@
       - node
       - git-lfs
       - osquery
+      - p7zip
 
     applications:
       - "0xed"
