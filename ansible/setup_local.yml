@@ -45,6 +45,7 @@
       - knockknock
       - blockblock
       - archiver
+      - elm-platform
 
   tasks:
     - name: Install programs with homebrew
