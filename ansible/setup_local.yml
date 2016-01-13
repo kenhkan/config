@@ -76,6 +76,9 @@
         - gitignore
         - vimrc
 
+    - name: Symlink stack config
+      file: path={{ home }}/.stack/config.yaml src={{ home }}/Desktop/code/config/dotfiles/stack state=link
+
     - name: Setup shortcuts
       file: path={{ home }}/s/{{ item.from }} src={{ item.to }} state=link
       with_items: shortcuts
