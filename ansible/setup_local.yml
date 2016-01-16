@@ -24,6 +24,7 @@
       - git-lfs
       - osquery
       - p7zip
+      - ffmpeg
 
     applications:
       - "0xed"
