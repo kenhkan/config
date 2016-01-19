@@ -1,3 +1,3 @@
 function gdiffn
-  git diff --name-only $argv
+  git diff --name-status $argv
 end
