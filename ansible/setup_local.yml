@@ -19,7 +19,6 @@
       - parallel
       - rust
       - caskroom/cask/brew-cask
-      - ghc
       - node
       - git-lfs
       - osquery

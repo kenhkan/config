@@ -66,9 +66,6 @@ NeoBundle 'Shougo/neocomplcache.vim'
 " The most-in-one Haskell bundle
 NeoBundle 'dag/vim2hs'
 
-" GHC integration
-NeoBundle 'eagletmt/ghcmod-vim'
-
 " Web tech beautification: HTML, CSS, and of course JS
 NeoBundle 'maksimr/vim-jsbeautify'
 " Other language support
