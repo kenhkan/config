@@ -24,6 +24,7 @@
       - osquery
       - p7zip
       - ffmpeg
+      - exiftool
 
     applications:
       - "0xed"
