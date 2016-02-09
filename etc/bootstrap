@@ -3,5 +3,6 @@
 cd ~/Desktop
 git clone https://github.com/kenhkan/config.git
 cd config
+git pull origin master
 bin/setup
 rm -rf ~/Desktop/config
