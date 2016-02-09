@@ -64,8 +64,11 @@
         - code
         - code/hack
 
-    - name: Create shortcut directory
+    - name: Create shortcut directories
       file: path={{ home }}/s state=directory
+
+    - name: Create other directories
+      file: path={{ home }}/.stack state=directory
 
     - name: Clone config
       git: repo=https://github.com/kenhkan/config.git dest={{ home }}/Desktop/code/config update=no accept_hostkey=yes
