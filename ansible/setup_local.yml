@@ -1,6 +1,11 @@
 - hosts: localhost
+
+  vars_prompt:
+    - name: "username"
+      prompt: "Your username"
+
   vars:
-    home: /Users/kenhkan
+    home: "/Users/{{ username }}"
 
     shortcuts:
       - { from: "v", to: "/Volumes" }
@@ -102,7 +107,7 @@
       copy: dest={{ home }}/Library/Fonts/ src=../fonts/Input
 
     - name: Set startup items
-      shell: osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Users/kenhkan/Applications/{{ item }}.app", hidden:false}'
+      shell: osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Users/{{ username }}/Applications/{{ item }}.app", hidden:false}'
       with_items:
         - Spectacle
         - "Google Chrome"
