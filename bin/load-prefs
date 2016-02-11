@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+PREF_DIR=$HOME/Library/Preferences
+PREFS_PATH="$DIR/../etc/prefs.txt"
+OUTPUT_NAME=prefs.tar.gz
+TEMP_NAME=prefs
+
+tar -zxvf $HOME/s/w/$OUTPUT_NAME
+
+cp $TEMP_NAME/* $PREF_DIR/

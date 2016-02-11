@@ -1,0 +1,20 @@
+SourceGear DiffMerge Preferences
+com.apple.BluetoothAudioAgent.plist
+com.apple.Preview.plist
+com.apple.Safari.plist
+com.apple.Spotlight.plist
+com.apple.dock.plist
+com.apple.finder.plist
+com.apple.inputmethod.CoreChineseEngineFramework.plist
+com.apple.loginitems.plist
+com.apple.menuextra.battery.plist
+com.apple.menuextra.clock.plist
+com.apple.systempreferences.plist
+com.apple.systemsound.plist
+com.divisiblebyzero.Spectacle.plist
+com.google.Chrome.plist
+com.googlecode.iterm2.plist
+com.incrediblebee.Archiver.plist
+com.skitch.skitch.plist
+com.sourcegear.DiffMerge.plist
+com.suavetech.0xED.plist

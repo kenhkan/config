@@ -5,3 +5,4 @@ fish/*
 !fish/functions
 gtk-2.0/
 netrc
+prefs/
