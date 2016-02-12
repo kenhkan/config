@@ -12,6 +12,8 @@ mkdir $TEMP_DIR
 
 while read filename
 do
+  dir="$(dirname "$TEMP_DIR/$filename" )"
+  mkdir -p "$dir"
   cp "$PREF_DIR/$filename" "$TEMP_DIR/$filename"
 done < $PREFS_PATH
 
