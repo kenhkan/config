@@ -42,6 +42,7 @@ osx/app
 osx/dock
 osx/finder
 osx/general
+osx/git
 osx/input
 osx/mac
 osx/neobundle
@@ -49,9 +50,9 @@ osx/no_itunes
 osx/screen
 osx/spotlight
 osx/ssd
+osx/ssh
 osx/terminal
 osx/webkit
-osx/ssh
 
 
 echo ""

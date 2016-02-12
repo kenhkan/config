@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# git-related setup
+
+
+git config --global core.excludesfile $HOME/.gitignore
