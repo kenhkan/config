@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-PREF_DIR=$HOME/Library/Preferences
+PREF_DIR=$HOME/Library
 PREFS_PATH="$DIR/../etc/prefs.txt"
 OUTPUT_NAME=prefs.tar.gz
 TEMP_NAME=prefs

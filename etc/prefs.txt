@@ -1,21 +1,22 @@
-SourceGear DiffMerge Preferences
-com.apple.BluetoothAudioAgent.plist
-com.apple.Preview.plist
-com.apple.Safari.plist
-com.apple.Spotlight.plist
-com.apple.dock.plist
-com.apple.finder.plist
-com.apple.inputmethod.CoreChineseEngineFramework.plist
-com.apple.loginitems.plist
-com.apple.menuextra.battery.plist
-com.apple.menuextra.clock.plist
-com.apple.symbolichotkeys.plist
-com.apple.systempreferences.plist
-com.apple.systemsound.plist
-com.divisiblebyzero.Spectacle.plist
-com.google.Chrome.plist
-com.googlecode.iterm2.plist
-com.incrediblebee.Archiver.plist
-com.skitch.skitch.plist
-com.sourcegear.DiffMerge.plist
-com.suavetech.0xED.plist
+Preferences/SourceGear DiffMerge Preferences
+Preferences/com.apple.BluetoothAudioAgent.plist
+Preferences/com.apple.Preview.plist
+Preferences/com.apple.Safari.plist
+Preferences/com.apple.Spotlight.plist
+Preferences/com.apple.dock.plist
+Preferences/com.apple.finder.plist
+Preferences/com.apple.inputmethod.CoreChineseEngineFramework.plist
+Preferences/com.apple.loginitems.plist
+Preferences/com.apple.menuextra.battery.plist
+Preferences/com.apple.menuextra.clock.plist
+Preferences/com.apple.symbolichotkeys.plist
+Preferences/com.apple.systempreferences.plist
+Preferences/com.apple.systemsound.plist
+Preferences/com.divisiblebyzero.Spectacle.plist
+Preferences/com.google.Chrome.plist
+Preferences/com.googlecode.iterm2.plist
+Preferences/com.incrediblebee.Archiver.plist
+Preferences/com.skitch.skitch.plist
+Preferences/com.sourcegear.DiffMerge.plist
+Preferences/com.suavetech.0xED.plist
+Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings
