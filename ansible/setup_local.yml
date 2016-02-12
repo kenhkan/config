@@ -70,17 +70,14 @@
     - name: Create other directories
       file: path={{ home }}/.stack state=directory
 
-    - name: Clone config
-      git: repo=https://github.com/kenhkan/config.git dest={{ home }}/Desktop/code/config update=no accept_hostkey=yes
-
     - name: Symlink config
-      file: path={{ home }}/.config src={{ home }}/Desktop/code/config state=link
+      file: path={{ home }}/.config src={{ home }}/Desktop/config state=link
 
     - name: Apply default DS_Store
       copy: src={{ home }}/Desktop/code/etc/DS_Store dest={{ home }}/.DS_Store
 
     - name: Symlink dotfiles in config
-      file: path={{ home }}/.{{ item }} src={{ home }}/Desktop/code/config/dotfiles/{{ item }} state=link
+      file: path={{ home }}/.{{ item }} src={{ home }}/Desktop/config/dotfiles/{{ item }} state=link
       with_items:
         - ackrc
         - editorconfig
@@ -89,7 +86,7 @@
         - vimrc
 
     - name: Symlink stack config
-      file: path={{ home }}/.stack/config.yaml src={{ home }}/Desktop/code/config/dotfiles/stack state=link
+      file: path={{ home }}/.stack/config.yaml src={{ home }}/Desktop/config/dotfiles/stack state=link
 
     - name: Setup shortcuts
       file: path={{ home }}/s/{{ item.from }} src={{ item.to }} state=link
