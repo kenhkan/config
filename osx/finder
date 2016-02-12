@@ -33,6 +33,12 @@ defaults write com.apple.finder ShowStatusBar -bool false
 # Finder: show path bar
 defaults write com.apple.finder ShowPathbar -bool true
 
+# Finder: hide toolbar
+defaults write com.apple.finder ShowToolbar -bool false
+
+# Finder: hide sidebar
+defaults write com.apple.finder ShowSidebar -bool false
+
 # Display full POSIX path as Finder window title
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
