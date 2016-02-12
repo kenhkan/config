@@ -57,7 +57,8 @@ osx/webkit
 
 echo ""
 echo "***** MANUAL STEPS *****"
-echo "- Run this to register the SSH key with GitHub: `pbcopy < ~/.ssh/id_rsa.pub`"
+echo "- Run \`bin/load-prefs\` with the saved prefs archive in \`~/s/w/\`"
+echo "- Run this to register the SSH key with GitHub: \`pbcopy < ~/.ssh/id_rsa.pub\`"
 echo "- Install Backblaze by opening the Backblaze installer"
 echo "- Install OSXFuse (with MacFuse support) and VeraCrypt in the etc directory"
 echo "- Run BlockBlock (/opt/homebrew-cask/Caskroom/blockblock/x.x.x/BlockBlock.app)"

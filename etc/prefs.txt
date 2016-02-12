@@ -9,6 +9,7 @@ com.apple.inputmethod.CoreChineseEngineFramework.plist
 com.apple.loginitems.plist
 com.apple.menuextra.battery.plist
 com.apple.menuextra.clock.plist
+com.apple.symbolichotkeys.plist
 com.apple.systempreferences.plist
 com.apple.systemsound.plist
 com.divisiblebyzero.Spectacle.plist
