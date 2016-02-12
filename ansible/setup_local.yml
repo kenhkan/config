@@ -70,7 +70,7 @@
       file: path={{ home }}/.config src={{ home }}/Desktop/config state=link
 
     - name: Apply default DS_Store
-      copy: src={{ home }}/Desktop/code/etc/DS_Store dest={{ home }}/.DS_Store
+      copy: src={{ home }}/Desktop/config/etc/DS_Store dest={{ home }}/.DS_Store
 
     - name: Symlink dotfiles in config
       file: path={{ home }}/.{{ item }} src={{ home }}/Desktop/config/dotfiles/{{ item }} state=link
