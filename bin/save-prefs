@@ -1,20 +1,23 @@
 #!/usr/bin/env bash
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+HERE="$( cd "$DIR/.." && pwd)"
 PREF_DIR=$HOME/Library
 PREFS_PATH="$DIR/../etc/prefs.txt"
 OUTPUT_NAME=prefs.tar.gz
-TEMP_NAME=prefs
-TEMP_DIR=/tmp/$TEMP_NAME
+OUT_DIR=$HERE/prefs
 
-rm -r $TEMP_DIR
-mkdir $TEMP_DIR
+cd $HERE
+
+rm -r $OUT_DIR
+mkdir $OUT_DIR
 
 while read filename
 do
-  dir="$(dirname "$TEMP_DIR/$filename" )"
+  dir="$(dirname "$OUT_DIR/$filename" )"
   mkdir -p "$dir"
-  cp "$PREF_DIR/$filename" "$TEMP_DIR/$filename"
+  echo "Copying \"$PREF_DIR/$filename\" to \"$OUT_DIR/$filename\""
+  cp "$PREF_DIR/$filename" "$OUT_DIR/$filename"
 done < $PREFS_PATH
 
-$(cd /tmp; tar -zcvf $HOME/s/w/$OUTPUT_NAME $TEMP_NAME)
+echo "*** DONE"

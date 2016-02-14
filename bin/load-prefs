@@ -1,9 +1,13 @@
 #!/usr/bin/env bash
 
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+HERE="$( cd "$DIR/.." && pwd)"
 PREF_DIR=$HOME/Library
-OUTPUT_NAME=prefs.tar.gz
-TEMP_NAME=prefs
+OUT_NAME=$HERE/prefs
 
-tar -zxvf $HOME/s/w/$OUTPUT_NAME
+cd $HERE
 
-cp -R $TEMP_NAME/* $PREF_DIR/
+echo "Copying \"$OUT_NAME/*\" to \"$PREF_DIR/\""
+cp -R $OUT_NAME/* $PREF_DIR/
+
+echo "*** DONE"

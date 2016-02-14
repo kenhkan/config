@@ -1,3 +1,4 @@
+Preferences/.GlobalPreferences.plist
 Preferences/SourceGear DiffMerge Preferences
 Preferences/com.apple.BluetoothAudioAgent.plist
 Preferences/com.apple.Preview.plist

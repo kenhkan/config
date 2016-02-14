@@ -65,4 +65,4 @@ open "/opt/homebrew-cask/Caskroom/backblaze/latest/Backblaze Installer.app"
 
 
 echo ""
-echo "***** COMPLETE"
+echo "*** DONE"
