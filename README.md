@@ -8,7 +8,8 @@
 
 ### Manual steps after setup
 
-- Register the SSH key with GitHub
 - Configure input sources
 - Turn on firewall
 - Turn on FileVault
+- Register the SSH key with GitHub
+- Restore backup and update computer license
