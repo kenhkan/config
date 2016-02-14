@@ -57,11 +57,9 @@ osx/webkit
 
 # Other applications
 open "etc/osxfuse-2.8.2.dmg"
-open "/Volumes/FUSE for OS X"
 open "etc/VeraCrypt_1.16.dmg"
-open "/Volumes/VeraCrypt 1.16 for Mac OS X 10.6 and later"
-open "/Applications/BlockBlock.app"
-open "/opt/homebrew-cask/Caskroom/backblaze/latest/Backblaze Installer.app"
+find "/opt/homebrew-cask/Caskroom/blockblock/" -name "BlockBlock_Installer.app" | parallel open
+find "/opt/homebrew-cask/Caskroom/backblaze/" -name "Backblaze Installer.app" | parallel open
 
 
 echo ""
