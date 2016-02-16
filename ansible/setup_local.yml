@@ -26,6 +26,7 @@
       - p7zip
       - ffmpeg
       - exiftool
+      - coreutils
 
     applications:
       - "0xed"
