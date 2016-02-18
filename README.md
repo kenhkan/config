@@ -11,5 +11,5 @@
 - Configure input sources
 - Turn on firewall
 - Turn on FileVault
-- Register the SSH key with GitHub
+- Set up GitHub access key at https://github.com/settings/tokens
 - Restore backup and update computer license
