@@ -1,4 +1,4 @@
-function rename-extension
+function rename-ext
   set oldExt $argv[1]
   set newExt $argv[2]
 
