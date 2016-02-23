@@ -27,6 +27,7 @@
       - ffmpeg
       - exiftool
       - coreutils
+      - binutils
 
     applications:
       - "0xed"
