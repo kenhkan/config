@@ -28,6 +28,7 @@
       - exiftool
       - coreutils
       - binutils
+      - cloc
 
     applications:
       - "0xed"
