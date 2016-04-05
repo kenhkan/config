@@ -51,6 +51,7 @@
       - blockblock
       - archiver
       - elm-platform
+      - slack
 
   tasks:
     - name: Install programs with homebrew
