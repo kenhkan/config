@@ -52,6 +52,7 @@
       - archiver
       - elm-platform
       - slack
+      - transmission
 
   tasks:
     - name: Install programs with homebrew
