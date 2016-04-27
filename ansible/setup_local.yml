@@ -53,6 +53,7 @@
       - elm-platform
       - slack
       - transmission
+      - dropbox
 
   tasks:
     - name: Install programs with homebrew
