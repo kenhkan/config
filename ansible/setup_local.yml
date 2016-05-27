@@ -29,6 +29,7 @@
       - coreutils
       - binutils
       - cloc
+      - python
 
     applications:
       - "0xed"
@@ -107,6 +108,9 @@
       shell: brew cask install {{ item }}
       with_items: applications
       when: item not in installed_applications.results | map(attribute='stdout')
+
+    - name: Install autoformatter
+      pip: name=autopep8 state=present
 
     - name: Copy fonts
       copy: dest={{ home }}/Library/Fonts/ src=../fonts/Input
