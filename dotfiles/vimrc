@@ -88,6 +88,9 @@ NeoBundle 'rking/ag.vim'
 " Extradite for git log
 NeoBundle 'int3/vim-extradite'
 
+" Autoformatting
+NeoBundle 'Chiel92/vim-autoformat'
+
 
 " ----------
 " Basic setup
