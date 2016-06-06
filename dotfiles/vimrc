@@ -163,6 +163,7 @@ au BufWritePost * :silent! :syntax sync fromstart<cr>:redraw!<cr>
 
 " Fold
 set foldmethod=syntax
+set foldlevelstart=99
 
 " No highlight
 nmap <Leader>p :noh<CR>
