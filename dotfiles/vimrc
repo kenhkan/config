@@ -286,8 +286,8 @@ nnoremap <Leader>c :w<Space>!wc<CR>
 vnoremap <Leader>c :call<Space>VisualCount()<CR>
 
 " Autoformatting
-autocmd BufWritePre *.hs :%!hindent --style gibiansky
-autocmd BufWritePre *.hs :%!stylish-haskell
+autocmd BufWritePre *.hs :silent %!hindent --style gibiansky
+autocmd BufWritePre *.hs :silent %!stylish-haskell
 
 
 " ----------
