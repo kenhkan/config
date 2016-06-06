@@ -57,7 +57,6 @@
 
     stack_commands:
       - { user: "jaspervdj", repo: "stylish-haskell" }
-      - { user: "chrisdone", repo: "hindent" }
 
   tasks:
     - name: Install programs with homebrew
