@@ -19,7 +19,6 @@
       - heroku-toolbelt
       - parallel
       - rust
-      - caskroom/cask/brew-cask
       - node
       - git-lfs
       - osquery
@@ -56,6 +55,10 @@
       - transmission
       - dropbox
 
+    stack_commands:
+      - { user: "jaspervdj", repo: "stylish-haskell" }
+      - { user: "chrisdone", repo: "hindent" }
+
   tasks:
     - name: Install programs with homebrew
       homebrew: name={{ item }} state=present update_homebrew=yes
@@ -91,12 +94,23 @@
     - name: Symlink stack config
       file: path={{ home }}/.stack/config.yaml src={{ home }}/Desktop/config/dotfiles/stack state=link
 
+    - name: Fetch executables that require stack
+      with_items: stack_commands
+      git: repo=git@github.com:{{ item.user }}/{{ item.repo }}.git dest={{ home }}/Desktop/code/hack/{{ item.repo }} update=yes
+
+    - name: Install executables that require stack
+      with_items: stack_commands
+      shell: stack install chdir={{ home }}/Desktop/code/hack/{{ item.repo }}
+
     - name: Setup shortcuts
       file: path={{ home }}/s/{{ item.from }} src={{ item.to }} state=link
       with_items: shortcuts
 
     - name: Include old versions of casks
       shell: brew tap caskroom/versions
+
+    - name: Install Cask
+      shell: brew tap caskroom/cask
 
     - name: Check for installed applications
       shell: brew cask list | grep {{ item }}
