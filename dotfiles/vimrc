@@ -286,12 +286,8 @@ endfunction
 nnoremap <Leader>c :w<Space>!wc<CR>
 vnoremap <Leader>c :call<Space>VisualCount()<CR>
 
-" Autoformatting. Note that the command order matters.
-
-" For Haskell headers
-autocmd BufWritePre *.hs :exe 'norm M`'
-autocmd BufWritePre *.hs :exe 'silent! %!stylish-haskell'
-autocmd BufWritePre *.hs :exe 'norm m`'
+" Formatting Haskell headers
+command FormatHaskell :exe 'silent! %!stylish-haskell'
 
 
 " ----------
