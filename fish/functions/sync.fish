@@ -1,3 +1,3 @@
 function sync
-  rsync -avPz $argv[1] $argv[2]
+  rsync -avPz --exclude ".git" $argv[1] $argv[2]
 end
