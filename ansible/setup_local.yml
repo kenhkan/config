@@ -29,6 +29,7 @@
       - binutils
       - cloc
       - python
+      - jq
 
     applications:
       - "0xed"
