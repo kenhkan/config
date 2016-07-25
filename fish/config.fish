@@ -1,6 +1,25 @@
 set PATH $HOME/.config/bin $HOME/.local/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/bin /opt/X11/bin
 setenv EDITOR vim
 
+
+#####
+# Nix
+
+set NIX_LINK "$HOME/.nix-profile"
+set NIX_DEFAULT_LINK /nix/var/nix/profiles/default
+
+if not test -L "$NIX_DEFAULT_LINK"
+  ln -s "$NIX_DEFAULT_LINK" "$NIX_LINK"
+end
+
+set -x PATH $NIX_LINK/bin $PATH
+set -x NIX_PATH "$HOME/.nix-defexpr/channels/nixpkgs" $NIX_PATH
+echo "https://nixos.org/channels/nixpkgs-unstable nixpkgs" > "$HOME/.nix-channels"
+
+set -x SSL_CERT_FILE "$NIX_LINK/etc/ssl/certs/ca-bundle.crt"
+
+
+#####
 # http://ethanschoonover.com/solarized#the-values
 
 # Use these settings if you've applied a Solarized theme to your terminal (for
@@ -24,6 +43,8 @@ set -l blue    "blue"
 set -l cyan    "cyan"
 set -l green   "green"
 
+
+#####
 # Use these settings if your terminal supports term256 and your terminal hasn't
 # been configured with a Solarized theme.i.e. if "blue" is the default blue, not
 # Solarized blue.
