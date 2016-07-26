@@ -13,7 +13,7 @@ if not test -L "$NIX_DEFAULT_LINK"
 end
 
 set -x PATH $NIX_LINK/bin $PATH
-set -x NIX_PATH "$HOME/.nix-defexpr/channels/nixpkgs" $NIX_PATH
+set -x NIX_PATH nixpkgs="$HOME/.nix-defexpr/channels/nixpkgs"
 echo "https://nixos.org/channels/nixpkgs-unstable nixpkgs" > "$HOME/.nix-channels"
 
 set -x SSL_CERT_FILE "$NIX_LINK/etc/ssl/certs/ca-bundle.crt"
