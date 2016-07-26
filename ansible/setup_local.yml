@@ -30,6 +30,7 @@
       - cloc
       - python
       - jq
+      - postgresql
 
     applications:
       - "0xed"
