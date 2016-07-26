@@ -55,6 +55,7 @@
       - slack
       - transmission
       - dropbox
+      - mactex
 
     stack_commands:
       - { user: "jaspervdj", repo: "stylish-haskell" }
