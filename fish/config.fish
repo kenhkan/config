@@ -18,6 +18,8 @@ echo "https://nixos.org/channels/nixpkgs-unstable nixpkgs" > "$HOME/.nix-channel
 
 set -x SSL_CERT_FILE "$NIX_LINK/etc/ssl/certs/ca-bundle.crt"
 
+set -x NIXPKGS_ALLOW_UNFREE 1
+
 
 #####
 # http://ethanschoonover.com/solarized#the-values
