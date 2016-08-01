@@ -96,7 +96,7 @@
         - vimrc
 
     - name: Symlink stack config
-      file: path={{ home }}/.stack/config.yaml src={{ home }}/Desktop/config/dotfiles/stack state=link
+      file: path={{ home }}/.stack/config.yaml src={{ home }}/Desktop/config/dotfiles/stack state=link force=yes
 
     - name: Fetch executables that require stack
       with_items: stack_commands
