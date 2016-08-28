@@ -453,3 +453,9 @@ nmap <Leader>/j :Tabularize /\(:\\|=\\|,\)<CR>
 vmap <Leader>/j :Tabularize /\(:\\|=\\|,\)<CR>
 
 call neobundle#end()
+
+" ----------
+" Useful commands
+" ----------
+
+command ReverseLines :g/^/m0<CR>
