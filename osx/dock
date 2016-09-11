@@ -4,12 +4,6 @@
 # Dock, Dashboard, and hot corners                                            #
 ###############################################################################
 
-# https://www.quora.com/How-can-I-completely-hide-or-remove-the-Dock-in-Mac-OS-X-Yosemite
-# First make the dock really small:
-defaults write com.apple.dock tilesize -int 1
-# Then, make it not appear for a super long amount of time:
-defaults write com.apple.dock autohide-time-modifier -float 20000000000
-
 # Enable highlight hover effect for the grid view of a stack (Dock)
 defaults write com.apple.dock mouse-over-hilite-stack -bool true
 
@@ -62,6 +56,12 @@ defaults write com.apple.dock autohide -bool true
 
 # Make Dock icons of hidden applications translucent
 defaults write com.apple.dock showhidden -bool true
+
+# https://www.quora.com/How-can-I-completely-hide-or-remove-the-Dock-in-Mac-OS-X-Yosemite
+# First make the dock really small:
+defaults write com.apple.dock tilesize -int 1
+# Then, make it not appear for a super long amount of time:
+defaults write com.apple.dock autohide-time-modifier -float 20000000000
 
 # Disable the Launchpad gesture (pinch with thumb and three fingers)
 #defaults write com.apple.dock showLaunchpadGestureEnabled -int 0
