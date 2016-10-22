@@ -59,6 +59,7 @@
       - slack
       - transmission
       - dropbox
+      - soundflower
 
     stack_commands:
       - { user: "jaspervdj", repo: "stylish-haskell" }
