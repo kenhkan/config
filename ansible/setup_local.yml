@@ -60,6 +60,7 @@
       - transmission
       - dropbox
       - soundflower
+      - sequel-pro
 
     stack_commands:
       - { user: "jaspervdj", repo: "stylish-haskell" }
