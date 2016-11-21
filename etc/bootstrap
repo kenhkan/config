@@ -1,11 +1,8 @@
 #!/usr/bin/env bash
 
-if [[ ! -d /Applications/Xcode.app ]]; then
-  >&2 echo "----> Installing Xcode..."
-  xcode-select --install
-  >&2 echo "----> Please restart after Xcode has been installed."
-  exit 3
-fi
+>&2 echo "----> Installing Xcode..."
+xcode-select --install
+>&2 echo "----> Please restart after Xcode has been installed."
 
 cd ~/Desktop
 git clone https://github.com/kenhkan/config.git

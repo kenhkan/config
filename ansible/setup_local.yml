@@ -13,7 +13,7 @@
       - { from: "p", to: "{{ home }}/Dropbox/projects" }
       - { from: "r", to: "{{ home }}/Dropbox/print" }
 
-    programs:
+    cl_programs:
       - ag
       - vim
       - git
@@ -36,7 +36,7 @@
       - postgresql
       - git-when-merged
 
-    applications:
+    mac_applications:
       - "0xed"
       - google-chrome
       - fish
@@ -67,9 +67,9 @@
       - { user: "jaspervdj", repo: "stylish-haskell" }
 
   tasks:
-    - name: Install programs with homebrew
+    - name: Install command-line programs with homebrew
       homebrew: name={{ item }} state=present update_homebrew=yes
-      with_items: programs
+      with_items: cl_programs
 
     - name: Create top-level directories
       file: path={{ home }}/Desktop/{{ item }} state=directory
@@ -122,12 +122,12 @@
     - name: Check for installed applications
       shell: brew cask list | grep {{ item }}
       register: installed_applications
-      with_items: applications
+      with_items: mac_applications
       ignore_errors: true
 
     - name: Install applications with brew cask
       shell: brew cask install {{ item }}
-      with_items: applications
+      with_items: mac_applications
       when: item not in installed_applications.results | map(attribute='stdout')
 
     - name: Install autoformatter
