@@ -9,12 +9,6 @@ ANSIBLE_PATH="$( cd "$DIR/../ansible/" && pwd )"
 # Ask for the administrator password upfront
 sudo -v
 
-# Install Xcode
-xcode-select --install
-
-echo "Press ENTER when Xcode has finished installing."
-read XCODE_INSTALLED
-
 # Get Homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
