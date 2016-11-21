@@ -2,12 +2,21 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+>&2 echo "----> Checking for git..."
+git >/dev/null 2>/dev/null
+if [[ $? -ne 0 ]]; then
+  >&2 echo "----> Re-run setup after Xcode command line tools has been installed."
+  exit 3
+fi
+
 >&2 echo "----> Cloning config repo..."
-git clone https://github.com/kenhkan/config.git ~/Desktop/config
-( cd ~/Desktop/config; git pull origin master )
+cd ~/Desktop
+git clone https://github.com/kenhkan/config.git
+cd config
+git pull origin master
 
 >&2 echo "----> Starting the setup process..."
-$DIR/setup
+bin/setup
 
 >&2 echo "----> Done with the bootstrapping process."
 exit 0
