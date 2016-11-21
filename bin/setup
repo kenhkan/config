@@ -142,8 +142,8 @@ set +x
 >&2 echo "----> Mounting application images that need to be set up manually..."
 open "etc/osxfuse-2.8.2.dmg"
 open "etc/VeraCrypt_1.16.dmg"
-find "/opt/homebrew-cask/Caskroom/blockblock/" -name "BlockBlock_Installer.app" | parallel open
-find "/opt/homebrew-cask/Caskroom/backblaze/" -name "Backblaze Installer.app" | parallel open
+find "/usr/local/Caskroom/blockblock/" -name "BlockBlock_Installer.app" | parallel open
+find "/usr/local/Caskroom/backblaze/" -name "Backblaze Installer.app" | parallel open
 
 >&2 echo "----> Done setting up."
 exit 0

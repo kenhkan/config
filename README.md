@@ -10,7 +10,8 @@ curl https://raw.githubusercontent.com/kenhkan/config/master/bin/bootstrap > /tm
 ### Manual steps after setup
 
 - Configure input sources
-- Turn on firewall
-- Turn on FileVault
-- Set up GitHub access key at https://github.com/settings/tokens
 - Restore backup and update computer license
+- Set up GitHub access key at https://github.com/settings/tokens
+- Turn on FileVault
+- Turn on firewall
+- Update wallpaper image
