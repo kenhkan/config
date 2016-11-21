@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
 >&2 echo "----> Cloning config repo..."
-cd ~/Desktop
-git clone https://github.com/kenhkan/config.git
-cd config
-git pull origin master
+git clone https://github.com/kenhkan/config.git ~/Desktop/config
+( cd ~/Desktop/config; git pull origin master )
 
 >&2 echo "----> Starting the setup process..."
-bin/setup
+$DIR/setup
 
 >&2 echo "----> Done with the bootstrapping process."
 exit 0
