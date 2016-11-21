@@ -1,36 +1,128 @@
 #!/usr/bin/env bash
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-ANSIBLE_PATH="$( cd "$DIR/../ansible/" && pwd )"
 
+>&2 echo "----> Resetting working directory..."
+cd $DIR/..
 
-### Setup ###
-
-# Ask for the administrator password upfront
+>&2 echo "----> Asking for the administrator password upfront..."
 sudo -v
 
-# Get Homebrew
+>&2 echo "----> Checking for Xcode command line tools..."
+if [[ ! -d /Library/Developer/CommandLineTools ]]; then
+  >&2 echo "----> Installing Xcode command line tools..."
+  xcode-select --install
+  >&2 echo "----> Please restart after Xcode command line tools has been installed."
+  exit 3
+fi
+
+>&2 echo "----> Installing Homebrew..."
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-# Get Ansible
-brew install ansible
+>&2 echo "----> Installing command-line programs with Homebrew..."
+brew install ag
+brew install binutils
+brew install cloc
+brew install coreutils
+brew install exiftool
+brew install ffmpeg
+brew install git
+brew install git-lfs
+brew install git-when-merged
+brew install haskell-stack
+brew install jq
+brew install node
+brew install osquery
+brew install p7zip
+brew install parallel
+brew install postgresql
+brew install python
+brew install vim
 
+>&2 echo "----> Creating necessary directories..."
+mkdir -p ~/Desktop/code
+mkdir -p ~/Desktop/code/hack
+mkdir -p ~/s
+mkdir -p ~/.stack
 
-### Install ###
+>&2 echo "----> Applying default files..."
+cp ~/Desktop/config/etc/DS_Store ~/.DS_Store
 
-# Play setup playbook
-ansible-playbook $ANSIBLE_PATH/setup_local.yml -i $ANSIBLE_PATH/hosts
+>&2 echo "----> Creating symlinks..."
+ln -s ~/Desktop/config ~/.config
+ln -s ~/Desktop/config/dotfiles/ackrc ~/.ackrc
+ln -s ~/Desktop/config/dotfiles/editorconfig ~/.editorconfig
+ln -s ~/Desktop/config/dotfiles/gitconfig ~/.gitconfig
+ln -s ~/Desktop/config/dotfiles/gitignore ~/.gitignore
+ln -s ~/Desktop/config/dotfiles/vimrc ~/.vimrc
 
+>&2 echo "----> Setting stack up..."
+ln -s ~/Desktop/config/dotfiles/stack ~/.stack/config.yaml
+git clone git@github.com:jaspervdj/stylish-haskell.git ~/Desktop/code/hack/stylish-haskell
+( cd ~/Desktop/code/hack/stylish-haskell; stack install )
 
-### Setup OS X ###
+>&2 echo "----> Creating shortcut symlinks..."
+ln -s ~/Desktop ~/s/v
+ln -s ~/Desktop ~/s/d
+ln -s ~/Desktop/code ~/s/c
+ln -s ~/Desktop/code/hack ~/s/h
+ln -s ~/Downloads ~/s/w
+ln -s ~/Movies ~/s/o
+ln -s ~/Dropbox/projects ~/s/p
+ln -s ~/Dropbox/print ~/s/r
 
-# Use fish as the default shell
+>&2 echo "----> Including old versions of casks..."
+brew tap caskroom/versions
+
+>&2 echo "----> Install Cask..."
+brew tap caskroom/cask
+
+>&2 echo "----> Installing desktop applications with Homebrew Cask..."
+bin/install_application "0xed"
+bin/install_application archiver
+bin/install_application backblaze
+bin/install_application blockblock
+bin/install_application diffmerge
+bin/install_application dropbox
+bin/install_application elm-platform
+bin/install_application firefox
+bin/install_application fish
+bin/install_application google-chrome
+bin/install_application iterm2
+bin/install_application java
+bin/install_application knockknock
+bin/install_application sequel-pro
+bin/install_application skitch
+bin/install_application slack
+bin/install_application soundflower
+bin/install_application spectacle
+bin/install_application sublime-text3
+bin/install_application torbrowser
+bin/install_application transmission
+bin/install_application tuxera-ntfs
+bin/install_application vagrant
+bin/install_application virtualbox
+bin/install_application vlc
+
+>&2 echo "----> Installing Python programs..."
+pip install autopep8
+
+>&2 echo "----> Copying fonts..."
+rsync -avPz ../fonts/Input/* ~/Library/Fonts
+
+>&2 echo "----> Setting startup items..."
+# TODO: Remove all existing startup items first?
+osascript -e 'tell application "System Events" to make login item at end with properties {path:"~/Applications/Spectacle.app", hidden:false}'
+osascript -e 'tell application "System Events" to make login item at end with properties {path:"~/Applications/Google Chrome.app", hidden:false}'
+
+>&2 echo "----> Setting fish as the default shell..."
 chsh -s /usr/local/bin/fish
 
-# Keep-alive: update existing `sudo` time stamp until finish
+>&2 echo "----> keep-alive: update existing sudo time stamp until finish..."
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# Configure OS X. Most scripts addapted from
+>&2 echo "----> Configuring OS..."
+# Most scripts are addapted from
 # https://github.com/mathiasbynens/dotfiles/blob/master/.osx
 osx/app
 osx/dock
@@ -48,13 +140,11 @@ osx/ssh
 osx/terminal
 osx/webkit
 
-
-# Other applications
+>&2 echo "----> Mounting application images that need to be set up manually..."
 open "etc/osxfuse-2.8.2.dmg"
 open "etc/VeraCrypt_1.16.dmg"
 find "/opt/homebrew-cask/Caskroom/blockblock/" -name "BlockBlock_Installer.app" | parallel open
 find "/opt/homebrew-cask/Caskroom/backblaze/" -name "Backblaze Installer.app" | parallel open
 
-
-echo ""
-echo "*** DONE"
+>&2 echo "----> Done setting up."
+exit 0

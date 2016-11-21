@@ -7,7 +7,8 @@ OUT_NAME=$HERE/prefs
 
 cd $HERE
 
-echo "Copying \"$OUT_NAME/*\" to \"$PREF_DIR/\""
+>&2 echo "----> Copying \"$OUT_NAME/*\" to \"$PREF_DIR/\"..."
 cp -R $OUT_NAME/* $PREF_DIR/
 
-echo "*** DONE"
+>&2 echo "----> Done loading preferences."
+exit 0

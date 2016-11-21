@@ -3,25 +3,6 @@ setenv EDITOR vim
 
 
 #####
-# Nix
-
-set NIX_LINK "$HOME/.nix-profile"
-set NIX_DEFAULT_LINK /nix/var/nix/profiles/default
-
-if not test -L "$NIX_DEFAULT_LINK"
-  ln -s "$NIX_DEFAULT_LINK" "$NIX_LINK"
-end
-
-set -x PATH $NIX_LINK/bin $PATH
-set -x NIX_PATH nixpkgs="$HOME/.nix-defexpr/channels/nixpkgs"
-echo "https://nixos.org/channels/nixpkgs-unstable nixpkgs" > "$HOME/.nix-channels"
-
-set -x SSL_CERT_FILE "$NIX_LINK/etc/ssl/certs/ca-bundle.crt"
-
-set -x NIXPKGS_ALLOW_UNFREE 1
-
-
-#####
 # http://ethanschoonover.com/solarized#the-values
 
 # Use these settings if you've applied a Solarized theme to your terminal (for
