@@ -10,6 +10,7 @@ if [[ $? -ne 0 ]]; then
 fi
 
 >&2 echo "----> Cloning config repo..."
+rm -rf ~/Desktop/config
 cd ~/Desktop
 git clone https://github.com/kenhkan/config.git
 cd config
