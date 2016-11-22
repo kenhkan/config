@@ -2,11 +2,11 @@
 
 APPLICATION_NAME=$1
 
->&2 echo "----> Install '${APPLICATION_NAME}'..."
-brew cask list | grep $APPLICATION_NAME
+>&2 echo "----> Installing '${APPLICATION_NAME}'..."
+brew cask list | grep $APPLICATION_NAME >/dev/null
 if [[ $? -ne 0 ]]; then
   brew cask install $APPLICATION_NAME
 fi
 
->&2 echo "----> Done installing application."
+>&2 echo "----> Done installing '${APPLICATION_NAME}'."
 exit 0
