@@ -10,11 +10,16 @@ if [[ $? -ne 0 ]]; then
 fi
 
 >&2 echo "----> Cloning config repo..."
-rm -rf ~/Desktop/config
-cd ~/Desktop
-git clone https://github.com/kenhkan/config.git
-cd config
-git pull origin master
+if [[ -d ~/Desktop/config ]]; then
+  cd ~/Desktop/config
+  git checkout  master
+  git pull origin master
+else
+  cd ~/Desktop
+  git clone https://github.com/kenhkan/config.git
+  cd config
+  git pull origin master
+fi
 
 >&2 echo "----> Starting the setup process..."
 bin/setup
