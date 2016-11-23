@@ -89,8 +89,8 @@ brew tap caskroom/versions
 brew tap caskroom/cask
 
 >&2 echo "----> Installing desktop applications with Homebrew Cask..."
+bin/install_application https://raw.githubusercontent.com/caskroom/homebrew-cask/19c3eff52dc8b7d8e36c40eb6538592ae0c720d8/Casks/archiver.rb
 bin/install_application "0xed"
-bin/install_application archiver
 bin/install_application backblaze
 bin/install_application blockblock
 bin/install_application diffmerge
