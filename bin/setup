@@ -61,7 +61,6 @@ ln -sf ~/Desktop/config/dotfiles/vimrc ~/.vimrc
 
 >&2 echo "----> Setting stack up..."
 ln -sf ~/Desktop/config/dotfiles/stack ~/.stack/config.yaml
-stack setup
 if [[ ! -d ~/Desktop/code/hack/stylish-haskell ]]; then
   git clone https://github.com/jaspervdj/stylish-haskell.git ~/Desktop/code/hack/stylish-haskell
   if [[ $? -ne 0 ]]; then
@@ -69,7 +68,9 @@ if [[ ! -d ~/Desktop/code/hack/stylish-haskell ]]; then
     exit 5
   fi
 fi
-( cd ~/Desktop/code/hack/stylish-haskell; stack install )
+cd ~/Desktop/code/hack/stylish-haskell
+stack setup
+stack install
 
 >&2 echo "----> Creating shortcut symlinks..."
 ln -sf /Volumes ~/s/v
