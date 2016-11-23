@@ -52,15 +52,15 @@ mkdir -p ~/.stack
 cp ~/Desktop/config/etc/DS_Store ~/.DS_Store
 
 >&2 echo "----> Creating symlinks..."
-ln -sf ~/Desktop/config ~/.config
-ln -sf ~/Desktop/config/dotfiles/ackrc ~/.ackrc
-ln -sf ~/Desktop/config/dotfiles/editorconfig ~/.editorconfig
-ln -sf ~/Desktop/config/dotfiles/gitconfig ~/.gitconfig
-ln -sf ~/Desktop/config/dotfiles/gitignore ~/.gitignore
-ln -sf ~/Desktop/config/dotfiles/vimrc ~/.vimrc
+bin/create-link ~/.config  ~/Desktop/config
+bin/create-link ~/.ackrc  ~/Desktop/config/dotfiles/ackrc
+bin/create-link ~/.editorconfig  ~/Desktop/config/dotfiles/editorconfig
+bin/create-link ~/.gitconfig  ~/Desktop/config/dotfiles/gitconfig
+bin/create-link ~/.gitignore  ~/Desktop/config/dotfiles/gitignore
+bin/create-link ~/.vimrc  ~/Desktop/config/dotfiles/vimrc
 
 >&2 echo "----> Setting stack up..."
-ln -sf ~/Desktop/config/dotfiles/stack ~/.stack/config.yaml
+bin/create-link ~/.stack/config.yaml  ~/Desktop/config/dotfiles/stack
 if [[ ! -d ~/Desktop/code/hack/stylish-haskell ]]; then
   git clone https://github.com/jaspervdj/stylish-haskell.git ~/Desktop/code/hack/stylish-haskell
   if [[ $? -ne 0 ]]; then
@@ -68,19 +68,21 @@ if [[ ! -d ~/Desktop/code/hack/stylish-haskell ]]; then
     exit 5
   fi
 fi
-cd ~/Desktop/code/hack/stylish-haskell
-stack setup
-stack install
+(
+  cd ~/Desktop/code/hack/stylish-haskell;
+  stack setup;
+  stack install;
+)
 
 >&2 echo "----> Creating shortcut symlinks..."
-ln -sf /Volumes ~/s/v
-ln -sf ~/Desktop ~/s/d
-ln -sf ~/Desktop/code ~/s/c
-ln -sf ~/Desktop/code/hack ~/s/h
-ln -sf ~/Downloads ~/s/w
-ln -sf ~/Movies ~/s/o
-ln -sf ~/Dropbox/projects ~/s/p
-ln -sf ~/Dropbox/print ~/s/r
+bin/create-link ~/s/v /Volumes
+bin/create-link ~/s/d ~/Desktop
+bin/create-link ~/s/c ~/Desktop/code
+bin/create-link ~/s/h ~/Desktop/code/hack
+bin/create-link ~/s/w ~/Downloads
+bin/create-link ~/s/o ~/Movies
+bin/create-link ~/s/p ~/Dropbox/projects
+bin/create-link ~/s/r ~/Dropbox/print
 
 >&2 echo "----> Including old versions of casks..."
 brew tap caskroom/versions

@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+FROM=$1
+TO=$2
+
+>&2 echo "----> Creating a symlink from ${FROM} to ${TO}..."
+if [[ -L $FROM ]]; then
+  >&2 echo "----> Symlink '${FROM}' already exists..."
+  exit 0
+fi
+
+ln -sf $TO $FROM
+
+>&2 echo "----> Done linking '${FROM}'."
+exit 0
