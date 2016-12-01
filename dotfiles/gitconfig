@@ -1,10 +1,10 @@
 [user]
 	name = Kenneth Kan
-	email = kenhkan@gmail.com
+	email = kenneth.kan@mheducation.com
 [core]
 	editor = vim
 	pager = less
-	excludesfile = /Users/kenhkan/.gitignore
+	excludesfile = /Users/kenneth_kan/.gitignore
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean %f
