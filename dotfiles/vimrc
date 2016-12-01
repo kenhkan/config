@@ -316,13 +316,13 @@ let g:ag_working_path_mode='r'
 " Web stack
 " ----------
 
-nnoremap <Leader><Leader>JS :call JsBeautify()<CR>
-nnoremap <Leader><Leader>HTML :call HtmlBeautify()<CR>
-nnoremap <Leader><Leader>CSS :call CSSBeautify()<CR>
+nnoremap <Leader><Leader>js :call JsBeautify()<CR>
+nnoremap <Leader><Leader>html :call HtmlBeautify()<CR>
+nnoremap <Leader><Leader>css :call CSSBeautify()<CR>
 
-vnoremap <Leader><Leader>JS :call RangeJsBeautify()<CR>
-vnoremap <Leader><Leader>HTML :call RangeHtmlBeautify()<CR>
-vnoremap <Leader><Leader>CSS :call RangeCSSBeautify()<CR>
+vnoremap <Leader><Leader>js :call RangeJsBeautify()<CR>
+vnoremap <Leader><Leader>html :call RangeHtmlBeautify()<CR>
+vnoremap <Leader><Leader>css :call RangeCSSBeautify()<CR>
 
 
 " ----------
@@ -347,6 +347,9 @@ nmap <Leader>7 7gt
 nmap <Leader>8 8gt
 nmap <Leader>9 9gt
 nmap <Leader>0 10gt
+
+nnoremap <Leader><Leader>hex :%!xxd<CR>
+nnoremap <Leader><Leader>text :%!xxd -r<CR>
 
 
 " ----------
