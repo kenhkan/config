@@ -41,6 +41,7 @@ brew install parallel
 brew install postgresql
 brew install python
 brew install vim
+brew install woof
 
 >&2 echo "----> Creating necessary directories..."
 mkdir -p ~/Desktop/code
