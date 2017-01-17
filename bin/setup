@@ -43,6 +43,7 @@ brew install python
 brew install vim
 brew install woof
 brew install awscli
+brew install ncdu
 
 >&2 echo "----> Creating necessary directories..."
 mkdir -p ~/Desktop/code
