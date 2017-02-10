@@ -44,6 +44,7 @@ brew install vim
 brew install woof
 brew install awscli
 brew install ncdu
+brew install sbcl
 
 >&2 echo "----> Creating necessary directories..."
 mkdir -p ~/Desktop/code
