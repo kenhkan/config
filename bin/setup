@@ -45,6 +45,7 @@ brew install woof
 brew install awscli
 brew install ncdu
 brew install sbcl
+brew install httrack
 
 >&2 echo "----> Creating necessary directories..."
 mkdir -p ~/Desktop/code
