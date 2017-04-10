@@ -1,9 +1,12 @@
 # Reinstalling my machine
 
+- Make a copy of KeniSafe for LastPass grid
 - Backup preferences: `bin/save-prefs`
-- Backup all the files, including the saved preferences.
+- Backup all the files, including the saved preferences by moving them to
+  desktop.
 - Reinstall Mac OS with reformat.
-- Get the installation bootstrap script: `curl https://raw.githubusercontent.com/kenhkan/config/master/bin/bootstrap > /tmp/bootstrap`
+- Get the installation bootstrap script:
+  `curl https://raw.githubusercontent.com/kenhkan/config/master/bin/bootstrap > /tmp/bootstrap`
 - Run the bootstrap script: `bash /tmp/bootstrap`
 - Set up startup items: Spectacle
 - Restore preferences: `bin/load-prefs`

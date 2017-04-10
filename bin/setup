@@ -121,6 +121,7 @@ bin/install_application vagrant
 bin/install_application virtualbox
 bin/install_application vlc
 bin/install_application cyberduck
+bin/install_application whatsapp
 
 >&2 echo "----> Installing Python programs..."
 pip install autopep8
