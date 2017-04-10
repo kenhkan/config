@@ -16,3 +16,5 @@
 - Turn on FileVault.
 - Turn on firewall.
 - Update wallpaper image.
+- Reset PRAM: command-option-p-r
+- Reset SMC: shift-option-control on the left side

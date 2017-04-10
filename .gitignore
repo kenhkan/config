@@ -7,3 +7,4 @@ gtk-2.0/
 netrc
 prefs/
 git/ignore
+.*
