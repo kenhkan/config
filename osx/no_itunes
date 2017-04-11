@@ -2,6 +2,9 @@
 
 # Replace iTunes with an empty app to avoid being automatically opened.
 
+# We need iTunes.
+exit 0
+
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 ROOT="$( cd "$DIR/.." && pwd )"
