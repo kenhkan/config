@@ -18,3 +18,4 @@
 - Set up startup items: Spectacle
 - Restore preferences: `bin/load-prefs`
 - Set up [SSH key](https://github.com/settings/keys) with Github.
+- Install fonts under `fonts/`.
