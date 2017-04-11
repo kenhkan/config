@@ -7,8 +7,9 @@
 # Disable local Time Machine snapshots
 sudo tmutil disablelocal
 
-# Disable hibernation (speeds up entering sleep mode)
-sudo pmset -a hibernatemode 0
+# Enable hibernation to disk to conserve battery.
+# https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man1/pmset.1.html
+sudo pmset -a hibernatemode 25
 
 # Remove the sleep image file to save disk space
 sudo rm -f /private/var/vm/sleepimage
