@@ -100,6 +100,7 @@ brew tap caskroom/cask
 bin/install_application https://raw.githubusercontent.com/caskroom/homebrew-cask/19c3eff52dc8b7d8e36c40eb6538592ae0c720d8/Casks/archiver.rb
 bin/install_application "0xed"
 bin/install_application backblaze
+bin/install_application backblaze-downloader
 bin/install_application blockblock
 bin/install_application diffmerge
 bin/install_application dropbox
@@ -144,7 +145,7 @@ rsync -avPz $DIR/../fonts/Input/* /Library/Fonts
 
 >&2 echo "----> Setting fish as the default shell..."
 sudo sh -c 'echo /usr/local/bin/fish >> /etc/shells'
-sudo chsh -s /usr/local/bin/fish
+chsh -s /usr/local/bin/fish
 
 >&2 echo "----> keep-alive: update existing sudo time stamp until finish..."
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
