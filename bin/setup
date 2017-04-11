@@ -122,6 +122,8 @@ bin/install_application virtualbox
 bin/install_application vlc
 bin/install_application cyberduck
 bin/install_application whatsapp
+bin/install_application veracrypt
+bin/install_application osxfuse
 
 >&2 echo "----> Installing Python programs..."
 pip install autopep8
@@ -169,8 +171,6 @@ osx/webkit
 set +x
 
 >&2 echo "----> Mounting application images that need to be set up manually..."
-open "etc/osxfuse-2.8.2.dmg"
-open "etc/VeraCrypt_1.16.dmg"
 find "/usr/local/Caskroom/blockblock/" -name "BlockBlock_Installer.app" | parallel open
 find "/usr/local/Caskroom/backblaze/" -name "Backblaze Installer.app" | parallel open
 
