@@ -19,4 +19,14 @@
 - Restore preferences: `bin/load-prefs`
 - Set up [SSH key](https://github.com/settings/keys) with Github.
 - Install fonts under `fonts/`.
-- iTerm theme: Light, Solarized Light, Medium contrast, with Cursor color of 1f708d
+
+## iTerm settings
+
+Theme: Light
+Color preset: Solarized Light
+Contrast: Medium
+Cursor color: 1f708d
+Columns: 999
+Rows: 999
+Notifications: Silence bell
+Scrollback: unlimited
