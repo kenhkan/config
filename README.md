@@ -22,11 +22,11 @@
 
 ## iTerm settings
 
-Theme: Light
-Color preset: Solarized Light
-Contrast: Medium
-Cursor color: 1f708d
-Columns: 999
-Rows: 999
-Notifications: Silence bell
-Scrollback: unlimited
+- Theme: Light
+- Color preset: Solarized Light
+- Contrast: Medium
+- Cursor color: 1f708d
+- Columns: 999
+- Rows: 999
+- Notifications: Silence bell
+- Scrollback: unlimited
