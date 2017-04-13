@@ -46,6 +46,7 @@ brew install awscli
 brew install ncdu
 brew install sbcl
 brew install httrack
+brew install lastpass-cli
 
 >&2 echo "----> Creating necessary directories..."
 mkdir -p ~/Desktop/code
@@ -125,6 +126,7 @@ bin/install_application cyberduck
 bin/install_application whatsapp
 bin/install_application veracrypt
 bin/install_application osxfuse
+bin/install_application messenger-for-desktop
 
 >&2 echo "----> Installing Python programs..."
 pip install autopep8
