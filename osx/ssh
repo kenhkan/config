@@ -7,4 +7,9 @@ if [ ! -d $HOME/.ssh ]; then
   eval "$(ssh-agent -s)"
   ssh-add ~/.ssh/id_rsa
 
+  # Password-less login locally
+  # http://stackoverflow.com/questions/7439563/how-to-ssh-to-localhost-without-password
+  cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+  chmod og-wx ~/.ssh/authorized_keys 
+
 fi
