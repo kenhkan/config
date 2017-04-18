@@ -2,28 +2,26 @@
 
 # Replace iTunes with an empty app to avoid being automatically opened.
 
-# We need iTunes.
-exit 0
+>&2 echo '----> Bypassing disabling iTunes...'
 
+#DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+#ROOT="$( cd "$DIR/.." && pwd )"
 
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-ROOT="$( cd "$DIR/.." && pwd )"
+## If only this has already been done
+#if [ ! -d /Applications/iTunes.backup.app ]; then
 
-# If only this has already been done
-if [ ! -d /Applications/iTunes.backup.app ]; then
+#  # Replace iTunes
+#  sudo mv /Applications/iTunes.app /Applications/iTunes.backup.app
+#  sudo cp -r $ROOT/etc/DoNothing.app /Applications/iTunes.app
 
-  # Replace iTunes
-  sudo mv /Applications/iTunes.app /Applications/iTunes.backup.app
-  sudo cp -r $ROOT/etc/DoNothing.app /Applications/iTunes.app
+#  # Create empty group.
+#  sudo dscl . -create /groups/nobody
+#  sudo dscl . -append /groups/nobody gid 4200
+#  sudo dscl . -append /groups/nobody passwd "*"
 
-  # Create empty group.
-  sudo dscl . -create /groups/nobody
-  sudo dscl . -append /groups/nobody gid 4200
-  sudo dscl . -append /groups/nobody passwd "*"
+#  # Change ownership of empty iTunes
+#  chown root /Applications/iTunes.app/
+#  sudo chmod 0755 /Applications/iTunes.app/
+#  sudo chgrp nobody /Applications/iTunes.app/
 
-  # Change ownership of empty iTunes
-  chown root /Applications/iTunes.app/
-  sudo chmod 0755 /Applications/iTunes.app/
-  sudo chgrp nobody /Applications/iTunes.app/
-
-fi
+#fi

@@ -297,7 +297,7 @@ command FormatHaskell :exe 'silent! %!stylish-haskell'
 " Activation shortcut
 nmap <Leader>g :NERDTreeTabsToggle<CR>
 " Close NERDTree on file opened
-let NERDTreeQuitOnOpen = 1
+let NERDTreeQuitOnOpen=1
 " No fancy arrows
 let g:NERDTreeDirArrows=0
 
