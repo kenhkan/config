@@ -2,6 +2,7 @@
 
 - Make a copy of KeniSafe for LastPass grid
 - Backup preferences: `bin/save-prefs`
+- Backup `hosts` file: `/etc/hosts`
 - Backup all the files, including the saved preferences by moving them to
   desktop.
 - Reinstall Mac OS with reformat.
@@ -30,3 +31,12 @@
 - Rows: 999
 - Notifications: Silence bell
 - Scrollback: unlimited
+- Default directory: `~/s/w`
+
+## Firefox settings
+
+- Never remember history
+
+## Safari settings
+
+- Never remember history
