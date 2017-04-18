@@ -2,6 +2,11 @@ set PATH $HOME/.config/bin $HOME/.local/bin /usr/local/bin /usr/bin /bin /usr/sb
 setenv EDITOR vim
 
 
+# iTerm integration
+
+test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
+
+
 #####
 # http://ethanschoonover.com/solarized#the-values
 
