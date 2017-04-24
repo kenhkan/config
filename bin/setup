@@ -86,10 +86,9 @@ bin/create-link ~/s/v /Volumes
 bin/create-link ~/s/d ~/Desktop
 bin/create-link ~/s/c ~/Desktop/code
 bin/create-link ~/s/h ~/Desktop/code/hack
+bin/create-link ~/s/m ~/Desktop/code/mhe
 bin/create-link ~/s/w ~/Downloads
 bin/create-link ~/s/o ~/Movies
-bin/create-link ~/s/p ~/Dropbox/projects
-bin/create-link ~/s/r ~/Dropbox/print
 
 >&2 echo "----> Including old versions of casks..."
 brew tap caskroom/versions
