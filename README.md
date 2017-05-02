@@ -40,3 +40,13 @@
 ## Safari settings
 
 - Never remember history
+
+## Proxy setting
+
+- Enable "Remote Login" in "System Preferences > Sharing"
+- Explicitly add current user to "Remote Login" list
+- Set up proxy host
+- Set up PEM authentication
+- Update `dotfiles/ssh_config`
+- Update `dotfiles/proxy.pac`
+- Automatic Proxy Configuration: `file:///Users/kenhkan/Desktop/config/dotfiles/proxy.pac`
