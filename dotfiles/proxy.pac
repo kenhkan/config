@@ -1,8 +1,11 @@
 function FindProxyForURL(url, host) {
   var SOCKS_PROXY = "45.33.75.238:10001";
+  var MHE_DOMAINS = ["awsci3.mheducation.com", "mhe.okta.com", "ew-oktaiwa.mhe.mhc"];
 
-  if (dnsDomainIs(host, "mhe.okta.com") || dnsDomainIs(host, "ew-oktaiwa.mhe.mhc")) {
-    return "SOCKS5 " + SOCKS_PROXY;
+  for (var i = 0, l = MHE_DOMAINS.length; i < l; i++) {
+    if (dnsDomainIs(host, MHE_DOMAINS[i])) {
+      return "SOCKS5 " + SOCKS_PROXY;
+    }
   }
 
   return "DIRECT";
