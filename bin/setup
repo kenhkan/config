@@ -57,11 +57,12 @@ brew install httrack
 brew install lastpass-cli
 
 >&2 echo "----> Creating necessary directories..."
-mkdir -p ~/Desktop/code
-mkdir -p ~/Desktop/code/hack
 rm -rf ~/s
 mkdir -p ~/s
 mkdir -p ~/.stack
+mkdir -p ~/Desktop/code
+mkdir -p ~/Desktop/code/hack
+mkdir -p ~/Desktop/keys
 
 >&2 echo "----> Applying default files..."
 cp ~/Desktop/config/etc/DS_Store ~/.DS_Store
