@@ -2,6 +2,14 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+function exit_erroneously {
+  >&2 echo "ERROR: A child script has ended with a non-zero exit code."
+  exit 254
+}
+
+trap exit_erroneously ERR
+set -e
+
 >&2 echo "----> Asking for the administrator password upfront..."
 sudo -v
 
