@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+CMD=$1
+
+>&2 echo "----> Running command '$CMD' as daemon..."
+while true; do
+  >&2 echo "----> Starting command '$CMD'..."
+  $CMD
+  STATUS=$?
+  [ $STATUS -ne 0 ] && >&2 echo "----> '$CMD' exitis with exit code ${STATUS}..." && exit
+  >&2 echo "----> Command '$CMD' has ended"
+done
