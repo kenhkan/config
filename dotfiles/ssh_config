@@ -1,0 +1,4 @@
+Host proxy
+  HostName 45.33.75.238
+  User root
+  IdentityFile ~/s/k/proxy.pem

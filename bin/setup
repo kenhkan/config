@@ -82,13 +82,14 @@ fi
 )
 
 >&2 echo "----> Creating shortcut symlinks..."
-bin/create-link ~/s/v /Volumes
-bin/create-link ~/s/d ~/Desktop
 bin/create-link ~/s/c ~/Desktop/code
+bin/create-link ~/s/d ~/Desktop
 bin/create-link ~/s/h ~/Desktop/code/hack
+bin/create-link ~/s/k ~/Desktop/keys
 bin/create-link ~/s/m ~/Desktop/code/mhe
-bin/create-link ~/s/w ~/Downloads
 bin/create-link ~/s/o ~/Movies
+bin/create-link ~/s/v /Volumes
+bin/create-link ~/s/w ~/Downloads
 
 >&2 echo "----> Including old versions of casks..."
 brew tap caskroom/versions
@@ -151,6 +152,9 @@ chsh -s /usr/local/bin/fish
 
 >&2 echo "----> keep-alive: update existing sudo time stamp until finish..."
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+>&2 echo "----> Installing SSH config file..."
+ln -s "$(cd $DIR/..; pwd)/dotfiles/ssh_config" ~/.ssh/config
 
 >&2 echo "----> Configuring OS..."
 set -x
