@@ -2,3 +2,28 @@ Host proxy
   HostName 45.33.75.238
   User root
   IdentityFile ~/s/k/proxy.pem
+
+Host mhe-production1
+  HostName production1.mhlearnsmart.com
+  User ec2-user
+  IdentityFile ~/s/k/cloud1.pem
+
+Host mhe-cloud1
+  HostName cloud1.mhlearnsmart.com
+  User ec2-user
+  IdentityFile ~/s/k/cloud1.pem
+
+Host mhe-qastaging
+  HostName qastaging.mhlearnsmart.com
+  User ec2-user
+  IdentityFile ~/s/k/cloud1.pem
+
+Host mhe-qalive
+  HostName qalive.mhlearnsmart.com
+  User ec2-user
+  IdentityFile ~/s/k/cloud1.pem
+
+Host mhe-demo
+  HostName demo.mhlearnsmart.com
+  User ec2-user
+  IdentityFile ~/s/k/cloud1.pem
