@@ -406,13 +406,9 @@ vnoremap <Leader><Leader>64 c<C-R>=system('base64 --decode', @")<CR><Esc>
 " Case-sensitive
 let g:EasyMotion_smartcase = 1
 
-" Use EasyMotion for search
-nmap <Leader>f <Plug>(easymotion-sn)
-omap <Leader>f <Plug>(easymotion-tn)
-
-" Previous and next
-map n <Plug>(easymotion-next)
-map N <Plug>(easymotion-prev)
+" In-file find
+nmap <Leader>f /
+omap <Leader>f /
 
 " hjkl-specific motions
 map <Leader><Leader>l <Plug>(easymotion-lineforward)
