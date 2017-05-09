@@ -3,6 +3,22 @@ Host proxy
   User root
   IdentityFile ~/s/k/proxy.pem
 
+Host mhe-mbp
+  HostName 45.33.75.238
+  Port 10002
+  User kenneth_kan
+
+Host mhe-macbuild
+  HostName 45.33.75.238
+  Port 10003
+  User releaseman
+
+Host mhe-bastion
+  HostName 45.33.75.238
+  Port 10004
+  User ec2-user
+  IdentityFile ~/s/k/cloud1.pem
+
 Host mhe-production1
   HostName production1.mhlearnsmart.com
   User ec2-user
