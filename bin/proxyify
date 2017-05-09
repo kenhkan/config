@@ -12,6 +12,7 @@ PROXY=${PROXY_USER}@proxy
 function setup_reverse_proxy {
   SSH_ARGS=$@
 
+  >&2 echo "---> Starting autossh: 'autossh -f -M $AUTOSSH_PORT -vvv -N ${SSH_ARGS}'..."
   autossh -f -M $AUTOSSH_PORT -vvv -N ${SSH_ARGS}
 
   AUTOSSH_PORT=$(($AUTOSSH_PORT + 2))
