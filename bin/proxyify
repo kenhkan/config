@@ -3,39 +3,30 @@
 # This script turns the host that runs this script into a local network proxy.
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-DAEMONIZE=$DIR/daemonize
-
 PROXY_USER=root
 MAC_BUILD_HOST=10.216.2.20
 BASTION_HOST=34.194.4.202
 AUTOSSH_PORT=20000
-
-function daemonize {
-  CMD=$1
-  $DAEMONIZE "$CMD" &
-  [ $? -eq 255 ] && >&2 echo "ERROR: Something went terribly wrong." && exit
-}
+PROXY=${PROXY_USER}@proxy
 
 function setup_reverse_proxy {
-  HOST_DETAIL=$1
+  SSH_ARGS=$@
+
+  autossh -f -M $AUTOSSH_PORT -vvv -N ${SSH_ARGS}
 
   AUTOSSH_PORT=$(($AUTOSSH_PORT + 2))
-
-  #daemonize "ssh -vvv -N -q -R ${HOST_DETAIL} ${PROXY_USER}@proxy"
-  autossh -f -M $AUTOSSH_PORT -vvv -N -q -R ${HOST_DETAIL} ${PROXY_USER}@proxy
 }
 
-# Kill existing daemons.
-#ps -ef | grep bin/daemonize | awk -F '[ ]' '{print $4}' | xargs kill
+# Kill existing proxies.
 ps -ef | grep autossh | awk -F '[ ]' '{print $4}' | xargs kill
 
 # SOCKS-5
-#daemonize "ssh -N -D 0.0.0.0:10000 localhost"
-autossh -f -M $AUTOSSH_PORT -vvv -N -D 0.0.0.0:10000 localhost
-# Reverse proxy to this machine
-setup_reverse_proxy 10001:localhost:10000
-setup_reverse_proxy 10002:localhost:22
-# Reverse proxy to Mac build machine
-setup_reverse_proxy 10003:${MAC_BUILD_HOST}:22
-# Reverse proxy to bastion build machine
-setup_reverse_proxy 10004:${BASTION_HOST}:22
+setup_reverse_proxy -D 0.0.0.0:10000 localhost
+# Proxy to SOCKS-5
+setup_reverse_proxy -R 10001:localhost:10000 $PROXY
+# Proxy to SSH deamon
+setup_reverse_proxy -R 10002:localhost:22 $PROXY
+# Proxy to Mac build machine
+setup_reverse_proxy -R 10003:${MAC_BUILD_HOST}:22 $PROXY
+# Proxy to bastion build machine
+setup_reverse_proxy -R 10004:${BASTION_HOST}:22 $PROXY
