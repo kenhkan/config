@@ -22,15 +22,16 @@ function setup_reverse_proxy {
   AUTOSSH_PORT=$(($AUTOSSH_PORT + 2))
 
   #daemonize "ssh -vvv -N -q -R ${HOST_DETAIL} ${PROXY_USER}@proxy"
-  autossh -M $AUTOSSH_PORT -vvv -N -q -R ${HOST_DETAIL} ${PROXY_USER}@proxy
+  autossh -V -f -M $AUTOSSH_PORT -vvv -N -q -R ${HOST_DETAIL} ${PROXY_USER}@proxy
 }
 
 # Kill existing daemons.
 #ps -ef | grep bin/daemonize | awk -F '[ ]' '{print $4}' | xargs kill
+ps -ef | grep autossh | awk -F '[ ]' '{print $4}' | xargs kill
 
 # SOCKS-5
 #daemonize "ssh -N -D 0.0.0.0:10000 localhost"
-autossh -M $AUTOSSH_PORT -vvv -N -D 0.0.0.0:10000 localhost
+autossh -V -f -M $AUTOSSH_PORT -vvv -N -D 0.0.0.0:10000 localhost
 # Reverse proxy to this machine
 setup_reverse_proxy 10001:localhost:10000
 setup_reverse_proxy 10002:localhost:22
