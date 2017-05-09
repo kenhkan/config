@@ -8,6 +8,7 @@ DAEMONIZE=$DIR/daemonize
 PROXY_USER=root
 MAC_BUILD_HOST=10.216.2.20
 BASTION_HOST=34.194.4.202
+AUTOSSH_PORT=20000
 
 function daemonize {
   CMD=$1
@@ -18,16 +19,18 @@ function daemonize {
 function setup_reverse_proxy {
   HOST_DETAIL=$1
 
-  #daemonize "autossh -N -q -R ${HOST_DETAIL} ${PROXY_USER}@proxy"
-  autossh -vvv -N -q -R ${HOST_DETAIL} ${PROXY_USER}@proxy
+  AUTOSSH_PORT=$(($AUTOSSH_PORT + 2))
+
+  #daemonize "ssh -vvv -N -q -R ${HOST_DETAIL} ${PROXY_USER}@proxy"
+  autossh -M $AUTOSSH_PORT -vvv -N -q -R ${HOST_DETAIL} ${PROXY_USER}@proxy
 }
 
 # Kill existing daemons.
 #ps -ef | grep bin/daemonize | awk -F '[ ]' '{print $4}' | xargs kill
 
 # SOCKS-5
-#daemonize "autossh -N -D 0.0.0.0:10000 localhost"
-autossh -vvv -N -D 0.0.0.0:10000 localhost
+#daemonize "ssh -N -D 0.0.0.0:10000 localhost"
+autossh -M $AUTOSSH_PORT -vvv -N -D 0.0.0.0:10000 localhost
 # Reverse proxy to this machine
 setup_reverse_proxy 10001:localhost:10000
 setup_reverse_proxy 10002:localhost:22
