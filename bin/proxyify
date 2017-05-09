@@ -18,14 +18,16 @@ function daemonize {
 function setup_reverse_proxy {
   HOST_DETAIL=$1
 
-  daemonize "ssh -N -q -R ${HOST_DETAIL} ${PROXY_USER}@proxy"
+  #daemonize "autossh -N -q -R ${HOST_DETAIL} ${PROXY_USER}@proxy"
+  autossh -N -q -R ${HOST_DETAIL} ${PROXY_USER}@proxy
 }
 
 # Kill existing daemons.
-ps -ef | grep bin/daemonize | awk -F '[ ]' '{print $4}' | xargs kill
+#ps -ef | grep bin/daemonize | awk -F '[ ]' '{print $4}' | xargs kill
 
 # SOCKS-5
-daemonize "ssh -N -D 0.0.0.0:10000 localhost"
+#daemonize "autossh -N -D 0.0.0.0:10000 localhost"
+autossh -N -D 0.0.0.0:10000 localhost
 # Reverse proxy to this machine
 setup_reverse_proxy 10001:localhost:10000
 setup_reverse_proxy 10002:localhost:22

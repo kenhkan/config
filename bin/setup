@@ -55,6 +55,7 @@ brew install ncdu
 brew install sbcl
 brew install httrack
 brew install lastpass-cli
+brew install autossh
 
 >&2 echo "----> Creating necessary directories..."
 rm -rf ~/s
