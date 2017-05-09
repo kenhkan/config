@@ -19,7 +19,7 @@ function setup_reverse_proxy {
   HOST_DETAIL=$1
 
   #daemonize "autossh -N -q -R ${HOST_DETAIL} ${PROXY_USER}@proxy"
-  autossh -N -q -R ${HOST_DETAIL} ${PROXY_USER}@proxy
+  autossh -vvv -N -q -R ${HOST_DETAIL} ${PROXY_USER}@proxy
 }
 
 # Kill existing daemons.
@@ -27,7 +27,7 @@ function setup_reverse_proxy {
 
 # SOCKS-5
 #daemonize "autossh -N -D 0.0.0.0:10000 localhost"
-autossh -N -D 0.0.0.0:10000 localhost
+autossh -vvv -N -D 0.0.0.0:10000 localhost
 # Reverse proxy to this machine
 setup_reverse_proxy 10001:localhost:10000
 setup_reverse_proxy 10002:localhost:22
