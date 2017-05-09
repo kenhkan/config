@@ -6,7 +6,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 PROXY_USER=root
 MAC_BUILD_HOST=10.216.2.20
 BASTION_HOST=34.194.4.202
-AUTOSSH_PORT=20000
+AUTOSSH_PORT=10000
 PROXY=${PROXY_USER}@proxy
 
 function setup_reverse_proxy {
@@ -19,7 +19,7 @@ function setup_reverse_proxy {
 }
 
 # Kill existing proxies.
-ps -ef | grep autossh | awk -F '[ ]' '{print $4}' | xargs kill
+killall autossh
 
 # SOCKS-5
 setup_reverse_proxy -D 0.0.0.0:10000 localhost
