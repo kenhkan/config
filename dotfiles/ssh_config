@@ -43,3 +43,13 @@ Host mhe-demo
   HostName demo.mhlearnsmart.com
   User ec2-user
   IdentityFile ~/s/k/cloud1.pem
+
+Host mhe-reflow
+  HostName reflow.mhlearnsmart.com
+  User ec2-user
+  IdentityFile ~/s/k/cloud1.pem
+
+Host mhe-html1
+  HostName html1.mhlearnsmart.com
+  User ec2-user
+  IdentityFile ~/s/k/cloud1.pem
