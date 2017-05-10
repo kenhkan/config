@@ -53,3 +53,13 @@ Host mhe-html1
   HostName html1.mhlearnsmart.com
   User ec2-user
   IdentityFile ~/s/k/cloud1.pem
+
+Host mhe-cluster-c
+  HostName ec2-34-195-181-207.compute-1.amazonaws.com
+  User ec2-user
+  IdentityFile ~/s/k/cloud1.pem
+
+Host mhe-cluster-d
+  HostName ec2-34-195-87-42.compute-1.amazonaws.com
+  User ec2-user
+  IdentityFile ~/s/k/cloud1.pem
