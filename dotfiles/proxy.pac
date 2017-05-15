@@ -8,7 +8,7 @@ function FindProxyForURL(url, host) {
     "artifactory.mheducation.com",
     "awsci3.mheducation.com",
     "mhe.okta.com",
-    "ew-oktaiwa.mhe.mhc"
+    "mhe.mhc"
   ];
 
   for (var i = 0, l = MHE_DOMAINS.length; i < l; i++) {
