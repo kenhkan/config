@@ -12,7 +12,8 @@ function FindProxyForURL(url, host) {
     "mhe.okta.com",
     "mhe.mhc",
     "mhecloud.com",
-    "apidocs.dlepoc.nonprod.mheducation.com"
+    "apidocs.dlepoc.nonprod.mheducation.com",
+    "*.avalon.nonprod.mheducation.com"
   ];
 
   for (var i = 0, l = MHE_DOMAINS.length; i < l; i++) {
