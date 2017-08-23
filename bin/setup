@@ -141,6 +141,8 @@ bin/install_application messenger-for-desktop
 bin/install_application skype
 bin/install_application alarm-clock
 bin/install_application dbeaver-community
+bin/install_application kindle
+bin/install_application valentina-studio
 
 >&2 echo "----> Installing Python programs..."
 pip install autopep8
