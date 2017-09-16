@@ -153,6 +153,7 @@ fi
 
 >&2 echo "----> Installing Node.js programs..."
 npm install -g polymer-cli
+npm install -g clausreinke/typescript-tools typescript
 if [[ $? -ne 0 ]]; then
   >&2 echo "----> ERROR: Failed to install polymer-cli."
   exit 7
