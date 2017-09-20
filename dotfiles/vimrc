@@ -461,5 +461,6 @@ call neobundle#end()
 " Useful commands
 " ----------
 
-command ReverseLines :g/^/m0<CR>
-command FormatJson :%!python -m json.tool
+command REVERSELINES :g/^/m0<CR>
+command JSON :%!python -m json.tool
+command XML :%!xmllint --format --recover - 2>/dev/null
