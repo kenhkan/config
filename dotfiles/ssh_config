@@ -4,17 +4,17 @@ Host proxy
   IdentityFile ~/s/k/proxy.pem
 
 Host mhe-mbp
-  HostName 45.33.75.238
+  HostName 45.79.145.198
   Port 10002
   User kenneth_kan
 
 Host mhe-macbuild
-  HostName 45.33.75.238
+  HostName 45.79.145.198
   Port 10003
   User releaseman
 
 Host mhe-bastion
-  HostName 45.33.75.238
+  HostName 45.79.145.198
   Port 10004
   User ec2-user
   IdentityFile ~/s/k/cloud1.pem
