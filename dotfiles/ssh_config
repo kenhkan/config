@@ -1,5 +1,5 @@
 Host proxy
-  HostName 45.33.75.238
+  HostName 45.79.145.198
   User root
   IdentityFile ~/s/k/proxy.pem
 
