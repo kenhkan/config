@@ -5,7 +5,7 @@ import SocketServer
 import logging
 import os
 
-PORT = os.environ["PORT"]
+PORT = int(os.environ["PORT"])
 
 class GetHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
 
