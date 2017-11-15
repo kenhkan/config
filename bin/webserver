@@ -3,8 +3,9 @@
 import SimpleHTTPServer
 import SocketServer
 import logging
+import os
 
-PORT = 8000
+PORT = os.environ["PORT"]
 
 class GetHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
 
