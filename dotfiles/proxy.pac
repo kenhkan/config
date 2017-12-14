@@ -1,5 +1,5 @@
 function FindProxyForURL(url, host) {
-  var SOCKS_PROXY = "45.33.75.238:10001";
+  var SOCKS_PROXY = "45.79.145.198:10001";
   var PRINTER = "10.216.0.157";
   var AUTOMATION_JENKINS = "10.216.2.246";
   var DOCKER_DIRECTORY = "10.221.0.172";
