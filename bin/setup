@@ -129,7 +129,6 @@ bin/install_application spectacle
 bin/install_application sublime-text
 bin/install_application torbrowser
 bin/install_application transmission
-bin/install_application tuxera-ntfs
 bin/install_application vagrant
 bin/install_application virtualbox
 bin/install_application vlc
