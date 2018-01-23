@@ -27,34 +27,34 @@ fi
 echo | ruby /tmp/install_homebrew.rb
 
 >&2 echo "----> Installing command-line programs with Homebrew..."
-bin/install_program ag
-bin/install_program binutils
-bin/install_program cloc
-bin/install_program coreutils
-bin/install_program exiftool
-bin/install_program ffmpeg
-bin/install_program fish
-bin/install_program git
-bin/install_program git-lfs
-bin/install_program git-when-merged
-bin/install_program haskell-stack
-bin/install_program jq
-bin/install_program node
-bin/install_program osquery
-bin/install_program p7zip
-bin/install_program parallel
-bin/install_program postgresql
-bin/install_program python
-bin/install_program vim
-bin/install_program woof
-bin/install_program awscli
-bin/install_program ncdu
-bin/install_program sbcl
-bin/install_program httrack
-bin/install_program lastpass-cli
-bin/install_program autossh
-bin/install_program mplayer
-bin/install_program docker
+bin/install-program ag
+bin/install-program binutils
+bin/install-program cloc
+bin/install-program coreutils
+bin/install-program exiftool
+bin/install-program ffmpeg
+bin/install-program fish
+bin/install-program git
+bin/install-program git-lfs
+bin/install-program git-when-merged
+bin/install-program haskell-stack
+bin/install-program jq
+bin/install-program node
+bin/install-program osquery
+bin/install-program p7zip
+bin/install-program parallel
+bin/install-program postgresql
+bin/install-program python
+bin/install-program vim
+bin/install-program woof
+bin/install-program awscli
+bin/install-program ncdu
+bin/install-program sbcl
+bin/install-program httrack
+bin/install-program lastpass-cli
+bin/install-program autossh
+bin/install-program mplayer
+bin/install-program docker
 
 >&2 echo "----> Creating necessary directories..."
 rm -rf ~/s
@@ -109,38 +109,38 @@ brew tap caskroom/versions
 brew tap caskroom/cask
 
 >&2 echo "----> Installing desktop applications with Homebrew Cask..."
-bin/install_application https://raw.githubusercontent.com/caskroom/homebrew-cask/19c3eff52dc8b7d8e36c40eb6538592ae0c720d8/Casks/archiver.rb
-bin/install_application "0xed"
-bin/install_application backblaze
-bin/install_application backblaze-downloader
-bin/install_application blockblock
-bin/install_application diffmerge
-bin/install_application dropbox
-bin/install_application firefox
-bin/install_application google-chrome
-bin/install_application iterm2
-bin/install_application java
-bin/install_application knockknock
-bin/install_application sequel-pro
-bin/install_application skitch
-bin/install_application slack
-bin/install_application soundflower
-bin/install_application spectacle
-bin/install_application sublime-text
-bin/install_application torbrowser
-bin/install_application transmission
-bin/install_application vagrant
-bin/install_application virtualbox
-bin/install_application vlc
-bin/install_application cyberduck
-bin/install_application whatsapp
-bin/install_application veracrypt
-bin/install_application osxfuse
-bin/install_application skype
-bin/install_application alarm-clock
-bin/install_application dbeaver-community
-bin/install_application kindle
-bin/install_application valentina-studio
+bin/install-application https://raw.githubusercontent.com/caskroom/homebrew-cask/19c3eff52dc8b7d8e36c40eb6538592ae0c720d8/Casks/archiver.rb
+bin/install-application "0xed"
+bin/install-application backblaze
+bin/install-application backblaze-downloader
+bin/install-application blockblock
+bin/install-application diffmerge
+bin/install-application dropbox
+bin/install-application firefox
+bin/install-application google-chrome
+bin/install-application iterm2
+bin/install-application java
+bin/install-application knockknock
+bin/install-application sequel-pro
+bin/install-application skitch
+bin/install-application slack
+bin/install-application soundflower
+bin/install-application spectacle
+bin/install-application sublime-text
+bin/install-application torbrowser
+bin/install-application transmission
+bin/install-application vagrant
+bin/install-application virtualbox
+bin/install-application vlc
+bin/install-application cyberduck
+bin/install-application whatsapp
+bin/install-application veracrypt
+bin/install-application osxfuse
+bin/install-application skype
+bin/install-application alarm-clock
+bin/install-application dbeaver-community
+bin/install-application kindle
+bin/install-application valentina-studio
 
 >&2 echo "----> Installing Python programs..."
 pip2 install autopep8
