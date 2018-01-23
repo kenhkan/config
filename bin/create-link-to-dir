@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+FROM=$1
+TO=$2
+
+mkdir -p $TO
+bin/create-link $FROM $TO

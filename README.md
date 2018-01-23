@@ -20,6 +20,8 @@
 - Restore preferences: `bin/load-prefs`
 - Set up [SSH key](https://github.com/settings/keys) with Github.
 - Install fonts under `fonts/`.
+- Remap Cmd-Q for app applications.
+- Remap Cmd-W for iTerms.
 
 ## iTerm settings
 

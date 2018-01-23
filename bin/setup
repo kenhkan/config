@@ -10,9 +10,6 @@ function exit_erroneously {
 trap exit_erroneously ERR
 set -e
 
->&2 echo "----> Asking for the administrator password upfront..."
-sudo -v
-
 >&2 echo "----> Checking for Xcode command line tools..."
 if [[ ! -d /Library/Developer/CommandLineTools ]]; then
   >&2 echo "----> Installing Xcode command line tools..."
@@ -30,38 +27,40 @@ fi
 echo | ruby /tmp/install_homebrew.rb
 
 >&2 echo "----> Installing command-line programs with Homebrew..."
-brew install ag
-brew install binutils
-brew install cloc
-brew install coreutils
-brew install exiftool
-brew install ffmpeg
-brew install fish
-brew install git
-brew install git-lfs
-brew install git-when-merged
-brew install haskell-stack
-brew install jq
-brew install node
-brew install osquery
-brew install p7zip
-brew install parallel
-brew install postgresql
-brew install python
-brew install vim
-brew install woof
-brew install awscli
-brew install ncdu
-brew install sbcl
-brew install httrack
-brew install lastpass-cli
-brew install autossh
-brew install mplayer
+bin/install_program ag
+bin/install_program binutils
+bin/install_program cloc
+bin/install_program coreutils
+bin/install_program exiftool
+bin/install_program ffmpeg
+bin/install_program fish
+bin/install_program git
+bin/install_program git-lfs
+bin/install_program git-when-merged
+bin/install_program haskell-stack
+bin/install_program jq
+bin/install_program node
+bin/install_program osquery
+bin/install_program p7zip
+bin/install_program parallel
+bin/install_program postgresql
+bin/install_program python
+bin/install_program vim
+bin/install_program woof
+bin/install_program awscli
+bin/install_program ncdu
+bin/install_program sbcl
+bin/install_program httrack
+bin/install_program lastpass-cli
+bin/install_program autossh
+bin/install_program mplayer
+bin/install_program docker
 
 >&2 echo "----> Creating necessary directories..."
 rm -rf ~/s
-mkdir -p ~/s
+mkdir -p ~/.ssh
 mkdir -p ~/.stack
+mkdir -p ~/s
 mkdir -p ~/Desktop/code
 mkdir -p ~/Desktop/code/hack
 mkdir -p ~/Desktop/keys
@@ -93,15 +92,15 @@ fi
 )
 
 >&2 echo "----> Creating shortcut symlinks..."
-bin/create-link ~/s/c ~/Desktop/code
-bin/create-link ~/s/d ~/Desktop
-bin/create-link ~/s/h ~/Desktop/code/hack
-bin/create-link ~/s/k ~/Desktop/keys
-bin/create-link ~/s/t ~/Desktop/tools
-bin/create-link ~/s/m ~/Desktop/code/mhe
-bin/create-link ~/s/o ~/Movies
-bin/create-link ~/s/v /Volumes
-bin/create-link ~/s/w ~/Downloads
+bin/create-link-to-dir ~/s/c ~/Desktop/code
+bin/create-link-to-dir ~/s/d ~/Desktop
+bin/create-link-to-dir ~/s/h ~/Desktop/code/hack
+bin/create-link-to-dir ~/s/k ~/Desktop/keys
+bin/create-link-to-dir ~/s/t ~/Desktop/tools
+bin/create-link-to-dir ~/s/m ~/Desktop/code/mhe
+bin/create-link-to-dir ~/s/o ~/Movies
+bin/create-link-to-dir ~/s/v /Volumes
+bin/create-link-to-dir ~/s/w ~/Downloads
 
 >&2 echo "----> Including old versions of casks..."
 brew tap caskroom/versions
@@ -137,7 +136,6 @@ bin/install_application cyberduck
 bin/install_application whatsapp
 bin/install_application veracrypt
 bin/install_application osxfuse
-bin/install_application messenger-for-desktop
 bin/install_application skype
 bin/install_application alarm-clock
 bin/install_application dbeaver-community
@@ -145,7 +143,7 @@ bin/install_application kindle
 bin/install_application valentina-studio
 
 >&2 echo "----> Installing Python programs..."
-pip install autopep8
+pip2 install autopep8
 if [[ $? -ne 0 ]]; then
   >&2 echo "----> ERROR: Failed to install autopep8."
   exit 6
