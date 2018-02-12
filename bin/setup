@@ -90,6 +90,7 @@ fi
   stack setup;
   stack install;
 )
+stack install stack-run
 
 >&2 echo "----> Creating shortcut symlinks..."
 bin/create-link-to-dir ~/s/c ~/Desktop/code
