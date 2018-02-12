@@ -16,11 +16,11 @@ function FindProxyForURL(url, host) {
     "oktacdn.com"
   ];
 
-  for (var i = 0, l = MHE_DOMAINS.length; i < l; i++) {
-    if (dnsDomainIs(host, MHE_DOMAINS[i])) {
-      return "SOCKS5 " + SOCKS_PROXY;
-    }
-  }
+  //for (var i = 0, l = MHE_DOMAINS.length; i < l; i++) {
+  //  if (dnsDomainIs(host, MHE_DOMAINS[i])) {
+  //    return "SOCKS5 " + SOCKS_PROXY;
+  //  }
+  //}
 
   return "DIRECT";
 }
