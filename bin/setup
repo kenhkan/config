@@ -55,6 +55,7 @@ bin/install-program lastpass-cli
 bin/install-program autossh
 bin/install-program mplayer
 bin/install-program docker
+bin/install-program minimal-racket
 
 >&2 echo "----> Creating necessary directories..."
 rm -rf ~/s
