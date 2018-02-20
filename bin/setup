@@ -153,12 +153,10 @@ if [[ $? -ne 0 ]]; then
 fi
 
 >&2 echo "----> Installing Node.js programs..."
-npm install -g polymer-cli
-npm install -g clausreinke/typescript-tools typescript
-if [[ $? -ne 0 ]]; then
-  >&2 echo "----> ERROR: Failed to install polymer-cli."
-  exit 7
-fi
+bin/install-npm-bin polymer-cli
+bin/install-npm-bin clausreinke/typescript-tools
+bin/install-npm-bin typescript
+bin/install-npm-bin ts-node
 
 >&2 echo "----> Copying fonts..."
 rsync -avPz $DIR/../fonts/Input/* /Library/Fonts

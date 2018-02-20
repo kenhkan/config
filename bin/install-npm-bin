@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+PROGRAM_NAME=$1
+
+>&2 echo "----> Installing '${PROGRAM_NAME}'..."
+npm install -g $PROGRAM_NAME
+if [[ $? -ne 0 ]]; then
+  >&2 echo "----> ERROR: Failed to install ${PROGRAM_NAME}."
+  exit 3
+fi
+
+>&2 echo "----> Done installing '${PROGRAM_NAME}'."
+exit 0
