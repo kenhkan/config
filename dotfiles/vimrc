@@ -122,11 +122,10 @@ set rnu
 set nosmartindent
 set autoindent
 
-" Wrapping
-set wrap
-set formatoptions=tcq
+" No auto-wrapping
+set nowrap
 " Wrapping needs to be enforced on every buffer.
-autocmd BufRead * :set textwidth=79
+autocmd BufRead * :set textwidth=0
 
 " Use spaces, not tabs
 set tabstop=2
