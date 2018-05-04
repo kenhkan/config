@@ -123,7 +123,7 @@ set nosmartindent
 set autoindent
 
 " No auto-wrapping
-set nowrap
+set wrap
 " Wrapping needs to be enforced on every buffer.
 autocmd BufRead * :set textwidth=0
 
