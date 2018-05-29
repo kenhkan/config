@@ -113,6 +113,10 @@ syntax enable
 set number
 set ruler
 
+" Cursor
+set cursorline
+set cursorcolumn
+
 " Use relative line numbering
 set nonumber
 set relativenumber
