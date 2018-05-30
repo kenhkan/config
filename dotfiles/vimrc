@@ -245,7 +245,7 @@ nmap <Leader>y <C-W>\|
 nmap <Leader>u <C-W>=
 
 " Enable yank history
-let g:unite_source_history_yank_enable = 1
+let g:unite_source_history_yank_enable=1
 
 " Disable folding in Markdown
 let g:vim_markdown_folding_disabled=1
@@ -464,6 +464,7 @@ call neobundle#end()
 " Useful commands
 " ----------
 
-command REVERSELINES :g/^/m0<CR>
+command REVLINES :g/^/m0<CR>
 command JSON :%!python -m json.tool
 command XML :%!xmllint --format --recover - 2>/dev/null
+command! -nargs=+ G :call cursor(<f-args>)
