@@ -1,10 +1,7 @@
 # Reinstalling my machine
 
-- Make a copy of KeniSafe for LastPass grid
-- Backup preferences: `bin/save-prefs`
+- Backup preferences: `bin/save-prefs` and move them to desktop.
 - Backup `hosts` file: `/etc/hosts`
-- Backup all the files, including the saved preferences by moving them to
-  desktop.
 - Reinstall Mac OS with reformat.
 - Update Mac OS.
 - Reset PRAM: command-option-p-r
