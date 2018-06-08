@@ -139,11 +139,6 @@ bin/install-application whatsapp
 bin/install-application veracrypt
 bin/install-application osxfuse
 bin/install-application skype
-bin/install-application alarm-clock
-bin/install-application dbeaver-community
-bin/install-application kindle
-bin/install-application valentina-studio
-bin/install-application electronic-wechat
 
 >&2 echo "----> Installing Python programs..."
 pip2 install autopep8
