@@ -78,7 +78,7 @@ bin/create-link ~/.gitignore  ~/Desktop/config/dotfiles/gitignore
 bin/create-link ~/.vimrc  ~/Desktop/config/dotfiles/vimrc
 
 >&2 echo "----> Setting stack up..."
-bin/create-link ~/.stack/config.yaml  ~/Desktop/config/dotfiles/stack
+bin/create-link ~/.stack/config.yaml ~/Desktop/config/dotfiles/stack
 if [[ ! -d ~/Desktop/code/hack/stylish-haskell ]]; then
   git clone https://github.com/jaspervdj/stylish-haskell.git ~/Desktop/code/hack/stylish-haskell
   if [[ $? -ne 0 ]]; then
@@ -91,7 +91,6 @@ fi
   stack setup;
   stack install;
 )
-stack install stack-run
 
 >&2 echo "----> Creating shortcut symlinks..."
 bin/create-link-to-dir ~/s/c ~/Desktop/code
@@ -164,11 +163,12 @@ chsh -s /usr/local/bin/fish
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 >&2 echo "----> Installing SSH config file..."
+rm -f ~/.ssh/config
 ln -s "$(cd $DIR/..; pwd)/dotfiles/ssh_config" ~/.ssh/config
 
 >&2 echo "----> Configuring OS..."
 set -x
-# Most scripts are addapted from
+# Most scripts are adapted from
 # https://github.com/mathiasbynens/dotfiles/blob/master/.osx
 osx/app
 osx/dock

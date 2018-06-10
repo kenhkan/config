@@ -8,8 +8,8 @@ BUNDLE_DIR=~/.vim/bundle
 INSTALL_DIR="$BUNDLE_DIR/neobundle.vim"
 echo "$INSTALL_DIR"
 if [ -e "$INSTALL_DIR" ]; then
-  echo "$INSTALL_DIR already exists!"
-  exit 1
+  echo "$INSTALL_DIR already exists. Removing for reinstallation."
+  rm -rf $INSTALL_DIR
 fi
 
 # check git command
