@@ -19,6 +19,7 @@
 - Install fonts under `fonts/`.
 - Remap Cmd-Q for app applications.
 - Remap Cmd-W for iTerms.
+- Install Google Drive
 
 ## iTerm settings
 
