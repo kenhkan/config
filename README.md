@@ -17,9 +17,16 @@
 - Restore preferences: `bin/load-prefs`
 - Set up [SSH key](https://github.com/settings/keys) with Github.
 - Install fonts under `fonts/`.
+- Disable all keyboard mappings
 - Remap Cmd-Q for app applications.
 - Remap Cmd-W for iTerms.
+- Set iTerm font: Input Mono 18pt
 - Install Google Drive
+- Turn off desktop notifications
+- Login with Chrome Sync
+- Login with Cloud ID
+- Add Google as source of Contacts sync
+- Install applications via App Store
 
 ## iTerm settings
 
