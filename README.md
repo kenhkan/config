@@ -2,6 +2,7 @@
 
 - Backup preferences: `bin/save-prefs` and move them to desktop.
 - Backup `hosts` file: `/etc/hosts`
+- Log on to Backblaze and make sure those files are in fact backed up.
 - Reinstall Mac OS with reformat.
 - Update Mac OS.
 - Reset PRAM: command-option-p-r
