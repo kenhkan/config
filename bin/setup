@@ -102,6 +102,7 @@ bin/create-link-to-dir ~/s/m ~/Desktop/code/mhe
 bin/create-link-to-dir ~/s/o ~/Movies
 bin/create-link-to-dir ~/s/v /Volumes
 bin/create-link-to-dir ~/s/w ~/Downloads
+bin/create-link-to-dir ~/s/g ~/GDrive
 
 >&2 echo "----> Including old versions of casks..."
 brew tap caskroom/versions
