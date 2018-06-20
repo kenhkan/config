@@ -138,6 +138,7 @@ bin/install-application whatsapp
 bin/install-application veracrypt
 bin/install-application osxfuse
 bin/install-application skype
+bin/install-application google-backup-and-sync
 
 >&2 echo "----> Installing Python programs..."
 pip2 install autopep8
