@@ -57,6 +57,7 @@ bin/install-program mplayer
 bin/install-program docker
 bin/install-program minimal-racket
 bin/install-program wget
+bin/install-program b2-tools
 
 >&2 echo "----> Creating necessary directories..."
 rm -rf ~/s
