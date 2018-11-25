@@ -1,4 +1,4 @@
-set PATH $HOME/.config/bin $HOME/.local/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/bin /Applications/Postgres.app/Contents/Versions/latest/bin
+set PATH $HOME/.config/bin $HOME/.local/bin $HOME/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/bin /Applications/Postgres.app/Contents/Versions/latest/bin
 setenv EDITOR vim
 
 
