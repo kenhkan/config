@@ -291,8 +291,9 @@ endfunction
 nnoremap <Leader>c :w<Space>!wc<CR>
 vnoremap <Leader>c :call<Space>VisualCount()<CR>
 
-" Formatting Haskell headers
+" Format Haskell
 command FormatHaskell :exe 'silent! %!stylish-haskell'
+autocmd BufWritePre *.hs :exe 'silent! %!stylish-haskell'
 
 " TypeScript highlighting needs setting up
 autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
