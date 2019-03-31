@@ -22,7 +22,6 @@
 - Remap Cmd-Q for app applications.
 - Remap Cmd-W for iTerms.
 - Set iTerm font: Input Mono 18pt
-- Install Google Drive
 - Turn off desktop notifications
 - Login with Chrome Sync
 - Login with Cloud ID
@@ -42,9 +41,5 @@
 - Default directory: `~/s/w`
 
 ## Firefox settings
-
-- Never remember history
-
-## Safari settings
 
 - Never remember history
