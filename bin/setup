@@ -98,10 +98,7 @@ fi
 >&2 echo "----> Creating shortcut symlinks..."
 bin/create-link-to-dir ~/s/c ~/Desktop/code
 bin/create-link-to-dir ~/s/d ~/Desktop
-bin/create-link-to-dir ~/s/g ~/GDrive
 bin/create-link-to-dir ~/s/h ~/Desktop/code/hack
-bin/create-link-to-dir ~/s/m ~/Desktop/code/mhe
-bin/create-link-to-dir ~/s/t ~/GDrive/Tools
 bin/create-link-to-dir ~/s/v /Volumes
 bin/create-link-to-dir ~/s/w ~/Downloads
 
