@@ -143,6 +143,7 @@ bin/install-application google-backup-and-sync
 >&2 echo "--------> Installing s-exp pretty printer"
 (
   cd ~/s/h
+  rm -rf prettyprint-s-expression
   git clone git@github.com:mattmight/prettyprint-s-expression.git
   cd prettyprint-s-expression
   make install
