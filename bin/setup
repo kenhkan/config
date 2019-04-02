@@ -137,7 +137,7 @@ bin/install-application whatsapp
 bin/install-application veracrypt
 bin/install-application osxfuse
 bin/install-application skype
-bin/install-application google-backup-and-sync
+bin/install-application ngrok
 
 >&2 echo "----> Installing utilities..."
 >&2 echo "--------> Installing s-exp pretty printer"
