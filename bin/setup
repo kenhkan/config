@@ -138,6 +138,7 @@ bin/install-application veracrypt
 bin/install-application osxfuse
 bin/install-application skype
 bin/install-application ngrok
+bin/install-application android-platform-tools
 
 >&2 echo "----> Installing utilities..."
 >&2 echo "--------> Installing s-exp pretty printer"
