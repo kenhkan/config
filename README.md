@@ -27,7 +27,6 @@
 - Login with Cloud ID
 - Add Google as source of Contacts sync
 - Install applications via App Store
-- Add bass: `fisher add edc/bass`
 
 ## iTerm settings
 
