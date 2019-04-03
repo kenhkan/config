@@ -103,6 +103,7 @@ bin/create-link-to-dir ~/s/v /Volumes
 bin/create-link-to-dir ~/s/w ~/Downloads
 bin/create-link-to-dir ~/s/a ~/Desktop/code/airfox
 bin/create-link-to-dir ~/s/ad ~/Desktop/code/airfox/dev-env
+bin/create-link-to-dir ~/s/ads ~/Desktop/code/airfox/dev-env/services
 
 >&2 echo "----> Including old versions of casks..."
 brew tap caskroom/versions
