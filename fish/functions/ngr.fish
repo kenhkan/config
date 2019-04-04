@@ -1,3 +1,3 @@
 function ngr
-  ./ngrok http $argv[1]
+  ngrok http $argv[1]
 end
