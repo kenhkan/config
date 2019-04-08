@@ -44,6 +44,8 @@ bin/install-program git-when-merged
 bin/install-program haskell-stack
 bin/install-program jq
 bin/install-program node
+bin/install-program node@8
+bin/install-program node@10
 bin/install-program p7zip
 bin/install-program parallel
 bin/install-program postgresql
