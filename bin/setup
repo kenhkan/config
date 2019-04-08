@@ -26,39 +26,59 @@ if [[ $? -ne 0 ]]; then
 fi
 echo | ruby /tmp/install_homebrew.rb
 
->&2 echo "----> Installing command-line programs with Homebrew..."
+>&2 echo "----> Including old versions of casks..."
+brew tap caskroom/versions
+
+>&2 echo "----> Install Cask..."
+brew tap caskroom/cask
+
+>&2 echo "----> Installing programs with Homebrew..."
+bin/install-application java
 bin/install-program ag
 bin/install-program binutils
 bin/install-program cloc
 bin/install-program coreutils
-bin/install-program exiftool
-bin/install-program ffmpeg
 bin/install-program fish
 bin/install-program git
-bin/install-program git-lfs
 bin/install-program git-when-merged
 bin/install-program haskell-stack
 bin/install-program jq
 bin/install-program node
-bin/install-program osquery
 bin/install-program p7zip
 bin/install-program parallel
 bin/install-program postgresql
 bin/install-program python
 bin/install-program vim
-bin/install-program woof
 bin/install-program awscli
-bin/install-program ncdu
 bin/install-program sbcl
-bin/install-program httrack
-bin/install-program lastpass-cli
-bin/install-program autossh
-bin/install-program mplayer
 bin/install-program docker
-bin/install-program minimal-racket
 bin/install-program wget
 bin/install-program b2-tools
 bin/install-program elm
+bin/install-application https://raw.githubusercontent.com/caskroom/homebrew-cask/19c3eff52dc8b7d8e36c40eb6538592ae0c720d8/Casks/archiver.rb
+bin/install-application "0xed"
+bin/install-application backblaze
+bin/install-application backblaze-downloader
+bin/install-application blockblock
+bin/install-application diffmerge
+bin/install-application dropbox
+bin/install-application firefox
+bin/install-application google-chrome
+bin/install-application iterm2
+bin/install-application knockknock
+bin/install-application sequel-pro
+bin/install-application skitch
+bin/install-application slack
+bin/install-application spectacle
+bin/install-application sublime-text
+bin/install-application vlc
+bin/install-application cyberduck
+bin/install-application whatsapp
+bin/install-application osxfuse
+bin/install-application veracrypt
+bin/install-application skype
+bin/install-application ngrok
+bin/install-application android-platform-tools
 
 >&2 echo "----> Creating necessary directories..."
 rm -rf ~/s
@@ -103,44 +123,6 @@ bin/create-link-to-dir ~/s/v /Volumes
 bin/create-link-to-dir ~/s/w ~/Downloads
 bin/create-link-to-dir ~/s/a ~/Desktop/code/airfox
 bin/create-link-to-dir ~/s/ad ~/Desktop/code/airfox/dev-env
-
->&2 echo "----> Including old versions of casks..."
-brew tap caskroom/versions
-
->&2 echo "----> Install Cask..."
-brew tap caskroom/cask
-
->&2 echo "----> Installing desktop applications with Homebrew Cask..."
-bin/install-application https://raw.githubusercontent.com/caskroom/homebrew-cask/19c3eff52dc8b7d8e36c40eb6538592ae0c720d8/Casks/archiver.rb
-bin/install-application "0xed"
-bin/install-application backblaze
-bin/install-application backblaze-downloader
-bin/install-application blockblock
-bin/install-application diffmerge
-bin/install-application dropbox
-bin/install-application firefox
-bin/install-application google-chrome
-bin/install-application iterm2
-bin/install-application java
-bin/install-application knockknock
-bin/install-application sequel-pro
-bin/install-application skitch
-bin/install-application slack
-bin/install-application soundflower
-bin/install-application spectacle
-bin/install-application sublime-text
-bin/install-application torbrowser
-bin/install-application transmission
-bin/install-application vagrant
-bin/install-application virtualbox
-bin/install-application vlc
-bin/install-application cyberduck
-bin/install-application whatsapp
-bin/install-application veracrypt
-bin/install-application osxfuse
-bin/install-application skype
-bin/install-application ngrok
-bin/install-application android-platform-tools
 
 >&2 echo "----> Installing utilities..."
 >&2 echo "--------> Installing s-exp pretty printer"
