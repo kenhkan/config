@@ -18,15 +18,20 @@
 - Restore preferences: `bin/load-prefs`
 - Set up [SSH key](https://github.com/settings/keys) with Github.
 - Install fonts under `fonts/`.
-- Disable all keyboard mappings
-- Remap Cmd-Q for app applications.
-- Remap Cmd-W for iTerms.
+- Keyboard mappings
+  - Disable all keyboard mappings
+  - Remap Cmd-Q for app applications to "Invert colors"
+  - Remap Cmd-W for iTerms to "Find cursor"
+  - Enable "Move focus to next window"
+  - Enable "Save picture of screen as a file"
+  - Enable "Show spotlight search"
 - Set iTerm font: Input Mono 18pt
 - Turn off desktop notifications
 - Login with Chrome Sync
 - Login with Cloud ID
 - Add Google as source of Contacts sync
 - Install applications via App Store
+- See `screenshots/spectacle.png` for Spectacle's configuration
 
 ## iTerm settings
 
@@ -39,6 +44,7 @@
 - Notifications: Silence bell
 - Scrollback: unlimited
 - Default directory: `~/s/w`
+- Font: 18pt InputMono
 
 ## Firefox settings
 
