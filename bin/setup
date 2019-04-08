@@ -88,6 +88,7 @@ mkdir -p ~/s
 mkdir -p ~/Desktop/code
 mkdir -p ~/Desktop/code/hack
 mkdir -p ~/Desktop/keys
+mkdir -p ~/bin
 
 >&2 echo "----> Applying default files..."
 cp ~/Desktop/config/etc/DS_Store ~/.DS_Store

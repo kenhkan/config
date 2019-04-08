@@ -45,6 +45,7 @@
 - Scrollback: unlimited
 - Default directory: `~/s/w`
 - Font: 18pt InputMono
+- Select "Show tab bar even when there is only one tab"
 
 ## Firefox settings
 
