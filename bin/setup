@@ -81,7 +81,6 @@ bin/install-application veracrypt
 bin/install-application skype
 bin/install-application ngrok
 bin/install-application android-platform-tools
-bin/install-application android-studio
 
 >&2 echo "----> Creating necessary directories..."
 rm -rf ~/s
