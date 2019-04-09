@@ -32,6 +32,7 @@
 - Add Google as source of Contacts sync
 - Install applications via App Store
 - See `screenshots/spectacle.png` for Spectacle's configuration
+- Set logout after inactivity at 10 minutes.
 
 ## iTerm settings
 
