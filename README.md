@@ -33,6 +33,7 @@
 - Install applications via App Store
 - See `screenshots/spectacle.png` for Spectacle's configuration
 - Set logout after inactivity at 10 minutes.
+- Deselect everything in "Energy Saver > Power Adapter"
 
 ## iTerm settings
 
