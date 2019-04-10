@@ -69,7 +69,6 @@ bin/install-application google-chrome
 bin/install-application iterm2
 bin/install-application knockknock
 bin/install-application sequel-pro
-bin/install-application skitch
 bin/install-application slack
 bin/install-application spectacle
 bin/install-application sublime-text
