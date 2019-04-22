@@ -54,6 +54,7 @@ bin/install-program vim
 bin/install-program awscli
 bin/install-program sbcl
 bin/install-program docker
+bin/install-program docker-compose
 bin/install-program wget
 bin/install-program b2-tools
 bin/install-program elm
@@ -131,18 +132,11 @@ bin/create-link-to-dir ~/s/ad ~/Desktop/code/airfox/dev-env
 (
   cd ~/s/h
   rm -rf prettyprint-s-expression
-  git clone git@github.com:mattmight/prettyprint-s-expression.git
+  git clone https://github.com/mattmight/prettyprint-s-expression
   cd prettyprint-s-expression
   make install
   cp ~/bin/prettyprint-sexp.rkt ~/bin/prettyprint-sexp
 )
-
->&2 echo "----> Installing Python programs..."
-pip2 install autopep8
-if [[ $? -ne 0 ]]; then
-  >&2 echo "----> ERROR: Failed to install autopep8."
-  exit 6
-fi
 
 >&2 echo "----> Installing Node.js programs..."
 bin/install-npm-bin polymer-cli

@@ -5,8 +5,8 @@
 - Log on to Backblaze and make sure those files are in fact backed up.
 - Reinstall Mac OS with reformat.
 - Update Mac OS.
-- Reset PRAM: command-option-p-r
-- Reset SMC: shift-option-control on the left side
+- Reset PRAM: https://support.apple.com/en-us/HT204063
+- Reset SMC: https://support.apple.com/en-us/HT201295
 - Update wallpaper image.
 - Turn on FileVault.
 - Turn on firewall.
@@ -32,7 +32,6 @@
 - Add Google as source of Contacts sync
 - Install applications via App Store
 - See `screenshots/spectacle.png` for Spectacle's configuration
-- Set logout after inactivity at 10 minutes.
 - Deselect everything in "Energy Saver > Power Adapter"
 
 ## iTerm settings
