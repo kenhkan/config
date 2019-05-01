@@ -32,7 +32,7 @@
 - Add Google as source of Contacts sync
 - Install applications via App Store
 - See `screenshots/spectacle.png` for Spectacle's configuration
-- Deselect everything in "Energy Saver > Power Adapter"
+- Deselect everything except for "Prevent computer..." in "Energy Saver > Power Adapter"
 
 ## iTerm settings
 
