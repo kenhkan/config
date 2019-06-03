@@ -33,6 +33,7 @@
 - Install applications via App Store
 - See `screenshots/spectacle.png` for Spectacle's configuration
 - Deselect everything except for "Prevent computer..." in "Energy Saver > Power Adapter"
+- Install [Logitech Options](https://www.logitech.com/en-us/product/options)
 
 ## iTerm settings
 
