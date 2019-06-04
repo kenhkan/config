@@ -84,7 +84,6 @@ bin/install-application android-platform-tools
 bin/install-application docker
 bin/install-application tableplus
 bin/install-application racket
-bin/install-application contexts
 bin/install-application teensy
 
 >&2 echo "----> Creating necessary directories..."
