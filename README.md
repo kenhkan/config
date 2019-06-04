@@ -22,6 +22,7 @@
   - Disable all keyboard mappings
   - Remap Cmd-Q for app applications to "Invert colors"
   - Remap Cmd-W for iTerms to "Find cursor"
+  - Remap "Toggle Full Screen" for iTerms to something else other than Cmd-Enter
   - Enable "Move focus to next window"
   - Enable "Save picture of screen as a file"
   - Enable "Show spotlight search"
