@@ -53,8 +53,6 @@ bin/install-program python
 bin/install-program vim
 bin/install-program awscli
 bin/install-program sbcl
-bin/install-program docker
-bin/install-program docker-compose
 bin/install-program wget
 bin/install-program b2-tools
 bin/install-program elm
