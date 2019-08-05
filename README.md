@@ -40,4 +40,7 @@
   - Turn off Spotlight options other than Apps and Calculator.
   - Rename device in Backblaze.
   - Put in private encryption key in Backblaze.
+  - Update profile picture.
+  - Update keystrokes speed in "Keyboard".
+  - Turn off screen saver.
 - After 1 week, update Backblaze license.
