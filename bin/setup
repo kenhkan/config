@@ -150,6 +150,7 @@ bin/install-npm-bin polymer-cli
 bin/install-npm-bin clausreinke/typescript-tools
 bin/install-npm-bin typescript
 bin/install-npm-bin ts-node
+bin/install-npm-bin jay-repl
 
 >&2 echo "----> Copying fonts..."
 rsync -avPz $DIR/../fonts/Input/* /Library/Fonts
