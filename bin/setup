@@ -88,6 +88,7 @@ bin/install-application racket
 bin/install-application teensy
 bin/install-application microsoft-remote-desktop-beta
 bin/install-application anaconda2
+bin/install-application postman
 
 >&2 echo "----> Creating necessary directories..."
 rm -rf ~/s
