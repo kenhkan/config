@@ -32,6 +32,9 @@ brew tap caskroom/versions
 >&2 echo "----> Install Cask..."
 brew tap caskroom/cask
 
+>&2 echo "----> Adding additional taps..."
+brew tap johanhaleby/kubetail
+
 >&2 echo "----> Installing programs with Homebrew..."
 bin/install-application java
 bin/install-program ag
@@ -59,6 +62,7 @@ bin/install-program elm
 bin/install-program python
 bin/install-program kops
 bin/install-program gnupg
+bin/install-program kubetail
 bin/install-application https://raw.githubusercontent.com/caskroom/homebrew-cask/19c3eff52dc8b7d8e36c40eb6538592ae0c720d8/Casks/archiver.rb
 bin/install-application "0xed"
 bin/install-application backblaze
