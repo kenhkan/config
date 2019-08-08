@@ -276,6 +276,8 @@ let g:neocomplcache_enable_at_startup = 1
 
 " Solarized
 hi Visual cterm=NONE ctermbg=0 ctermfg=NONE guibg=Grey40
+" Sharpen selection text
+hi Visual cterm=bold ctermbg=Blue ctermfg=NONE
 
 " Count characters and lines
 function! VisualCount() range
