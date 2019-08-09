@@ -21,8 +21,8 @@
 - Install fonts under `fonts/`.
 - Keyboard mappings
   - Disable all keyboard mappings.
-  - Remap Cmd-W for iTerms to "Find cursor".
-  - Remap "Toggle Full Screen" for iTerms to something else other than Cmd-Enter.
+  - Remap Cmd-W for iTerms to "Find Cursor".
+  - Remap Cmd-Enter for iTerms to "Bring All To Front".
   - Enable "Move focus to next window".
   - Enable "Save picture of screen as a file", mapped with `Shift-Cmd-1`.
   - Enable "Show spotlight search".
