@@ -6,9 +6,9 @@
   - SSH keys `~/.ssh`
   - `hosts` file: `/etc/hosts`
 - Log on to Backblaze and make sure those files are in fact backed up.
-- Reset PRAM: https://support.apple.com/en-us/HT204063
-- Reset SMC: https://support.apple.com/en-us/HT201295
-- Reinstall Mac OS with reformat to factory settings.
+- Reset PRAM: Option-⌘-R-⌘-P. https://support.apple.com/en-us/HT204063
+- Reset SMC: Shift-Control-Option-Power. https://support.apple.com/en-us/HT201295
+- Reinstall Mac OS: Shift-Option-⌘-R. https://support.apple.com/en-us/HT204904
 - Update wallpaper image.
 - Turn on FileVault.
 - Turn on firewall.
