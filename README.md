@@ -1,7 +1,10 @@
 # Reinstalling my machine
 
-- Backup preferences: `bin/save-prefs` and move them to desktop.
-- Backup `hosts` file: `/etc/hosts`
+- Backup
+  - Preferences: `bin/save-prefs` and move them to desktop.
+  - TablePlus connections
+  - SSH keys `~/.ssh`
+  - `hosts` file: `/etc/hosts`
 - Log on to Backblaze and make sure those files are in fact backed up.
 - Reset PRAM: https://support.apple.com/en-us/HT204063
 - Reset SMC: https://support.apple.com/en-us/HT201295
