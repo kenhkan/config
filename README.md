@@ -9,10 +9,10 @@
 - Reset PRAM: Option-⌘-R-⌘-P. https://support.apple.com/en-us/HT204063
 - Reset SMC: Shift-Control-Option-Power. https://support.apple.com/en-us/HT201295
 - Reinstall Mac OS: Shift-Option-⌘-R. https://support.apple.com/en-us/HT204904
+- Update Mac OS.
 - Update wallpaper image.
 - Turn on FileVault.
 - Turn on firewall.
-- Restore backup from Backblaze.
 - Install [Xcode Command Line Tools](https://developer.apple.com/download/more/).
   - Agree to license on the command line.
 - Get the installation bootstrap script:
@@ -20,7 +20,6 @@
 - Run the bootstrap script: `bash /tmp/bootstrap`
 - Set up startup items: Spectacle
 - Restore preferences: `bin/load-prefs`
-- Set up [SSH key](https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) with Github.
 - Install fonts under `fonts/`.
 - Keyboard mappings
   - Disable all keyboard mappings.
@@ -30,12 +29,6 @@
   - Enable "Save picture of screen as a file", mapped with `Shift-Cmd-1`.
   - Enable "Show spotlight search".
 - Turn off desktop notifications.
-- Login with Chrome Sync.
-- Login with Cloud ID.
-- Add Google as source of Contacts sync.
-- Install applications via App Store.
-- Install [Logitech Options](https://www.logitech.com/en-us/product/options).
-- Update Mac OS.
 - Go through System Preferences.
   - Deselect everything except for "Prevent computer..." in "Energy Saver > Power Adapter".
   - Put display off after 1 hour on power adapter.
@@ -46,4 +39,11 @@
   - Update profile picture.
   - Update keystrokes speed in "Keyboard".
   - Turn off screen saver.
+- Install applications via App Store.
+- Install [Logitech Options](https://www.logitech.com/en-us/product/options).
+- Restore backup from Backblaze.
+- Set up [SSH key](https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) with Github.
+- Login with Chrome Sync.
+- Login with Cloud ID.
+- Add Google as source of Contacts sync.
 - After 1 week, update Backblaze license.
