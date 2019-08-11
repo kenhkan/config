@@ -93,6 +93,7 @@ bin/install-application teensy
 bin/install-application microsoft-remote-desktop-beta
 bin/install-application anaconda2
 bin/install-application postman
+bin/install-application postgres
 
 >&2 echo "----> Creating necessary directories..."
 rm -rf ~/s
