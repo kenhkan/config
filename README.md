@@ -46,4 +46,4 @@
 - Login with Chrome Sync.
 - Login with Cloud ID.
 - Add Google as source of Contacts sync.
-- After 1 week, update Backblaze license.
+- After 2 weeks, update Backblaze license.
