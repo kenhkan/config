@@ -32,7 +32,6 @@
 - Go through System Preferences.
   - Deselect everything except for "Prevent computer..." in "Energy Saver > Power Adapter".
   - Put display off after 1 hour on power adapter.
-  - Hide Dock.
   - Turn off Spotlight options other than Apps and Calculator.
   - Rename device in Backblaze.
   - Put in private encryption key in Backblaze.
@@ -46,4 +45,4 @@
 - Login with Chrome Sync.
 - Login with Cloud ID.
 - Add Google as source of Contacts sync.
-- After 2 weeks, update Backblaze license.
+- After 1 week, update Backblaze license.
