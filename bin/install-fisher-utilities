@@ -1,0 +1,4 @@
+#!/usr/local/bin/fish
+
+fisher add FabioAntunes/fish-nvm
+fisher add edc/bass

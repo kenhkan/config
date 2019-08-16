@@ -95,6 +95,10 @@ bin/install-application anaconda2
 bin/install-application postman
 bin/install-application postgres
 
+>&2 echo "----> Install fisher..."
+curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
+/usr/local/bin/fish bin/install-fisher-utilities
+
 >&2 echo "----> Creating necessary directories..."
 rm -rf ~/s
 mkdir -p ~/.ssh
