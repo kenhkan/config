@@ -1,3 +1,3 @@
 function gstash
-  git stash save $argv
+  git stash --include-untracked
 end
