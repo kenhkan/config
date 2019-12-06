@@ -64,6 +64,7 @@ bin/install-program kops
 bin/install-program gnupg
 bin/install-program kubetail
 bin/install-program scw
+bin/install-program tig
 bin/install-application https://raw.githubusercontent.com/caskroom/homebrew-cask/19c3eff52dc8b7d8e36c40eb6538592ae0c720d8/Casks/archiver.rb
 bin/install-application "0xed"
 bin/install-application backblaze
