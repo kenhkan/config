@@ -26,7 +26,6 @@
   - Remap Cmd-W for iTerms to "Find Cursor".
   - Remap Cmd-Enter for iTerms to "Bring All To Front".
   - Enable "Move focus to next window".
-  - Enable "Save picture of screen as a file", mapped with `Shift-Cmd-1`.
   - Enable "Show spotlight search".
 - Turn off desktop notifications.
 - Go through System Preferences.
