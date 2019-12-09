@@ -470,3 +470,4 @@ command JSON :%!python -m json.tool
 command XML :%!xmllint --format --recover - 2>/dev/null
 command! -nargs=+ G :call cursor(<f-args>)
 command RELNUM :set rnu!
+command SORTBYLENGTH :%! awk '{ print length(), $0 | "sort -n | cut -d\\  -f2-" }'
