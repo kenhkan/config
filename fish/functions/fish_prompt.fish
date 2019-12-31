@@ -41,7 +41,10 @@ if not set -q __fish_prompt_cwd
             set -g __fish_prompt_cwd (set_color $fish_color_cwd)
         end
 
-printf '%s%s@%s %s%s %s(%s)%s \f\r> ' "$__fish_color_blue" $USER $__fish_prompt_hostname "$__fish_prompt_cwd" (pwd) "$__fish_color_status" "$stat" "$__fish_prompt_normal"
+printf (date "+$c2%H$c0:$c2%M$c0:$c2%S")
+
+printf '%s %s%s %s(%s)%s \f\r> ' "$__fish_color_blue" "$__fish_prompt_cwd" (pwd) "$__fish_color_status" "$stat" "$__fish_prompt_normal"
 
 end
+
 end
