@@ -96,6 +96,7 @@ bin/install-application microsoft-remote-desktop-beta
 bin/install-application anaconda2
 bin/install-application postman
 bin/install-application postgres
+bin/install-application spotify
 
 >&2 echo "----> Install fisher..."
 curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
