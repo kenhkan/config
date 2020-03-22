@@ -97,6 +97,7 @@ bin/install-application anaconda2
 bin/install-application postman
 bin/install-application postgres
 bin/install-application spotify
+bin/install-application balenaetcher
 
 >&2 echo "----> Install fisher..."
 curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
