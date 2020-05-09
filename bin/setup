@@ -100,6 +100,7 @@ bin/install-application spotify
 bin/install-application balenaetcher
 bin/install-application r
 bin/install-application rstudio
+bin/install-application handbrake
 
 >&2 echo "----> Install fisher..."
 curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
