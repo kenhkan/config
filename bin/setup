@@ -171,6 +171,7 @@ bin/install-npm-bin jay-repl
 
 >&2 echo "----> Copying fonts..."
 rsync -avPz $DIR/../fonts/Input/* /Library/Fonts
+rsync -avPz $DIR/../fonts/JetBrains/* /Library/Fonts
 
 >&2 echo "----> Setting fish as the default shell..."
 sudo sh -c 'echo /usr/local/bin/fish >> /etc/shells'
