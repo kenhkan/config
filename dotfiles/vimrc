@@ -120,6 +120,9 @@ set cursorcolumn
 
 " Use hybrid relative line numbering
 set nu rnu
+" Automatically switch between absolute and relative line numbering
+autocmd BufEnter,FocusGained,InsertLeave * :set relativenumber
+autocmd BufLeave,FocusLost,InsertEnter * :set norelativenumber
 
 " Indentation
 set nosmartindent
@@ -471,3 +474,5 @@ command XML :%!xmllint --format --recover - 2>/dev/null
 command! -nargs=+ G :call cursor(<f-args>)
 command RELNUM :set rnu!
 command SORTBYLENGTH :%! awk '{ print length(), $0 | "sort -n | cut -d\\  -f2-" }'
+command ABSNUM :set norelativenumber
+command RELNUM :set relativenumber
