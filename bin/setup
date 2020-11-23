@@ -104,6 +104,7 @@ bin/install-application handbrake
 bin/install-program rust
 bin/install-application discord
 bin/install-application figma
+bin/install-application timer
 
 >&2 echo "----> Install fisher..."
 curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
