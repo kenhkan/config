@@ -19,12 +19,16 @@ if [[ ! -d /Library/Developer/CommandLineTools ]]; then
 fi
 
 >&2 echo "----> Installing Homebrew..."
-curl https://raw.githubusercontent.com/Homebrew/install/master/install >/tmp/install_homebrew.rb
+curl https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh >/tmp/install_homebrew
 if [[ $? -ne 0 ]]; then
   >&2 echo "----> ERROR: Failed to download homebrew installer."
   exit 4
 fi
-echo | ruby /tmp/install_homebrew.rb
+bash /tmp/install_homebrew
+if [[ $? -ne 0 ]]; then
+  >&2 echo "----> ERROR: Failed to install homebrew."
+  exit 6
+fi
 
 >&2 echo "----> Including old versions of casks..."
 brew tap caskroom/versions
