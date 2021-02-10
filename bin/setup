@@ -31,16 +31,16 @@ if [[ $? -ne 0 ]]; then
 fi
 
 >&2 echo "----> Including old versions of casks..."
-brew tap caskroom/versions
+brew tap homebrew/cask-versions
 
 >&2 echo "----> Install Cask..."
-brew tap caskroom/cask
+brew tap homebrew/cask
 
 >&2 echo "----> Adding additional taps..."
 brew tap johanhaleby/kubetail
 
 >&2 echo "----> Installing programs with Homebrew..."
-bin/install-application java
+bin/install-program java
 bin/install-program ag
 bin/install-program binutils
 bin/install-program cloc
@@ -51,8 +51,6 @@ bin/install-program git-when-merged
 bin/install-program haskell-stack
 bin/install-program jq
 bin/install-program node
-bin/install-program node@8
-bin/install-program node@10
 bin/install-program p7zip
 bin/install-program parallel
 bin/install-program postgresql
@@ -69,46 +67,45 @@ bin/install-program gnupg
 bin/install-program kubetail
 bin/install-program scw
 bin/install-program tig
-bin/install-application https://raw.githubusercontent.com/caskroom/homebrew-cask/19c3eff52dc8b7d8e36c40eb6538592ae0c720d8/Casks/archiver.rb
-bin/install-application "0xed"
-bin/install-application backblaze
-bin/install-application backblaze-downloader
-bin/install-application blockblock
-bin/install-application diffmerge
-bin/install-application dropbox
-bin/install-application firefox
-bin/install-application google-chrome
-bin/install-application iterm2
-bin/install-application knockknock
-bin/install-application sequel-pro
-bin/install-application slack
-bin/install-application spectacle
-bin/install-application sublime-text
-bin/install-application vlc
-bin/install-application cyberduck
-bin/install-application whatsapp
-bin/install-application osxfuse
-bin/install-application veracrypt
-bin/install-application skype
-bin/install-application ngrok
-bin/install-application android-platform-tools
-bin/install-application docker
-bin/install-application tableplus
-bin/install-application racket
-bin/install-application teensy
-bin/install-application microsoft-remote-desktop-beta
-bin/install-application anaconda2
-bin/install-application postman
-bin/install-application postgres
-bin/install-application spotify
-bin/install-application balenaetcher
-bin/install-application r
-bin/install-application rstudio
-bin/install-application handbrake
+bin/install-program backblaze
+bin/install-program backblaze-downloader
+bin/install-program blockblock
+bin/install-program diffmerge
+bin/install-program dropbox
+bin/install-program firefox
+bin/install-program google-chrome
+bin/install-program iterm2
+bin/install-program knockknock
+bin/install-program sequel-pro
+bin/install-program slack
+bin/install-program spectacle
+bin/install-program sublime-text
+bin/install-program vlc
+bin/install-program cyberduck
+bin/install-program whatsapp
+bin/install-program osxfuse
+bin/install-program veracrypt
+bin/install-program skype
+bin/install-program ngrok
+bin/install-program android-platform-tools
+bin/install-program docker
+bin/install-program tableplus
+bin/install-program racket
+bin/install-program teensy
+bin/install-program anaconda2
+bin/install-program postman
+bin/install-program postgres
+bin/install-program spotify
+bin/install-program balenaetcher
+bin/install-program r
+bin/install-program rstudio
+bin/install-program handbrake
 bin/install-program rust
-bin/install-application discord
-bin/install-application figma
-bin/install-application timer
+bin/install-program discord
+bin/install-program figma
+bin/install-program timer
+bin/install-program vanilla
+bin/install-program openvpn-connect
 
 >&2 echo "----> Install fisher..."
 curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
@@ -128,7 +125,7 @@ mkdir -p ~/bin
 cp ~/Desktop/config/etc/DS_Store ~/.DS_Store
 
 >&2 echo "----> Creating symlinks..."
-bin/create-link ~/.config  ~/Desktop/config
+bin/create-link ~/.config  ~/Desktop/config/
 bin/create-link ~/.ackrc  ~/Desktop/config/dotfiles/ackrc
 bin/create-link ~/.editorconfig  ~/Desktop/config/dotfiles/editorconfig
 bin/create-link ~/.gitconfig  ~/Desktop/config/dotfiles/gitconfig

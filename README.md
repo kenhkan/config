@@ -1,7 +1,6 @@
 # Reinstalling my machine
 
 - Backup
-  - Preferences: `bin/save-prefs` and move them to desktop.
   - TablePlus connections
   - SSH keys `~/.ssh`
   - `hosts` file: `/etc/hosts`
@@ -10,7 +9,6 @@
 - Reset SMC: Shift-Control-Option-Power. https://support.apple.com/en-us/HT201295
 - Reinstall Mac OS: Shift-Option-⌘-R. https://support.apple.com/en-us/HT204904
 - Update Mac OS.
-- Update wallpaper image.
 - Turn on FileVault.
 - Turn on firewall.
 - Install [Xcode Command Line Tools](https://developer.apple.com/download/more/).
@@ -18,8 +16,16 @@
 - Get the installation bootstrap script:
   `curl https://raw.githubusercontent.com/kenhkan/config/master/bin/bootstrap > /tmp/bootstrap`
 - Run the bootstrap script: `bash /tmp/bootstrap`
-- Set up startup items: Spectacle
-- Restore preferences: `bin/load-prefs`
+- Set up startup items
+  - Spectacle
+  - iTerm
+  - Chrome
+  - Fantastical
+  - Slack
+  - Notes
+  - BlockBlock
+  - MonoSnap
+  - Vanilla
 - Install fonts under `fonts/`.
 - Keyboard mappings
   - Disable all keyboard mappings.
@@ -37,11 +43,14 @@
   - Update profile picture.
   - Update keystrokes speed in "Keyboard".
   - Turn off screen saver.
+  - Update wallpaper image.
+  - Remove all gestures under "Trackpad" > "More Gestures"
+  - Use 24-hour clock
 - Install applications via App Store.
-- Install [Logitech Options](https://www.logitech.com/en-us/product/options).
 - Restore backup from Backblaze.
 - Set up [SSH key](https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) with Github.
-- Login with Chrome Sync.
-- Login with Cloud ID.
+- Login with iCloud.
 - Add Google as source of Contacts sync.
 - After 1 week, update Backblaze license.
+- Install "Archiver 2" under `etc/`.
+- See `screenshots/` for configuration.
