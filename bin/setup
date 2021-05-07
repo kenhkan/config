@@ -108,6 +108,7 @@ bin/install-program vanilla
 bin/install-program openvpn-connect
 bin/install-program elixir
 bin/install-program tree
+bin/install-program asdf
 
 >&2 echo "----> Install fisher..."
 curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
