@@ -183,6 +183,7 @@ rsync -avPz $DIR/../fonts/JetBrains/* /Library/Fonts
 >&2 echo "----> Setting fish as the default shell..."
 sudo sh -c 'echo /usr/local/bin/fish >> /etc/shells'
 chsh -s /usr/local/bin/fish
+ln -s ~/.config/config/fish ~/.config/fish
 
 >&2 echo "----> keep-alive: update existing sudo time stamp until finish..."
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
