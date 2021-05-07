@@ -155,8 +155,7 @@ bin/create-link-to-dir ~/s/d ~/Desktop
 bin/create-link-to-dir ~/s/h ~/Desktop/code/hack
 bin/create-link-to-dir ~/s/v /Volumes
 bin/create-link-to-dir ~/s/w ~/Downloads
-bin/create-link-to-dir ~/s/a ~/Desktop/code/airfox
-bin/create-link-to-dir ~/s/ad ~/Desktop/code/airfox/dev-env
+bin/create-link-to-dir ~/s/b ~/Desktop/code/blockfi
 
 >&2 echo "----> Installing utilities..."
 >&2 echo "--------> Installing s-exp pretty printer"
