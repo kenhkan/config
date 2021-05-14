@@ -1,4 +1,4 @@
-set PATH $HOME/.cargo/bin $HOME/.config/bin $HOME/.local/bin $HOME/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/bin /Applications/Postgres.app/Contents/Versions/latest/bin
+set PATH $HOME/.cargo/bin $HOME/.config/bin $HOME/.local/bin $HOME/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/bin /Applications/Postgres.app/Contents/Versions/latest/bin $HOME/.asdf/shims
 setenv EDITOR vim
 setenv KUBE_EDITOR vim
 
@@ -85,3 +85,8 @@ set -g fish_color_escape      $cyan
 set -g fish_color_hostname    $cyan
 set -g fish_color_cwd         $yellow
 set -g fish_color_git         $green
+
+
+# Other programs
+
+direnv hook fish | source
