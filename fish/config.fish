@@ -3,6 +3,11 @@ setenv EDITOR vim
 setenv KUBE_EDITOR vim
 
 
+# fenv
+
+fenv source ~/.nix-profile/etc/profile.d/nix.sh
+
+
 # Fisher
 
 if not functions -q fisher
